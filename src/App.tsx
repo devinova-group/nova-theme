@@ -1,7 +1,6 @@
 /** @jsxImportSource theme-ui */
 import './App.css';
-import { useColorMode, Button, Box, Text, Label, Switch, Checkbox, Radio, Avatar } from 'theme-ui'
-
+import { Card, Image, Badge , useColorMode, Button, Box, Text, Label, Switch, Checkbox, Radio, Field  } from 'theme-ui'
 
 
 
@@ -11,19 +10,53 @@ function App() {
   return (
     <div className="App">
       <div className="test">
+      <Card variant='cards.primary' >
+      <Image src='https://i.ibb.co/dBdCVQq/Rectangle-143.jpg'/>
+      <Text variant='overline.notoSans'>Overline</Text>
+      <Text variant='h5.quicksand'sx={{ fontWeight: 700,}}>Starting?</Text>
+      <Text variant='caption.quicksand' sx={{lineHeight: '26.4px'}} >Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</Text>
+
+      <Button variant='learnMore'>Learn More</Button>
+      </Card>
       </div>
       <div>
         <button onClick={(e) => {
           setColorMode(colorMode === 'default' ? 'dark' : 'default')
         }} >
           Toggle {colorMode === 'default' ? 'Dark' : 'Light'}</button>
+          <div className="test">
+          </div>
+          <div className='test' style={{margin: '20px'}} >
+          <Badge variant='inActive'>inActive</Badge>
+          <Badge variant='error'>Error</Badge>
+          <Badge variant='disabled'>Disabled</Badge>
+          <Badge variant='active'>Active</Badge>
+          <Badge variant='default'>Default</Badge>
+          <Badge variant='primary'>Primary</Badge>
+          <Badge variant='selected'>Selected</Badge>
+          <Badge variant='secondary'>Secondary</Badge>
+          </div>
         <div className='test' >
-          <Text>Hello</Text>
-        </div>
+        
 
-        <Label><Checkbox /></Label>
+        <Field  variant='field.text' name="email" defaultValue="" placeholder='Placeholder Text' />
+        <Field  disabled variant='field.text' name="email" defaultValue="" placeholder='Placeholder Text' />
+        <Field  variant='field.textError' name="email" defaultValue="" placeholder='Placeholder Text' />
+
+
+        
+        </div>
+        <div className='test'>
+            <Field  variant='field.search' name="email" defaultValue="" placeholder='Search' />
+        <Field  disabled variant='field.search' name="email" defaultValue="" placeholder='Search' />
+ 
+        </div>
+     <div className='test'>
+       <Label ><Checkbox /></Label>
         <Label><Checkbox /></Label>
         <Label><Checkbox disabled /></Label>
+     </div>
+       
       </div>
       <div className='test'>
         <Label><Radio name='test' value='true' /></Label>
@@ -98,7 +131,49 @@ function App() {
         <br />
         <Text variant='h6.quicksand'>H6- Quicksand</Text>
         <br />
-
+        <br />
+        <br />
+        <Text variant='display.notoSans'>Noto Sans</Text>
+        <br />
+        <Text variant='title1.notoSans'>Noto Sans</Text>
+        <br />
+        <Text variant='title2.notoSans'>Noto Sans</Text>
+        <br />
+        <Text variant='subhead.notoSans'>Noto Sans</Text>
+        <br />
+        <Text variant='body1.notoSans'>Noto Sans</Text>
+        <br />
+        <Text variant='body2.notoSans'>Noto Sans</Text>
+        <br />
+        <Text variant='body3.notoSans'>Noto Sans</Text>
+        <br />
+        <Text variant='caption.notoSans'>Noto Sans</Text>
+        <br />
+        <Text variant='button.notoSans'>Noto Sans</Text>
+        <br />
+        <Text variant='overline.notoSans'>Noto Sans</Text>
+        <br />
+        <br />
+        <Text variant='display.quicksand'>Quicksand</Text>
+        <br />
+        <Text variant='title1.quicksand'>Quicksand</Text>
+        <br />
+        <Text variant='title2.quicksand'>Quicksand</Text>
+        <br />
+        <Text variant='subhead.quicksand'>Quicksand</Text>
+        <br />
+        <Text variant='body1.quicksand'>Quicksand</Text>
+        <br />
+        <Text variant='body2.quicksand'>Quicksand</Text>
+        <br />
+        <Text variant='body3.quicksand'>Quicksand</Text>
+        <br />
+        <Text variant='caption.quicksand'>Quicksand</Text>
+        <br />
+        <Text variant='button.quicksand'>Quicksand</Text>
+        <br />
+        <Text variant='overline.quicksand'>Quicksand</Text>
+        <br />
       </div>
     </div>
   );
