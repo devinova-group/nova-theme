@@ -3,6 +3,8 @@ import text from "./text";
 import buttons from "./buttons";
 import badges from "./badges";
 import cards from "./cards";
+import shadows from "./shadows";
+import borders from "./borders";
 
 export const theme = {
   space: [
@@ -21,17 +23,17 @@ export const theme = {
   },
 
   letterSpacings: [1, 2, 2.5, 3, 3.5],
-label: {
-width: '30px',
-},
+  label: {
+    width: "30px",
+  },
   /* Fields */
   field: {
     text: {
       width: "314px",
       height: "50px",
-      border: "2px solid",
+      border: "default",
       borderColor: "field.borderColor",
-      boxShadow: "2px 5px 10px rgba(76, 58, 128, 0.25)",
+      boxShadow: "field",
       borderRadius: "6px",
       background: "field.background",
       backgroundColor: "field.backgroundColor",
@@ -58,8 +60,6 @@ width: '30px',
       variant: "field.text",
       borderColor: "field.disabledBorder",
       background: "field.errorBg",
-      /*         backgroundPosition: 'left 16px center, right 16px center',
-        backgroundRepeat: 'no-repeat, no-repeat', */
       backgroundColor: "field.errorBackground",
     },
     search: {
@@ -67,9 +67,11 @@ width: '30px',
       width: "240px",
       height: "50px",
       background: "field.searchBg",
+      backgroundColor: "field.searchBackground",
+      borderColor: "field.searchBorder",
       "&:focus": {
         outline: "none",
-        borderColor: "#9b91b8",
+        borderColor: "field.borderColorClick",
       },
     },
   },
@@ -77,27 +79,25 @@ width: '30px',
   radio: {
     width: "24px",
     height: "24px",
-    border: "2px solid",
-    borderColor: "lightMode.second",
-    backgroundColor: "lightMode.white",
-    boxShadow: "2px 4px 10px rgba(0, 0, 0, 0.25)",
-    color: "lightMode.second",
+    border: "default",
+    borderColor: "radio.borderColor",
+    backgroundColor: "radio.bg",
+    boxShadow: "radio",
     "> path": {
       fill: "none",
       d: 'circle cx="6.75" cy:"6.75" r="6.75" ',
     },
     "input:checked ~ &": {
-      borderColor: "radio.borderColor",
+      borderColor: "radio.clicked",
       background: "radio.background",
-      /*  color: 'radio.primary', */
     },
     "input:disabled ~ &": {
       width: "24px",
       height: "24px",
       cursor: "not-allowed",
       background: "radio.disabled",
-      border: "2px solid",
-      borderColor: "badgeColorsLightMode.disabled",
+      border: "primary",
+      borderColor: "radio.disabledBorder",
     },
   },
 
@@ -105,11 +105,11 @@ width: '30px',
   checkbox: {
     width: "24px",
     height: "24px",
-    border: "2px solid #9d93b9",
-    boxShadow: "2px 4px 10px rgba(0, 0, 0, 0.25)",
+    border: "default",
+    borderColor: "check.borderColor",
+    boxShadow: "radio",
     fill: "none",
     appearance: "none",
-
     "input:focus ~ &": {
       background: "transparent",
     },
@@ -123,7 +123,8 @@ width: '30px',
       width: "24px",
       height: "24px",
       cursor: "not-allowed",
-      border: "2px solid #C5C5C5",
+      border: "default",
+      borderColor: "check.borderDisabled",
       background: "check.backgroundDisabled",
     },
   },
@@ -134,7 +135,7 @@ width: '30px',
       width: "145px",
       height: "67px",
       backgroundColor: "badge.disabled",
-      boxShadow: "2px 4px 4px rgba(0, 0, 0, 0.25)",
+      boxShadow: "switch",
       borderRadius: "40px",
       display: "flex",
       alignItems: "center",
@@ -219,19 +220,12 @@ width: '30px',
         },
       },
     },
-    toggleSmallDayNightV2: {},
-  },
-  spinner: {
-    primary: {
-      box: {
-        background: `url("data:image/svg+xml;base64,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")
-        no-repeat, left center`,
-      },
-    },
   },
   colors,
   text,
   buttons,
   badges,
   cards,
+  shadows,
+  borders,
 };

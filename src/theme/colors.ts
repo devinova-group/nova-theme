@@ -1,7 +1,7 @@
 import { Theme } from "theme-ui";
 
-const test = {
-  primary: [
+const daisy = {
+  color: [
     "#ECE8F6",
     "#CFC6E8",
     "#B0A1DA",
@@ -13,25 +13,9 @@ const test = {
     "#3F319D",
     "#2B268D",
   ],
-}
-
-const colors: Theme["colors"] = {
-  config: {
-    initialColorModeName: "light",
-  },
-  primary: [
-    "#ECE8F6",
-    "#CFC6E8",
-    "#B0A1DA",
-    "#917BCC",
-    "#785EC0",
-    "#6044B5",
-    "#573FAF",
-    "#4A37A6",
-    "#3F319D",
-    "#2B268D",
-  ],
-  oath: [
+};
+const oath = {
+  color: [
     "#FFF4FF",
     "#FAF2FF",
     "#F5ECFE",
@@ -43,12 +27,32 @@ const colors: Theme["colors"] = {
     "#4A4458",
     "#292336",
   ],
-  
+};
+const noRep = {
+  second: "#4C3A80",
+  secondVariant: "#6E6893",
+  disabled: "#C5C5C5",
+  disabledV2: '#B4B4B4',
+  errorInput: "#700519",
+  black: "#000000",
+  white: "#FFFFFF",
+  darkPrimary: "#4C3A80",
+  darkSecond: '#7B4EFF',
+  badge: '#565555',
+  badgeBorder: '#5E4D8C',
+  badgeError: '#FFC34E',
+};
+
+const colors: Theme["colors"] = {
+  config: {
+    initialColorModeName: "light",
+  },
+
   default: {
-    primary: test.primary[9],
+    primary: daisy.color[5],
     primaryDisabled: "#BCB1DC",
-    second: "#4C3A80",
-    secondVariant: "#6E6893",
+    second: noRep.second,
+    secondVariant: noRep.secondVariant,
     textColor: "#08011C",
     textColorV2: "#585858",
     errors: "#C12945",
@@ -56,37 +60,49 @@ const colors: Theme["colors"] = {
     positive1: "#26962B",
     positive1Disabled: "#8AC18E",
     positive2: "#9AE79D",
-    black: "#000000",
-    white: "#FFFFFF",
-    errorInput: "#700519",
-  }, 
+    black: noRep.black,
+    white: noRep.white,
+    errorInput: noRep.errorInput,
+  },
   background: "#EDEBF1",
   text: {
-    primary: "#000000",
-    overline: "#A8A1B8",
-    titleCard: '#6044B5',
+    primary: noRep.black,
+    overline: oath.color[5],
+    titleCard: daisy.color[5],
   },
   badge: {
     inActive: "#F03738",
     active: "#3CC13B",
-    activeBg: 'transparent',
-    defaultBg: '#4C3A80',
+    selectedBg: noRep.white,
+    bg: noRep.second,
     error: "#CC9428",
-    disabled: "#B4B4B4",
+    disabled: noRep.disabledV2,
     primary: "#4B88CF",
-    secondary: '#C7BED7',
-    border: '#443F54',
-    
+    secondary: oath.color[4],
+    /* Border Unlist */
+    border: "#443F54",
+    inActiveBorder: "#EED9DF",
+    activeBorder: "#DAE6D9",
+    borderTwo: noRep.badgeBorder,
+    errorBorder: "#EAE3DD",
+    disabledBorder: "#E3E2E2",
+    primaryBorder: "#DBE1E8",
+    selectedBorder: "#D8F3D8",
   },
   check: {
+    borderColor: "#9D93B9",
     background: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMSIgeT0iMSIgd2lkdGg9IjIyIiBoZWlnaHQ9IjIyIiByeD0iMyIgZmlsbD0iIzRDM0E4MCIgc3Ryb2tlPSIjNEMzQTgwIiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0iTTE3LjkyMzMgNy42NDQ4M0MxNy4xODAxIDYuOTE3MDQgMTUuOTc4NSA2LjkyOTA4IDE1LjI1ODggNy42ODAxM1Y3LjY4MDEzTDExLjM3OTIgMTEuNTU5N0MxMC42MDg2IDEyLjMzMDQgOS4zNjI3NiAxMi4zNDIxIDguNTc3NzEgMTEuNTg2MUw4LjQ1NjY5IDExLjQ2OTZMOC40MjgyNyAxMS40NDEyQzcuNjkwNTMgMTAuNzAzNCA2LjQ5NDQyIDEwLjcwMzQgNS43NTY2OSAxMS40NDEyVjExLjQ0MTJDNS4wMTg5NSAxMi4xNzg5IDUuMDE4OTUgMTMuMzc1IDUuNzU2NjkgMTQuMTEyOEw1Ljc4NTExIDE0LjE0MTJMOC42MjcyMSAxNi45ODMzVjE2Ljk4MzNDOS4zNDQ3MSAxNy43MzIgMTAuNTM3NCAxNy43NDQ3IDExLjI3MDcgMTcuMDExNEwxMS4yOTg4IDE2Ljk4MzNMMTcuOTMwNCAxMC4zNTE3TDE3Ljk0NDcgMTAuMzM3NEMxOC42ODc5IDkuNTk0MTkgMTguNjc0NCA4LjM4MDIgMTcuOTIzMyA3LjY0NDgzVjcuNjQ0ODNaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K")
     no-repeat center center`,
     backgroundDisabled: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMSIgeT0iMSIgd2lkdGg9IjIyIiBoZWlnaHQ9IjIyIiByeD0iMyIgZmlsbD0iI0FBQUFBQSIgc3Ryb2tlPSIjQzVDNUM1IiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0iTTE3LjI4ODQgNy4wMjMxQzE2Ljg5MDggNi42MzM3NyAxNi4yNTE4IDYuNjQzOTMgMTUuODY2OCA3LjA0NTcxTDE1LjI1ODggNy42ODAxM0wxMC42ODUzIDEyLjI1MzZDMTAuMyAxMi42Mzg5IDkuNjc3MDkgMTIuNjQ0OCA5LjI4NDU3IDEyLjI2NjhMOC40NTY2OSAxMS40Njk2TDcuNzk5NTggMTAuODEyNUM3LjQwOTA2IDEwLjQyMiA2Ljc3NTg5IDEwLjQyMiA2LjM4NTM3IDEwLjgxMjVMNS4xMjgwMSAxMi4wNjk5QzQuNzM3NDggMTIuNDYwNCA0LjczNzQ4IDEzLjA5MzYgNS4xMjgwMSAxMy40ODQxTDUuNzg1MTEgMTQuMTQxMkw4LjYyNzIxIDE2Ljk4MzNMOS4yMjc4IDE3LjYxQzkuNjE1NjkgMTguMDE0NyAxMC4yNjA1IDE4LjAyMTYgMTAuNjU2OSAxNy42MjUyTDExLjI5ODggMTYuOTgzM0wxNy45MzA0IDEwLjM1MTdMMTguNTggOS43MDIwOUMxOC45NzM0IDkuMzA4NjUgMTguOTcwMSA4LjY2OTc0IDE4LjU3MjUgOC4yODA0N0wxNy4yODg0IDcuMDIzMVoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=")
     no-repeat center center`,
+    borderDisabled: noRep.disabled,
   },
   radio: {
-    borderColor: "#4c3a80",
-    disabled: "#C5C5C5",
+    borderColor: oath.color[6],
+    bg: "transparent",
+    clicked: noRep.second,
+    disabled: noRep.disabled,
+    disabledBorder: noRep.disabledV2,
     background: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iNyIgY3k9IjciIHI9IjciIGZpbGw9IiM0QzNBODAiLz4KPC9zdmc+Cg==")
     no-repeat center center`,
   },
@@ -94,14 +110,14 @@ const colors: Theme["colors"] = {
     background: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDBDNC41IDAgMyAxLjUgMyAxLjVWNy42MzVDMi43NzUgNy41NiAyLjUwNSA3LjUgMi4yNSA3LjVDMS4wMDUgNy41IDAgOC41MDUgMCA5Ljc1QzAgMTAuOTk1IDEuMDA1IDEyIDIuMjUgMTJDMy40OTUgMTIgNC41IDEwLjk5NSA0LjUgOS43NVYzLjc5NUM1LjU5NSAzLjQ1IDcuNDg1IDMuMTM1IDEwLjUgMy4wNDVWNi4xMzVDMTAuMjc1IDYuMDYgMTAuMDA1IDYgOS43NSA2QzguNTA1IDYgNy41IDcuMDA1IDcuNSA4LjI1QzcuNSA5LjQ5NSA4LjUwNSAxMC41IDkuNzUgMTAuNUMxMC45OTUgMTAuNSAxMiA5LjQ5NSAxMiA4LjI1VjBaIiBmaWxsPSIjNTg1ODU4Ii8+Cjwvc3ZnPgo=")
     no-repeat 16px center
     `,
-    /* Not found, only disabledBorder  */
     borderColorClick: "#ACA4C5",
     borderColor: "#D5D5D5",
     disabled: "#D3D2D3",
-    disabledBorder: "#C5C5C5",
+    disabledBorder: noRep.disabled,
     errorBorder: "#D16B7F",
     placeholder: "#A3A3A3",
     errorBackground: "#E6CED7",
+
     errorBg: `
     url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDBDNC41IDAgMyAxLjUgMyAxLjVWNy42MzVDMi43NzUgNy41NiAyLjUwNSA3LjUgMi4yNSA3LjVDMS4wMDUgNy41IDAgOC41MDUgMCA5Ljc1QzAgMTAuOTk1IDEuMDA1IDEyIDIuMjUgMTJDMy40OTUgMTIgNC41IDEwLjk5NSA0LjUgOS43NVYzLjc5NUM1LjU5NSAzLjQ1IDcuNDg1IDMuMTM1IDEwLjUgMy4wNDVWNi4xMzVDMTAuMjc1IDYuMDYgMTAuMDA1IDYgOS43NSA2QzguNTA1IDYgNy41IDcuMDA1IDcuNSA4LjI1QzcuNSA5LjQ5NSA4LjUwNSAxMC41IDkuNzUgMTAuNUMxMC45OTUgMTAuNSAxMiA5LjQ5NSAxMiA4LjI1VjBaIiBmaWxsPSIjNTg1ODU4Ii8+Cjwvc3ZnPgo=")
     no-repeat left 16px center, 
@@ -110,15 +126,21 @@ const colors: Theme["colors"] = {
     searchBg: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxMyAxMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUuMjU3NSAwLjAwNzVDNS4yNTI3IDAuMDEyMzAyMiA1LjI0NjEzIDAuMDE0OTk3MSA1LjIzOTMzIDAuMDE1MDEwN0MyLjM0OTIyIDAuMDIwNzg2IDAgMi4zNzM1NiAwIDUuMjY1QzAgOC4xNiAyLjM1NSAxMC41MTUgNS4yNSAxMC41MTVDNi4wMzgyNCAxMC41MTUgNi44MTQ1OCAxMC4zNDg0IDcuNDk0MjMgMTAuMDI1OEM3LjYzOTA0IDkuOTU3MSA3LjgxMTcyIDkuOTkyNTYgNy45MzUgMTAuMDk1VjEwLjA5NUw5LjQzNSAxMS41OTVDOS41NzM1MSAxMS43NTA5IDkuNzQyNCAxMS44NzY3IDkuOTMxMzMgMTEuOTY1QzEwLjEyMDIgMTIuMDUzMiAxMC4zMjUyIDEyLjEwMTggMTAuNTMzNiAxMi4xMDhDMTAuNzQyIDEyLjExNDEgMTAuOTQ5NSAxMi4wNzc2IDExLjE0MzMgMTIuMDAwNkMxMS4zMzcxIDExLjkyMzcgMTEuNTEzMSAxMS44MDc5IDExLjY2MDUgMTEuNjYwNUMxMS44MDc5IDExLjUxMzEgMTEuOTIzNyAxMS4zMzcxIDEyLjAwMDYgMTEuMTQzM0MxMi4wNzc2IDEwLjk0OTUgMTIuMTE0MSAxMC43NDIgMTIuMTA4IDEwLjUzMzZDMTIuMTAxOCAxMC4zMjUyIDEyLjA1MzIgMTAuMTIwMiAxMS45NjUgOS45MzEzM0MxMS44NzY3IDkuNzQyNCAxMS43NTA5IDkuNTczNTEgMTEuNTk1IDkuNDM1TDEwLjA5NSA3LjkzNVY3LjkzNUM5Ljk3MTQ2IDcuODExNDIgOS45MjEyMSA3LjYyMjE3IDkuOTk2ODcgNy40NjQ2NkMxMC4zMTg2IDYuNzk0ODggMTAuNTE1IDYuMDM5NzcgMTAuNTE1IDUuMjVDMTAuNTE1IDIuMzU4NTYgOC4xNjU3OCAwLjAwNTc4NTk4IDUuMjc1NjcgMS4wNjU1M2UtMDVDNS4yNjg4NyAtMi45MTU3NGUtMDYgNS4yNjIzIDAuMDAyNjk3ODMgNS4yNTc1IDAuMDA3NVYwLjAwNzVaTTUuMjQyNSAxLjUyMjVDNS4yNDczIDEuNTE3NyA1LjI1Mzg4IDEuNTE1IDUuMjYwNjcgMS41MTUwMUM3LjM0MDY4IDEuNTIwNjggOSAzLjE4MzU2IDkgNS4yNjVDOSA2LjI1NSA4LjY0IDcuMTcgOC4wMSA3Ljg0NUM3Ljk5NSA3Ljg2IDcuOTggNy44NzUgNy45NjUgNy44OUM3Ljg5NDE1IDcuOTQ4ODcgNy44Mjg4NyA4LjAxNDE1IDcuNzcgOC4wODVDNy4xMSA4LjY4NSA2LjIxIDkuMDMgNS4yMzUgOS4wM0MzLjE1IDkuMDMgMS40ODUgNy4zNjUgMS40ODUgNS4yOEMxLjQ4NSAzLjE5ODU2IDMuMTQ0MzIgMS41MzU2OCA1LjIyNDMzIDEuNTMwMDFDNS4yMzExMiAxLjUzIDUuMjM3NyAxLjUyNzMgNS4yNDI1IDEuNTIyNVYxLjUyMjVaIiBmaWxsPSIjNkI2Mjc4Ii8+Cjwvc3ZnPgo=")
           no-repeat 16px center
           `,
+    searchBorder: "#F5F3F6",
+    searchBackground: "#FCFBFC",
   },
-
+  shadow: {
+    default: "rgba(0, 0, 0, 0.25)",
+    field: "rgba(76, 58, 128, 0.25)",
+  },
+  border: {},
   modes: {
     dark: {
       default: {
-        primary: "#7B4EFF",
+        primary: noRep.darkPrimary,
         primaryDisabled: "#493683",
-        second: "#A8A1B8",
-        secondVariant: "#6E6893",
+        second: noRep.darkSecond,
+        secondVariant: noRep.secondVariant,
         textColor: "#08011C",
         textColorV2: "#585858",
         errors: "#C12945",
@@ -126,59 +148,67 @@ const colors: Theme["colors"] = {
         positive1: "#26962B",
         positive1Disabled: "#2B6035",
         positive2: "#9AE79D",
-        black: "#000000",
-        white: "#FFFFFF",
-        errorInput: "#700519",
+        black: noRep.black,
+        white: noRep.white,
+        errorInput: noRep.errorInput,
       },
-      background: "#2e2840",
-        text: {
-          primary: "#FFFFFF",
-          overline: "#F5ECFE",
-          titleCard: '#FFFFFF',
+      background: "#2F2A41",
+      text: {
+        primary: noRep.white,
+        overline: "#F5ECFE",
+        titleCard: noRep.white,
       },
-       badge: {
-    inActive: "#FF6768",
-    active: "#3CC13B",
-    activeBg: '#EAE9EC',
-    defaultBg: '#4C3A80',
-    error: "#FFC34E",
-    disabled: "#C2C9D1",
-    primary: "#B2C3FF",
-    secondary: '#4C3A80',
-    border: '#443F54',
+      badge: {
+        inActive: "#FF6768",
+        active: "#3CC13B",
+        selectedBg: "#EAE9EC",
+        bg: noRep.second,
+        error: noRep.badgeError,
+        disabled: "#C2C9D1",
+        primary: "#B2C3FF",
+        secondary: oath.color[4],
 
-  },
-      darkModePurple: {
-        highLight: "#2b6035",
-        purple: "#7B4EFF",
-        textButtonDisabled: "#ded8ee",
+        /* Border unlist double? */
+        border: "#443F54",
+        inActiveBorder: "#423E53",
+        activeBorder: "#4C6A54",
+        borderTwo: noRep.badgeBorder,
+        errorBorder: noRep.badgeError,
+        disabledBorder: noRep.badge,
+        primaryBorder: noRep.badge,
+        selectedBorder: "#ECECEC",
       },
       check: {
+        borderColor: "#9794A0",
         background: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzFfMTMpIj4KPHBhdGggZD0iTTIwIDFINEMyLjM0MzE1IDEgMSAyLjM0MzE1IDEgNFYyMEMxIDIxLjY1NjkgMi4zNDMxNSAyMyA0IDIzSDIwQzIxLjY1NjkgMjMgMjMgMjEuNjU2OSAyMyAyMFY0QzIzIDIuMzQzMTUgMjEuNjU2OSAxIDIwIDFaIiBmaWxsPSIjN0I0RUZGIiBzdHJva2U9IiM3QjRFRkYiIHN0cm9rZS13aWR0aD0iMiIvPgo8cGF0aCBkPSJNMTcuOTIzMyA3LjY0NDgzQzE3LjE4MDEgNi45MTcwNCAxNS45Nzg1IDYuOTI5MDggMTUuMjU4OCA3LjY4MDEzTDExLjM3OTIgMTEuNTU5N0MxMC42MDg2IDEyLjMzMDQgOS4zNjI3NiAxMi4zNDIxIDguNTc3NzEgMTEuNTg2MUw4LjQ1NjY5IDExLjQ2OTZMOC40MjgyNyAxMS40NDEyQzcuNjkwNTMgMTAuNzAzNCA2LjQ5NDQyIDEwLjcwMzQgNS43NTY2OSAxMS40NDEyQzUuMDE4OTUgMTIuMTc4OSA1LjAxODk1IDEzLjM3NSA1Ljc1NjY5IDE0LjExMjhMNS43ODUxMSAxNC4xNDEyTDguNjI3MjEgMTYuOTgzM0M5LjM0NDcxIDE3LjczMiAxMC41Mzc0IDE3Ljc0NDcgMTEuMjcwNyAxNy4wMTE0TDExLjI5ODggMTYuOTgzM0wxNy45MzA0IDEwLjM1MTdMMTcuOTQ0NyAxMC4zMzc0QzE4LjY4NzkgOS41OTQxOSAxOC42NzQ0IDguMzgwMiAxNy45MjMzIDcuNjQ0ODNaIiBmaWxsPSJ3aGl0ZSIvPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwXzFfMTMiPgo8cmVjdCB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9IndoaXRlIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg==")
             no-repeat center center`,
         backgroundDisabled: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMSIgeT0iMSIgd2lkdGg9IjIyIiBoZWlnaHQ9IjIyIiByeD0iMSIgZmlsbD0iI0M1QzVDNSIvPgo8cGF0aCBkPSJNMTguMzQ2MyA3LjUzNjM1QzE3LjU2NjUgNi44MDk1MiAxNi4zMDU3IDYuODIxNTQgMTUuNTUwNSA3LjU3MTZMMTEuNDc5OSAxMS40NDYxQzEwLjY3MTQgMTIuMjE1OCA5LjM2NDE5IDEyLjIyNzQgOC41NDA0OCAxMS40NzI0TDguNDEzNSAxMS4zNTYxTDguMzgzNjggMTEuMzI3N0M3LjYwOTYxIDEwLjU5MDkgNi4zNTQ2MSAxMC41OTA5IDUuNTgwNTUgMTEuMzI3N0M0LjgwNjQ4IDEyLjA2NDUgNC44MDY0OCAxMy4yNTkgNS41ODA1NSAxMy45OTU4TDUuNjEwMzcgMTQuMDI0Mkw4LjU5MjQyIDE2Ljg2MjZDOS4zNDUyNSAxNy42MTAzIDEwLjU5NjcgMTcuNjIzIDExLjM2NjEgMTYuODkwNkwxMS4zOTU2IDE2Ljg2MjZMMTguMzUzNyAxMC4yMzk3TDE4LjM2ODcgMTAuMjI1NEMxOS4xNDg1IDkuNDgzMTUgMTkuMTM0MyA4LjI3MDc2IDE4LjM0NjMgNy41MzYzNVoiIGZpbGw9IndoaXRlIi8+CjxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIyMiIgaGVpZ2h0PSIyMiIgcng9IjEiIHN0cm9rZT0iI0M1QzVDNSIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjwvc3ZnPgo=")
             no-repeat center center`,
+        borderDisabled: noRep.disabled,
       },
       radio: {
-        borderColor: "#7b4eff",
-        disabled: "#C5C5C5",
-        disabledBorder: "#B4B4B4",
+        borderColor: oath.color[4],
+        bg: oath.color[5],
+        clicked: noRep.darkSecond,
+        disabled: noRep.disabled,
+        disabledBorder: noRep.disabledV2,
         background: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTcgMTRDMTAuODY2IDE0IDE0IDEwLjg2NiAxNCA3QzE0IDMuMTM0MDEgMTAuODY2IDAgNyAwQzMuMTM0MDEgMCAwIDMuMTM0MDEgMCA3QzAgMTAuODY2IDMuMTM0MDEgMTQgNyAxNFoiIGZpbGw9IiM3QjRFRkYiLz4KPC9zdmc+Cg==")
             no-repeat center center`,
       },
-  
+
       field: {
         background: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDBDNC41IDAgMyAxLjUgMyAxLjVWNy42MzVDMi43NzUgNy41NiAyLjUwNSA3LjUgMi4yNSA3LjVDMS4wMDUgNy41IDAgOC41MDUgMCA5Ljc1QzAgMTAuOTk1IDEuMDA1IDEyIDIuMjUgMTJDMy40OTUgMTIgNC41IDEwLjk5NSA0LjUgOS43NVYzLjc5NUM1LjU5NSAzLjQ1IDcuNDg1IDMuMTM1IDEwLjUgMy4wNDVWNi4xMzVDMTAuMjc1IDYuMDYgMTAuMDA1IDYgOS43NSA2QzguNTA1IDYgNy41IDcuMDA1IDcuNSA4LjI1QzcuNSA5LjQ5NSA4LjUwNSAxMC41IDkuNzUgMTAuNUMxMC45OTUgMTAuNSAxMiA5LjQ5NSAxMiA4LjI1VjBaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K")
             no-repeat 16px center
             `,
-        backgroundColor: "#282437",
-        borderColor: "#332F41",
+        backgroundColor: "#282336",
+        borderColor: "#343041",
         borderColorClick: "#A689FF",
-        disabled: "#5F5B6C",
+        disabled: "#605B6C",
         disabledBorder: "#73717D",
         errorBorder: "#AD2944",
-        placeholder: '#FFFFFF', 
+        placeholder: noRep.white,
         errorBackground: "#5B2943",
+
         errorBg: `
             url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDBDNC41IDAgMyAxLjUgMyAxLjVWNy42MzVDMi43NzUgNy41NiAyLjUwNSA3LjUgMi4yNSA3LjVDMS4wMDUgNy41IDAgOC41MDUgMCA5Ljc1QzAgMTAuOTk1IDEuMDA1IDEyIDIuMjUgMTJDMy40OTUgMTIgNC41IDEwLjk5NSA0LjUgOS43NVYzLjc5NUM1LjU5NSAzLjQ1IDcuNDg1IDMuMTM1IDEwLjUgMy4wNDVWNi4xMzVDMTAuMjc1IDYuMDYgMTAuMDA1IDYgOS43NSA2QzguNTA1IDYgNy41IDcuMDA1IDcuNSA4LjI1QzcuNSA5LjQ5NSA4LjUwNSAxMC41IDkuNzUgMTAuNUMxMC45OTUgMTAuNSAxMiA5LjQ5NSAxMiA4LjI1VjBaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K")
                 no-repeat left 16px center, 
@@ -187,9 +217,16 @@ const colors: Theme["colors"] = {
         searchBg: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxMyAxMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUuMjU3NSAwLjAwNzVDNS4yNTI3IDAuMDEyMzAyMiA1LjI0NjEzIDAuMDE0OTk3MSA1LjIzOTMzIDAuMDE1MDEwN0MyLjM0OTIyIDAuMDIwNzg2IDAgMi4zNzM1NiAwIDUuMjY1QzAgOC4xNiAyLjM1NSAxMC41MTUgNS4yNSAxMC41MTVDNi4wMzgyNCAxMC41MTUgNi44MTQ1OCAxMC4zNDg0IDcuNDk0MjMgMTAuMDI1OEM3LjYzOTA0IDkuOTU3MSA3LjgxMTcyIDkuOTkyNTYgNy45MzUgMTAuMDk1VjEwLjA5NUw5LjQzNSAxMS41OTVDOS41NzM1MSAxMS43NTA5IDkuNzQyNCAxMS44NzY3IDkuOTMxMzMgMTEuOTY1QzEwLjEyMDIgMTIuMDUzMiAxMC4zMjUyIDEyLjEwMTggMTAuNTMzNiAxMi4xMDhDMTAuNzQyIDEyLjExNDEgMTAuOTQ5NSAxMi4wNzc2IDExLjE0MzMgMTIuMDAwNkMxMS4zMzcxIDExLjkyMzcgMTEuNTEzMSAxMS44MDc5IDExLjY2MDUgMTEuNjYwNUMxMS44MDc5IDExLjUxMzEgMTEuOTIzNyAxMS4zMzcxIDEyLjAwMDYgMTEuMTQzM0MxMi4wNzc2IDEwLjk0OTUgMTIuMTE0MSAxMC43NDIgMTIuMTA4IDEwLjUzMzZDMTIuMTAxOCAxMC4zMjUyIDEyLjA1MzIgMTAuMTIwMiAxMS45NjUgOS45MzEzM0MxMS44NzY3IDkuNzQyNCAxMS43NTA5IDkuNTczNTEgMTEuNTk1IDkuNDM1TDEwLjA5NSA3LjkzNVY3LjkzNUM5Ljk3MTQ2IDcuODExNDIgOS45MjEyMSA3LjYyMjE3IDkuOTk2ODcgNy40NjQ2NkMxMC4zMTg2IDYuNzk0ODggMTAuNTE1IDYuMDM5NzcgMTAuNTE1IDUuMjVDMTAuNTE1IDIuMzU4NTYgOC4xNjU3OCAwLjAwNTc4NTk4IDUuMjc1NjcgMS4wNjU1M2UtMDVDNS4yNjg4NyAtMi45MTU3NGUtMDYgNS4yNjIzIDAuMDAyNjk3ODMgNS4yNTc1IDAuMDA3NVYwLjAwNzVaTTUuMjQyNSAxLjUyMjVDNS4yNDczIDEuNTE3NyA1LjI1Mzg4IDEuNTE1IDUuMjYwNjcgMS41MTUwMUM3LjM0MDY4IDEuNTIwNjggOSAzLjE4MzU2IDkgNS4yNjVDOSA2LjI1NSA4LjY0IDcuMTcgOC4wMSA3Ljg0NUM3Ljk5NSA3Ljg2IDcuOTggNy44NzUgNy45NjUgNy44OUM3Ljg5NDE1IDcuOTQ4ODcgNy44Mjg4NyA4LjAxNDE1IDcuNzcgOC4wODVDNy4xMSA4LjY4NSA2LjIxIDkuMDMgNS4yMzUgOS4wM0MzLjE1IDkuMDMgMS40ODUgNy4zNjUgMS40ODUgNS4yOEMxLjQ4NSAzLjE5ODU2IDMuMTQ0MzIgMS41MzU2OCA1LjIyNDMzIDEuNTMwMDFDNS4yMzExMiAxLjUzIDUuMjM3NyAxLjUyNzMgNS4yNDI1IDEuNTIyNVYxLjUyMjVaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K")
             no-repeat 16px center
             `,
+        searchBorder: "#595661",
+        searchBackground: "#43404C",
       },
-      }
-},
+      shadow: {
+        default: "rgba(0, 0, 0, 0.25)",
+        field: "rgba(0, 0, 0, 0.25)",
+      },
+      /* border: {}, */
+    },
+  },
 };
 
 export default colors;

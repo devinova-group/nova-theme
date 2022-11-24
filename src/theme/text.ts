@@ -66,7 +66,7 @@ const text: Theme["text"] = {
     },
     quicksand: {
       variant: "text.heading.quicksand",
-      color: 'text.titleCard',
+      color: "text.titleCard",
       fontWeight: "heading.1",
       fontSize: 6,
       letterSpacing: 3,
@@ -91,7 +91,6 @@ const text: Theme["text"] = {
   /* heading */
   heading: {
     neucha: {
-
       fontFamily: "heading.0",
       fontWeight: "heading.0",
     },
@@ -202,7 +201,7 @@ const text: Theme["text"] = {
       letterSpacing: 0,
     },
     quicksand: {
-      color: 'text.primary',
+      color: "text.primary",
       fontFamily: "body.1",
       fontWeight: "body.2",
       fontSize: 2,
@@ -230,7 +229,7 @@ const text: Theme["text"] = {
       fontWeight: "body.2",
       fontSize: 1,
       letterSpacing: 3,
-    },    
+    },
     quicksand: {
       fontFamily: "body.1",
       fontWeight: "body.3",
