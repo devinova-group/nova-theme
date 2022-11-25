@@ -1,6 +1,7 @@
 /** @jsxImportSource theme-ui */
 import './App.css';
 import { Card, Image, Badge , useColorMode, Button, Box, Text, Label, Switch, Checkbox, Radio, Field  } from 'theme-ui'
+import CardTest from './components/CardTest';
 
 
 
@@ -18,6 +19,7 @@ function App() {
 
       <Button variant='learnMore'>Learn More</Button>
       </Card>
+      <CardTest/>
       </div>
       <div>
         <button onClick={(e) => {
