@@ -33,11 +33,20 @@ const cards: Theme["cards"] = {
     variant: "cards.primary",
     height: "none",
     padding: 0,
-    span: {},
-    button: {
-      marginLeft: 0,
-      marginTop: 5,
+    "div.arrowDown": {
+      width: "25px",
+      height: "20px",
+      backgroundColor: "black",
+      background: "card.arrowDown",
+      marginTop: 0,
     },
+    "div.arrowUp": {
+      width: "25px",
+      height: "30px",
+      background: "card.arrowUp",
+      marginTop: 0,
+    },
+    span: {},
   },
   short: {
     variant: "cards.primary",
