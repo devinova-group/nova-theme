@@ -1,12 +1,11 @@
 import React from "react";
-import { flex } from "styled-system";
 import { Text, Image, Box } from "theme-ui";
 import {
   HeaderProps,
   TextProps,
   HeadingProps,
-  ArrowProps,
   BodyProps,
+  FooterProps,
 } from "..//interfaces/models";
 
 const Header = ({ children }: HeaderProps) => <>{children}</>;
@@ -93,36 +92,14 @@ const Body = ({ children, hideArrow, onClick }: BodyProps) => (
   </Box>
 );
 
-const Footer = () => (
-  <Box
-    sx={{
-      display: "grid",
-      gridTemplateColumns: "1fr 3fr",
-      gridGap: 4,
-      alignItems: "center",
-      marginLeft: 8,
-      marginTop: 8,
-      marginBottom: 10,
-    }}
-  >
-    <Box
-      sx={{
-        width: "25px",
-        height: "20px",
-        background: "card.email",
-        marginTop: 2,
-      }}
-    />
-    <Text variant="caption.quicksand">figma@devinova.se</Text>
-    <Box
-      sx={{
-        width: "25px",
-        height: "30px",
-        background: "card.phone",
-        marginTop: 2,
-      }}
-    />
-    <Text variant="caption.quicksand">+46 77 123 45 67</Text>
+const Footer = ({children}: FooterProps) => (
+    <Box sx={{
+      margin: 8,
+    svg:{
+      fill: 'text.primary',
+    }
+  }}>
+    {children}
   </Box>
 );
 const Cards = { Img, Header, Body, Overline, Heading, Footer };

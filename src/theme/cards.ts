@@ -46,6 +46,7 @@ const cards: Theme["cards"] = {
       marginTop: 0,
     }, */
     span: {},
+    img: {},
   },
   short: {
     variant: "cards.primary",

@@ -10,12 +10,16 @@ export interface HeadingProps {
   children: string;
   variant?: string;
 }
-export interface ArrowProps {
-  children: string;
-}
 export interface BodyProps {
   children: string;
   hideArrow: boolean;
   onClick: () => void;
+}
+
+export interface FooterProps {
+  children: React.ReactNode;
+
+
+  
 }
 
