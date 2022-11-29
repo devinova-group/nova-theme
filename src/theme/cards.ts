@@ -33,10 +33,9 @@ const cards: Theme["cards"] = {
     variant: "cards.primary",
     height: "none",
     padding: 0,
-    "div.arrowDown": {
+    /* "div.arrowDown": {
       width: "25px",
       height: "20px",
-      backgroundColor: "black",
       background: "card.arrowDown",
       marginTop: 0,
     },
@@ -45,7 +44,7 @@ const cards: Theme["cards"] = {
       height: "30px",
       background: "card.arrowUp",
       marginTop: 0,
-    },
+    }, */
     span: {},
   },
   short: {

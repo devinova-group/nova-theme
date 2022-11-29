@@ -7,10 +7,8 @@ export interface TextProps {
   variant?: string;
 }
 export interface HeadingProps {
-  hideArrow: boolean;
   children: string;
   variant?: string;
-  onClick: () => void;
 }
 export interface ArrowProps {
   children: string;
@@ -20,3 +18,4 @@ export interface BodyProps {
   hideArrow: boolean;
   onClick: () => void;
 }
+
