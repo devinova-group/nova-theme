@@ -96,7 +96,7 @@ const Footer = ({children}: FooterProps) => (
     <Box sx={{
       margin: 8,
     svg:{
-      fill: 'text.primary',
+      fill: 'card.icon',
     }
   }}>
     {children}

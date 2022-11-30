@@ -1,4 +1,3 @@
-import { grid } from "styled-system";
 import { Theme } from "theme-ui";
 
 const cards: Theme["cards"] = {
@@ -48,17 +47,42 @@ const cards: Theme["cards"] = {
     span: {},
     img: {},
   },
-  short: {
-    variant: "cards.primary",
-    height: "675px",
-  },
+  
   noImgnoBtn: {
+    variant: "cards.primary",
+    height: "",
+    div: {
+      width: '90%',
+      display: "flex",
+      flexDirection: "column",
+      padding: 8,
+    },
+    span: {
+      marginTop: 2,
+       marginBottom: 2,
+    },
     img: {
       display: "none",
     },
-    height: "300px",
   },
-  noImg: {},
+  noImg: {
+    variant: "cards.primary",
+    height: "",
+    div: {
+      width: '90%',
+      display: "flex",
+      flexDirection: "column",
+      padding: 8,
+    },
+    span: {
+      marginTop: 4,
+       marginBottom: 2,
+    },
+    img: {
+      display: "none",
+    },
+    button: { marginTop: 4 },
+  },
 };
 
 export default cards;
