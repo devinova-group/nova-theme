@@ -1,4 +1,6 @@
-import { Switch, Box} from 'theme-ui'
+import React from "react"
+
+import { Switch} from 'theme-ui'
 
 function Switchs() {
   return (

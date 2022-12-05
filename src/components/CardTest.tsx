@@ -1,8 +1,10 @@
-import React, { useState } from "react";
-import { Card, Image, Box, Text } from "theme-ui";
+import React, { Component } from 'react';
+
+import { useState } from "react";
+import { Card, Box, Text } from "theme-ui";
 import Cards from "./Cards";
-import { ReactComponent as Phone } from "../icons/Phone.svg";
-import { ReactComponent as Email } from "../icons/Email.svg";
+import Phone  from "../icons/Phone.svg";
+import Email  from "../icons/Email.svg";
 
 function CardTest() {
   const [clicked, setClick] = useState(true);

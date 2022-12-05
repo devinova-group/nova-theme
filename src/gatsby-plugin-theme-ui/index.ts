@@ -1,3 +1,4 @@
+
 import colors from "./colors";
 import text from "./text";
 import buttons from "./buttons";
@@ -9,8 +10,11 @@ import switchs from "./switchs";
 import field from "./field";
 import radio from "./radio";
 import checkbox from "./checkbox";
+import links from "./links";
+import grids from "./grids";
 
-export const theme = {
+const theme = {
+   breakpoints: ['40em', '52em', '64em'],
   space: [
     0, 2, 4, 8, 12, 14, 16, 18, 21, 24, 28, 32, 36, 40, 42, 46, 48, 52, 56, 60,
     64, 72, 78, 80,
@@ -30,10 +34,6 @@ export const theme = {
 
   letterSpacings: [1, 2, 2.5, 3, 3.5],
 
-  /* LABEL TEST! */
-  label: {
-    width: "30px",
-  },
   colors,
   text,
   buttons,
@@ -44,5 +44,8 @@ export const theme = {
   switchs,
   field,
   radio,
-  checkbox
+  checkbox,
+  links,
+  grids
 };
+export default theme

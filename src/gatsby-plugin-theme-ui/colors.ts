@@ -1,17 +1,20 @@
 import { Theme } from "theme-ui";
 
-import moonBig from './svg/moonBig.svg'
-import backgroundV2Big from './svg/backgroundV2Big.svg'
-import backgroundV1BigMoon from './svg/backgroundV1BigMoon.svg'
-import backgroundV1BigSun from './svg/backgroundV1BigSun.svg'
-import backgroundV1SmallMoon from './svg/backgroundV1SmallMoon.svg'
-import backgroundV1SmallSun from './svg/backgroundV1SmallSun.svg'
-import backgroundV2BigLight from './svg/backgroundV2BigLight.svg'
-import backgroundV2BigSun from './svg/backgroundV2BigSun.svg'
-import bgV2SmallDark from './svg/bgV2SmallDark.svg'
-import moonSmall from './svg/moonSmall.svg'
-import bgV2SmallLight from './svg/bgV2SmallLight.svg'
-import bgV2SmallSun from './svg/bgV2SmallSun.svg'
+import moonBig from '../static/svg/moonBig.svg'
+import backgroundV2Big from '../static/svg/backgroundV2Big.svg'
+import backgroundV1BigMoon from '../static/svg/backgroundV1BigMoon.svg'
+import backgroundV1BigSun from '../static/svg/backgroundV1BigSun.svg'
+import backgroundV1SmallMoon from '../static/svg/backgroundV1SmallMoon.svg'
+import backgroundV1SmallSun from '../static/svg/backgroundV1SmallSun.svg'
+import backgroundV2BigLight from '../static/svg/backgroundV2BigLight.svg'
+import backgroundV2BigSun from '../static/svg/backgroundV2BigSun.svg'
+import bgV2SmallDark from '../static/svg/bgV2SmallDark.svg'
+import moonSmall from '../static/svg/moonSmall.svg'
+import bgV2SmallLight from '../static/svg/bgV2SmallLight.svg'
+import bgV2SmallSun from '../static/svg/bgV2SmallSun.svg'
+import logoBlack from '../static/logoBlack.png'
+import logoWhite from '../static/logoWhite.png'
+
 const daisy = {
   color: [
     "#ECE8F6",
@@ -75,6 +78,7 @@ const colors: Theme["colors"] = {
     black: noRep.black,
     white: noRep.white,
     errorInput: noRep.errorInput,
+    headerImg: `url(${logoBlack})`,
   },
   background: "#EDEBF1",
   text: {
@@ -164,10 +168,14 @@ const colors: Theme["colors"] = {
     bgV2BigLight: `url(${backgroundV2BigLight})`,
     bgV2BigSun: `url(${backgroundV2BigSun})`,
     bgV2SmallDark: `url(${bgV2SmallDark})`,	
-    bgV2MoonSmall: `url(${moonSmall})`,
     bgV2SmallLight: `url(${bgV2SmallLight})`,
-    bgV2SmallSun: `url(${bgV2SmallSun})`,
-  }, 
+    bgV2SmallSun: `url(${bgV2SmallSun})`, 
+    bgV2MoonSmall: `url(${moonSmall})`,
+  },  
+  
+  link: {
+      test: '#000',
+  },
   modes: {
     dark: {
       default: {
@@ -185,6 +193,8 @@ const colors: Theme["colors"] = {
         black: noRep.black,
         white: noRep.white,
         errorInput: noRep.errorInput,
+        headerImg: `url(${logoWhite})`,
+
       },
       background: "#2F2A41",
       text: {
@@ -260,7 +270,7 @@ const colors: Theme["colors"] = {
       },
       /* border: {}, */
       card: {
-        backgroundColor: "#6B6278CC",
+        backgroundColor: "rgba(107, 98, 120, 0.8)",
         arrowUp: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDE0IDkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xMC42Njc5IDguNTQyODlDMTEuMDU4NCA4LjkzMzQyIDExLjY5MTYgOC45MzM0MiAxMi4wODIxIDguNTQyODlMMTMuMjkyOSA3LjMzMjExQzEzLjY4MzQgNi45NDE1OCAxMy42ODM0IDYuMzA4NDIgMTMuMjkyOSA1LjkxNzg5TDcuNzA3MTEgMC4zMzIxMDZDNy4zMTY1OCAtMC4wNTg0MTg4IDYuNjgzNDIgLTAuMDU4NDE4MSA2LjI5Mjg5IDAuMzMyMTA2TDAuNzA3MTA2IDUuOTE3ODlDMC4zMTY1ODIgNi4zMDg0MiAwLjMxNjU4MyA2Ljk0MTU4IDAuNzA3MTA3IDcuMzMyMTFMMS45MTc4OSA4LjU0Mjg5QzIuMzA4NDIgOC45MzM0MiAyLjk0MTU4IDguOTMzNDIgMy4zMzIxMSA4LjU0Mjg5TDYuMjkyODkgNS41ODIxMUM2LjY4MzQyIDUuMTkxNTggNy4zMTY1OCA1LjE5MTU4IDcuNzA3MTEgNS41ODIxMUwxMC42Njc5IDguNTQyODlaIiBmaWxsPSIjRkZGNEZGIi8+Cjwvc3ZnPgo=")
         no-repeat center center`,
         arrowDown: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDE0IDkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0zLjMzMjExIDAuNDU3MTA3QzIuOTQxNTggMC4wNjY1ODMxIDIuMzA4NDIgMC4wNjY1ODI1IDEuOTE3ODkgMC40NTcxMDdMMC43MDcxMDcgMS42Njc4OUMwLjMxNjU4MyAyLjA1ODQyIDAuMzE2NTgzIDIuNjkxNTggMC43MDcxMDcgMy4wODIxMUw2LjI5Mjg5IDguNjY3ODlDNi42ODM0MiA5LjA1ODQyIDcuMzE2NTggOS4wNTg0MiA3LjcwNzExIDguNjY3ODlMMTMuMjkyOSAzLjA4MjExQzEzLjY4MzQgMi42OTE1OCAxMy42ODM0IDIuMDU4NDIgMTMuMjkyOSAxLjY2Nzg5TDEyLjA4MjEgMC40NTcxMDdDMTEuNjkxNiAwLjA2NjU4MjUgMTEuMDU4NCAwLjA2NjU4MjQgMTAuNjY3OSAwLjQ1NzEwN0w3LjcwNzExIDMuNDE3ODlDNy4zMTY1OCAzLjgwODQyIDYuNjgzNDIgMy44MDg0MiA2LjI5Mjg5IDMuNDE3ODlMMy4zMzIxMSAwLjQ1NzEwN1oiIGZpbGw9IiNGRkY0RkYiLz4KPC9zdmc+Cg==")
@@ -275,7 +285,14 @@ const colors: Theme["colors"] = {
         bgV2BigDark: `url(${backgroundV2Big})`,
         bgV2BigMoon: `url(${moonBig})`,
         bgV2BigLight: `url(${backgroundV2BigLight})`,
-        bgV2BigSun: `url(${backgroundV2BigSun}`,
+        bgV2BigSun: `url(${backgroundV2BigSun})`,
+        bgV2SmallDark: `url(${bgV2SmallDark})`,	
+        bgV2SmallLight: `url(${bgV2SmallLight})`,
+        bgV2SmallSun: `url(${bgV2SmallSun})`, 
+        bgV2MoonSmall: `url(${moonSmall})`,
+      }, 
+      link: {
+          test: '#FFF',
       },
     },
   },

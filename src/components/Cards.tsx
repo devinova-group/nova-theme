@@ -1,4 +1,5 @@
-import React from "react";
+import React from "react"
+
 import { Text, Image, Box } from "theme-ui";
 import {
   HeaderProps,
@@ -6,7 +7,7 @@ import {
   HeadingProps,
   BodyProps,
   FooterProps,
-} from "..//interfaces/models";
+} from "../interfaces/models";
 
 const Header = ({ children }: HeaderProps) => <>{children}</>;
 

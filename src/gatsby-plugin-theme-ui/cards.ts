@@ -45,21 +45,23 @@ const cards: Theme["cards"] = {
       marginTop: 0,
     }, */
     span: {},
-    img: {},
+    img: {
+      borderRadius: "20px 20px 0px 0px",
+    },
   },
-  
+
   noImgnoBtn: {
     variant: "cards.primary",
     height: "",
     div: {
-      width: '90%',
+      width: "90%",
       display: "flex",
       flexDirection: "column",
       padding: 8,
     },
     span: {
       marginTop: 2,
-       marginBottom: 2,
+      marginBottom: 2,
     },
     img: {
       display: "none",
@@ -69,14 +71,14 @@ const cards: Theme["cards"] = {
     variant: "cards.primary",
     height: "",
     div: {
-      width: '90%',
+      width: "90%",
       display: "flex",
       flexDirection: "column",
       padding: 8,
     },
     span: {
       marginTop: 4,
-       marginBottom: 2,
+      marginBottom: 2,
     },
     img: {
       display: "none",
