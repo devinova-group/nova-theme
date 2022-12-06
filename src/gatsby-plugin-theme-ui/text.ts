@@ -66,7 +66,6 @@ const text: Theme["text"] = {
     },
     quicksand: {
       variant: "text.heading.quicksand",
-      color: "text.titleCard",
       fontWeight: "heading.1",
       fontSize: 6,
       letterSpacing: 3,
@@ -201,7 +200,6 @@ const text: Theme["text"] = {
       letterSpacing: 0,
     },
     quicksand: {
-      color: "text.primary",
       fontFamily: "body.1",
       fontWeight: "body.2",
       fontSize: 2,
@@ -224,7 +222,6 @@ const text: Theme["text"] = {
   },
   overline: {
     notoSans: {
-      color: "text.overline",
       fontFamily: "body.0",
       fontWeight: "body.2",
       fontSize: 1,

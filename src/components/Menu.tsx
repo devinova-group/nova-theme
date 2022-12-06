@@ -6,14 +6,14 @@ function Menu() {
     <>
       <Box
         sx={{
-          position: "absolute",
+          position: 'fixed',
           display: "grid",
           gridTemplateColumns: "10% 15% 73%",
           bottom: 0,
           left: 0,
           width: "100%",
           height: "100%",
-          backgroundColor: "black",
+          backgroundColor: "background",
           zIndex: 1,
         }}
       >
@@ -28,7 +28,7 @@ function Menu() {
         >
           <Link
             variant="links.nav"
-            sx={{ color: "white", fontSize: "40px", fontWeight: "bold" }}
+            sx={{color: "default.black", fontSize: "40px", fontWeight: "bold" }}
             href="/about"
           >
             People
@@ -48,7 +48,7 @@ function Menu() {
           <Text
             variant="h5.notoSans"
             sx={{
-              color: "white",
+              color: "default.black",
               fontSize: "21px",
               fontWeight: "bold",
               marginTop: 12,
@@ -58,7 +58,7 @@ function Menu() {
           </Text>
           <Link
             variant="links.nav"
-            sx={{ color: "white", fontSize: "17px" }}
+            sx={{ color: "default.black", fontSize: "17px" }}
             href="/about"
           >
             Log in
@@ -67,7 +67,7 @@ function Menu() {
           <Text
             variant="h5.notoSans"
             sx={{
-              color: "white",
+              color: "default.black",
               fontSize: "21px",
               fontWeight: "bold",
               marginTop: 12,
@@ -77,7 +77,7 @@ function Menu() {
           </Text>
           <Link
             variant="links.nav"
-            sx={{ color: "white", fontSize: "17px" }}
+            sx={{ color: "default.black", fontSize: "17px" }}
             href="/about"
           >
             Log in to Connect
@@ -86,7 +86,7 @@ function Menu() {
           <Text
             variant="h5.notoSans"
             sx={{
-              color: "white",
+              color: "default.black",
               fontSize: "21px",
               fontWeight: "bold",
               marginTop: 12,
@@ -96,7 +96,7 @@ function Menu() {
           </Text>
           <Link
             variant="links.nav"
-            sx={{ color: "white", fontSize: "17px", width: "" }}
+            sx={{ color: "default.black", fontSize: "17px", width: "" }}
             href="/about"
           >
             devinova.se

@@ -12,7 +12,7 @@ import radio from "./radio";
 import checkbox from "./checkbox";
 import links from "./links";
 import grids from "./grids";
-
+import flex from "./flex";
 const theme = {
    breakpoints: ['40em', '52em', '64em'],
   space: [
@@ -46,6 +46,7 @@ const theme = {
   radio,
   checkbox,
   links,
-  grids
+  grids,
+  flex
 };
 export default theme

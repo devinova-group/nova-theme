@@ -12,6 +12,7 @@ export default function Navbar() {
   return (
   <>
     <nav style={{
+      width: '95%',
       display: 'flex',
       justifyContent: 'space-between',
     }}>
@@ -25,17 +26,20 @@ export default function Navbar() {
         backgroundRepeat: 'no-repeat',
         backgroundSize: '200px'    
     }}/>
-    <Link variant="links.nav" href="/about">GRID TEST</Link>
+     <Box>
+       <Link variant="links.nav" href="/about">GRID TEST</Link>
+          <Switch variant="switchs.toggleV2Small" onClick={() => {
+  setColorMode(colorMode === 'default' ? 'dark' : 'default')
+}} ></Switch> 
+        </Box>
     </>}
     {click && <>
     <Menu/>
-    <Link variant="links.nav" sx={{cursor: 'pointer', color: 'white', marginTop: 0, zIndex: 1, position: 'absolute'}} onClick={() => handleClick()}>X CARRER MENU</Link>
+    <Link variant="links.nav" sx={{cursor: 'pointer', color: 'default.black', marginTop: 0, zIndex: 1, position: 'absolute'}} onClick={() => handleClick()}>X CARRER MENU</Link>
     </> }
-        
+       
     </nav>
-    <Switch variant="switchs.toggleV2Small" onClick={() => {
-  setColorMode(colorMode === 'default' ? 'dark' : 'default')
-}} ></Switch> 
+
           </>
   )
 }

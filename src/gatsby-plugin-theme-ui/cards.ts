@@ -3,7 +3,7 @@ import { Theme } from "theme-ui";
 const cards: Theme["cards"] = {
   primary: {
     width: "353px",
-    height: "642px",
+    height: "500px",
     display: "flex",
     flexDirection: "column",
     gap: "10px",
