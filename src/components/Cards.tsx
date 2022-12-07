@@ -1,108 +1,79 @@
-import React from "react"
+import React from 'react'
+import { Card, Grid, Image, Text } from 'theme-ui'
 
-import { Text, Image, Box } from "theme-ui";
-import {
-  HeaderProps,
-  TextProps,
-  HeadingProps,
-  BodyProps,
-  FooterProps,
-} from "../interfaces/models";
-
-const Header = ({ children }: HeaderProps) => <>{children}</>;
-
-const Img = ({ src }: any) => <Image src={src} />;
-
-const Overline = ({ children }: TextProps) => (
-  <Text variant="overline.notoSans" sx={{ marginLeft: 8 }}>
-    {children}
-  </Text>
-);
-
-const Heading = ({ children }: HeadingProps) => (
-  <Text variant="h5.quicksand" sx={{ fontWeight: 700, marginLeft: 8 }}>
-    {children}
-  </Text>
-);
-
-const Body = ({ children, hideArrow, onClick }: BodyProps) => (
-  <Box
-    sx={{
-      position: "relative",
-      display: "flex",
-      justifyContent: "space-between",
-      width: "90%",
-      marginLeft: 8,
-    }}
-  >
-    {" "}
-    {hideArrow && (
-      <Box
-        sx={{
-          width: "80%",
-          textOverflow: "ellipsis",
-          overflow: "hidden",
-          whiteSpace: "nowrap",
-        }}
+function Cards() {
+  return (
+    <Grid variant='cards'>
+    <Card variant="primary">
+      <Image src="https://images.pexels.com/photos/40815/youth-active-jump-happy-40815.jpeg?cs=srgb&dl=pexels-jill-wellington-40815.jpg&fm=jpg" />
+      <Text variant="overline.quicksand" sx={{ color: "text.overline" }}>
+        Lorem lorem
+      </Text>
+      <Text variant="h5.quicksand" sx={{ color: "text.titleCard" }}>
+        Fun First
+      </Text>
+      <Text
+        variant="body2.notoSans"
+        sx={{ color: "default.black", marginBottom: "20px" }}
       >
-        <Text variant="caption.quicksand" sx={{ lineHeight: "26.4px" }}>
-          {children}
-        </Text>
-      </Box>
-    )}
-    {!hideArrow && (
-      <Box
-        sx={{
-          width: "90%",
-          overflow: "unset",
-          whiteSpace: "break-spaces",
-        }}
+        Enjoy what you do. Life is too short to be stuck at a boring job.
+      </Text>
+    </Card>
+    <Card variant="primary">
+      <Image src="https://images.squarespace-cdn.com/content/v1/578a53c39f745617d626a2c4/1481055835843-AVFSDQ65LHT5I9Y3QPOC/image-asset.png" />
+      <Text variant="overline.quicksand" sx={{ color: "text.overline" }}>
+        Lorem lorem
+      </Text>
+      <Text variant="h5.quicksand" sx={{ color: "text.titleCard" }}>
+        Learning and growth
+      </Text>
+      <Text
+        variant="body2.notoSans"
+        sx={{ color: "default.black", marginBottom: "20px" }}
       >
-        <Text variant="caption.quicksand" sx={{ lineHeight: "26.4px" }}>
-          {children}
-        </Text>
-      </Box>
-    )}
-    {hideArrow && (
-      <Box
-        onClick={onClick}
-        /* className="arrowDown" */
-        sx={{
-          width: "25px",
-          height: "20px",
-          background: "card.arrowDown",
-          marginTop: 0,
-        }}
-      ></Box>
-    )}
-    {!hideArrow && (
-      <Box
-        onClick={onClick}
-        /*  className="arrowUp" */
-        sx={{
-          background: "card.arrowUp",
-          position: "absolute",
-          right: 0,
-          top: "50%",
-          width: "25px",
-          height: "30px",
-          marginTop: 0,
-        }}
-      ></Box>
-    )}
-  </Box>
-);
+        As lifelong mentors and mentees, we take every chance to stretch
+        ourselves and each other. However you see your career shaping,
+        we’re here to help you make it happen.
+      </Text>
+    </Card>
+    <Card variant="primary">
+      <Image src="https://miro.medium.com/max/444/1*_3HSn_EqxIcNvb-SgfjFCg.jpeg" />
+      <Text variant="overline.quicksand" sx={{ color: "text.overline" }}>
+        Lorem lorem
+      </Text>
+      <Text variant="h5.quicksand" sx={{ color: "text.titleCard" }}>
+        Culture of involment
+      </Text>
+      <Text
+        variant="body2.notoSans"
+        sx={{ color: "default.black", marginBottom: "20px" }}
+      >
+        We’re not defined by our job titles but by the impact we make.
+        Everyone is encouraged and expected to step up, speak up, and
+        contribute in ways that make the whole company, our clients, and
+        our communities better.
+      </Text>
+    </Card>
+    <Card variant="primary">
+      <Image src="https://gorgeousgael.files.wordpress.com/2015/01/stand1.jpg" />
+      <Text variant="overline.quicksand" sx={{ color: "text.overline" }}>
+        Lorem lorem
+      </Text>
+      <Text variant="h5.quicksand" sx={{ color: "text.titleCard" }}>
+        Room for life
+      </Text>
+      <Text
+        variant="body2.notoSans"
+        sx={{ color: "default.black", marginBottom: "20px" }}
+      >
+        We all do better when we all do better. On and off the clock,
+        quality of life is something we never take lightly. Our benefits
+        and perks allow for flexibility and healthy wellbeing so that you
+        can enjoy your best life.
+      </Text>
+    </Card>
+  </Grid>
+  )
+}
 
-const Footer = ({children}: FooterProps) => (
-    <Box sx={{
-      margin: 8,
-    svg:{
-      fill: 'card.icon',
-    }
-  }}>
-    {children}
-  </Box>
-);
-const Cards = { Img, Header, Body, Overline, Heading, Footer };
-
-export default Cards;
+export default Cards

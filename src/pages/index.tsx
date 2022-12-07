@@ -2,7 +2,10 @@ import * as React from "react";
 import { Link } from "gatsby";
 import { Text, Image, Button, Box, Card, Grid, Flex } from "theme-ui";
 import Navbar from "../components/Navbar";
-import maps from "../images/maps.png";
+import Cards from "../components/Cards";
+import GlassTest from "../components/GlassTest";
+import Contact from "../components/Contact";
+import Gallery from "../components/Gallery";
 
 export default function Home() {
   return (
@@ -45,79 +48,9 @@ export default function Home() {
         <Text variant="h4.quicksand" sx={{ margin: "60px 0px" }}>
           Life at Devinova
         </Text>
-        <Grid variant='cards'>
-          <Card variant="primary">
-            <Image src="https://images.pexels.com/photos/40815/youth-active-jump-happy-40815.jpeg?cs=srgb&dl=pexels-jill-wellington-40815.jpg&fm=jpg" />
-            <Text variant="overline.quicksand" sx={{ color: "text.overline" }}>
-              Lorem lorem
-            </Text>
-            <Text variant="h5.quicksand" sx={{ color: "text.titleCard" }}>
-              Fun First
-            </Text>
-            <Text
-              variant="body2.notoSans"
-              sx={{ color: "default.black", marginBottom: "20px" }}
-            >
-              Enjoy what you do. Life is too short to be stuck at a boring job.
-            </Text>
-          </Card>
-          <Card variant="primary">
-            <Image src="https://images.squarespace-cdn.com/content/v1/578a53c39f745617d626a2c4/1481055835843-AVFSDQ65LHT5I9Y3QPOC/image-asset.png" />
-            <Text variant="overline.quicksand" sx={{ color: "text.overline" }}>
-              Lorem lorem
-            </Text>
-            <Text variant="h5.quicksand" sx={{ color: "text.titleCard" }}>
-              Learning and growth
-            </Text>
-            <Text
-              variant="body2.notoSans"
-              sx={{ color: "default.black", marginBottom: "20px" }}
-            >
-              As lifelong mentors and mentees, we take every chance to stretch
-              ourselves and each other. However you see your career shaping,
-              we’re here to help you make it happen.
-            </Text>
-          </Card>
-          <Card variant="primary">
-            <Image src="https://miro.medium.com/max/444/1*_3HSn_EqxIcNvb-SgfjFCg.jpeg" />
-            <Text variant="overline.quicksand" sx={{ color: "text.overline" }}>
-              Lorem lorem
-            </Text>
-            <Text variant="h5.quicksand" sx={{ color: "text.titleCard" }}>
-              Culture of involment
-            </Text>
-            <Text
-              variant="body2.notoSans"
-              sx={{ color: "default.black", marginBottom: "20px" }}
-            >
-              We’re not defined by our job titles but by the impact we make.
-              Everyone is encouraged and expected to step up, speak up, and
-              contribute in ways that make the whole company, our clients, and
-              our communities better.
-            </Text>
-          </Card>
-          <Card variant="primary">
-            <Image src="https://gorgeousgael.files.wordpress.com/2015/01/stand1.jpg" />
-            <Text variant="overline.quicksand" sx={{ color: "text.overline" }}>
-              Lorem lorem
-            </Text>
-            <Text variant="h5.quicksand" sx={{ color: "text.titleCard" }}>
-              Room for life
-            </Text>
-            <Text
-              variant="body2.notoSans"
-              sx={{ color: "default.black", marginBottom: "20px" }}
-            >
-              We all do better when we all do better. On and off the clock,
-              quality of life is something we never take lightly. Our benefits
-              and perks allow for flexibility and healthy wellbeing so that you
-              can enjoy your best life.
-            </Text>
-          </Card>
-        </Grid>
-        <Text variant="h5.neucha" sx={{ marginTop: "200px" }}>
-          Join the world’s best developers and designers around!
-        </Text>
+       <Cards />
+      <GlassTest />
+       
         <Text
           variant="h6.quicksand"
           sx={{
@@ -139,44 +72,14 @@ export default function Home() {
         </Text>
       </Flex>
 
-      <Grid variant="gallery">
-        <Image src="https://media.cdn.teamtailor.com/images/s3/teamtailor-production/gallery_picture-v6/image_uploads/356e5503-89e3-41bf-90de-7d1dae80b03e/original.jpg"></Image>
-        <Image src="https://media.cdn.teamtailor.com/images/s3/teamtailor-production/gallery_picture-v6/image_uploads/84c7ecca-c672-42c3-bd08-278be6133418/original.jpg"></Image>
-        <Image src="https://media.cdn.teamtailor.com/images/s3/teamtailor-production/gallery_picture-v6/image_uploads/8d41e9af-6a9c-43d2-a4ec-e33b9bc5b223/original.jpg"></Image>
-        <Image src="https://media.cdn.teamtailor.com/images/s3/teamtailor-production/gallery_picture-v6/image_uploads/a790a144-810c-428c-b94f-f3a8f1aa435c/original.jpg"></Image>
-        <Image src="https://media.cdn.teamtailor.com/images/s3/teamtailor-production/gallery_picture-v6/image_uploads/7164b7f1-06b9-45eb-baac-1a78ed2f7f88/original.jpg"></Image>
-      </Grid>
-
-      <Grid variant="two" sx={{ width: "100%", height: "50%" }}>
-        <Flex
-          variant="flex.default"
-          sx={{ background: "#8d448b", color: "white", gridColumn: "1/2" }}
-        >
-          <Text variant="h4.quicksand">Göteborg</Text>
-          <Text variant="body1.quicksand" sx={{ margin: "10px" }}>
-            Fabriksgatan 7 <br /> 412 50 Göteborg
-          </Text>
-          <Link
-            style={{ color: "white", margin: "10px" }}
-            to="https://maps.google.com/?daddr=57.70599720000001,11.9915133"
-          >
-            Directions
-          </Link>
-          <Link style={{ color: "white" }} to="mailto:info@devinova.se">
-            info@devinova.se
-          </Link>
-          <Link style={{ color: "white", margin: "10px" }} to="tel:0732500582">
-            0732500582
-          </Link>
-        </Flex>
-        <Image src={maps} sx={{width: '100%', height: "100%"}} />
-      </Grid>
+      <Gallery />
+<Contact />
+     
       <Flex
         variant="flex.default"
         sx={{
           width: "100%",
            height: '30vh',
-          /* marginTop: "35%",  */
         }}
       >
         <Box>

@@ -27,7 +27,7 @@ function Menu() {
           }}
         >
           <Link
-            variant="links.nav"
+            variant="links.menu"
             sx={{color: "default.black", fontSize: "40px", fontWeight: "bold" }}
             href="/about"
           >
@@ -57,7 +57,7 @@ function Menu() {
             Employee
           </Text>
           <Link
-            variant="links.nav"
+            variant="links.menu"
             sx={{ color: "default.black", fontSize: "17px" }}
             href="/about"
           >
@@ -76,7 +76,7 @@ function Menu() {
             Candidate
           </Text>
           <Link
-            variant="links.nav"
+            variant="links.menu"
             sx={{ color: "default.black", fontSize: "17px" }}
             href="/about"
           >
@@ -95,7 +95,7 @@ function Menu() {
             Homepage
           </Text>
           <Link
-            variant="links.nav"
+            variant="links.menu"
             sx={{ color: "default.black", fontSize: "17px", width: "" }}
             href="/about"
           >

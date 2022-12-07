@@ -128,101 +128,115 @@ const grids = {
     display: "grid",
     gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr 1fr",
     gridTemplateRows: "auto",
-    overflow: "hidden", 
+    overflow: "hidden",
     gap: 0,
     "@media (max-width: 1640px)": {
-      gridTemplateColumns: '1fr 1fr 1fr 1fr',
-      },
-      "@media (max-width: 890px)": {
-        gridTemplateColumns: '1fr',
-        },
+      gridTemplateColumns: "1fr 1fr 1fr 1fr",
+    },
+    "@media (max-width: 890px)": {
+      gridTemplateColumns: "1fr",
+    },
     "img:nth-of-type(1)": {
       gridColumn: "1/4",
       "@media (max-width: 1640px)": {
-        width: '100%',
+        width: "100%",
         gridColumn: "1/5",
-        },
-        "@media (max-width: 890px)": {
-          gridColumn: "1",
-          },
+      },
+      "@media (max-width: 890px)": {
+        gridColumn: "1",
+      },
     },
     "img:nth-of-type(2)": {
       gridColumn: "4/7",
       "@media (max-width: 1640px)": {
         gridColumn: "1/3",
-        },
-        "@media (max-width: 890px)": {
-          gridColumn: "1",
-          },
+      },
+      "@media (max-width: 890px)": {
+        gridColumn: "1",
+      },
     },
     "img:nth-of-type(3)": {
       height: "100%",
       gridColumn: "1/3",
       "@media (max-width: 1640px)": {
         gridColumn: "3/5",
-        },
-        "@media (max-width: 890px)": {
-          gridColumn: "1",
-          },
+      },
+      "@media (max-width: 890px)": {
+        gridColumn: "1",
+      },
     },
     "img:nth-of-type(4)": {
       height: "100%",
       gridColumn: "3/5",
       "@media (max-width: 1640px)": {
         gridColumn: "1/3",
-        },
-        "@media (max-width: 890px)": {
-          gridColumn: "1",
-          },
+      },
+      "@media (max-width: 890px)": {
+        gridColumn: "1",
+      },
     },
     "img:nth-of-type(5)": {
       height: "100%",
       gridColumn: "5/7",
       "@media (max-width: 1640px)": {
         gridColumn: "3/5",
-        },
-        "@media (max-width: 890px)": {
-          gridColumn: "1",
-          },
+      },
+      "@media (max-width: 890px)": {
+        gridColumn: "1",
+      },
     },
   },
   two: {
-    display: 'grid', 
-    width: "100%", 
+    display: "grid",
+    width: "100%",
     height: "50%",
-    gridTemplateColumns: '1fr 1fr',
+    borderBottom: "1px solid",
+    borderColor: "default.black",
+    gap: 0,
+    color: "default.textColor",
+    span: {
+      margin: "10px",
+    },
+    a: {
+      color: "default.textColor",
+      margin: "5px",
+    },
+    gridTemplateColumns: "1fr 1fr",
+    "@media (max-width: 1640px)": {
+      gridTemplateColumns: "1fr",
+    },
+    "div:ntn-of-type(1)": {
       "@media (max-width: 1640px)": {
-        gridTemplateColumns: '1fr',
-      },
-    "div:ntn-of-type(1)":{
-      "@media (max-width: 1640px)": {
-        width: "100%", 
-      height: "80%",
-      gridColumn: "1",
-      }},
-      "img":{
-        width: "100%", 
-        height: "100%",
-        "@media (max-width: 1640px)": {
+        width: "100%",
+        height: "80%",
         gridColumn: "1",
-        }}
+        background: "default.background",
+        color: "default.textColor",
+      },
+    },
+    img: {
+      width: "100%",
+      height: "100%",
+      "@media (max-width: 1640px)": {
+        gridColumn: "1",
+      },
+    },
   },
   cards: {
     width: "100%",
     backgroundColor: "white",
-    display: 'grid', 
-    gridTemplateColumns: '1fr 1fr 1fr 1fr',
-    "div": {
-      alignSelf: 'center',
-      justifySelf: 'center',
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr 1fr 1fr",
+    div: {
+      alignSelf: "center",
+      justifySelf: "center",
     },
     "@media (max-width: 1640px)": {
-    gridTemplateColumns: '1fr 1fr',
+      gridTemplateColumns: "1fr 1fr",
     },
     "@media (max-width: 890px)": {
-      gridTemplateColumns: '1fr',
-      },
-
+      gridTemplateColumns: "1fr",
+    },
   },
 };
 export default grids;

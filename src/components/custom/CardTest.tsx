@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { useState } from "react";
 import { Card, Box, Text } from "theme-ui";
-import Cards from "./Cards";
+import Cards from "./ExpandCard";
 import Phone  from "../icons/Phone.svg";
 import Email  from "../icons/Email.svg";
 

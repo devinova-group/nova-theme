@@ -1,7 +1,15 @@
 const links = {
+    cursor: "pointer",
+    color: "default.black",
     nav: {
-        color: 'link.test'
-
+        cursor: "pointer",
+        color: "default.black",
+        marginTop: 0,
+        zIndex: 1,
+        position: "absolute",
+    },
+    menu: {
+        color: "default.black",
     }    
 }
 
