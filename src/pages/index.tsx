@@ -1,32 +1,22 @@
 import * as React from "react";
-import { Link } from "gatsby";
-import { Text, Image, Button, Box, Card, Grid, Flex } from "theme-ui";
-import Navbar from "../components/Navbar";
+import { Text, Button, Box, Flex, Heading } from "theme-ui";
 import Cards from "../components/Cards";
 import GlassTest from "../components/GlassTest";
 import Contact from "../components/Contact";
 import Gallery from "../components/Gallery";
+import HeaderMainPage from "../components/HeaderMainPage";
 
 export default function Home() {
   return (
     <>
-      <header className="bg-cover">
-        <Navbar />
-        <Box className="overlay" sx={{ backgroundColor: "default.overlay" }}>
-          <Text variant="h2.quicksand" sx={{ color: "default.textColor" }}>
-            Great software is built with <br /> amazing developers
-          </Text>
-          <Button variant="activeMedium">Connect</Button>
-        </Box>
-      </header>
-      <Flex
+      <HeaderMainPage />
+      <Flex as='section'
         variant="flex.default"
         sx={{ width: "100%", height: "60vh", color: "default.black" }}
       >
-        <Text variant="h4.quicksand">Spark your potential</Text>
-        <Text
-          sx={{ width: "630px", alignSelf: "center", margin: "30px" }}
-          variant="h6.quicksand"
+        <Heading as='h2' variant="heading.h2.neucha">Spark your potential</Heading>
+        <Heading as='h6' variant="heading.h6.quicksand"
+          sx={{ width: "650px", alignSelf: "center", margin: "30px" }}
         >
           At Devinova we are just in the beginning of our journey and are
           looking for team members to start this adventure. You will be the
@@ -34,25 +24,27 @@ export default function Home() {
           looking for you who finds it exciting to be part of something new
           without any corporate hierarchies, just us, where what you bring into
           the company and team will be setting the shared culture and values of
-          our company for the future.
-          <br />
-          Spark your potential and join a team where we together will help each
-          other develop and grow in our craftsmanships and have a bunch of fun
-          along the way.
-        </Text>
+          our company for the future. <br /> Spark your potential and join a
+          team where we together will help each other develop and grow in our
+          craftsmanships and have a bunch of fun along the way.
+        </Heading>
       </Flex>
       <Flex
         variant="flex.default"
         sx={{ width: "100%", backgroundColor: "white" }}
       >
-        <Text variant="h4.quicksand" sx={{ margin: "60px 0px" }}>
+        <Heading variant="heading.h4.neucha" sx={{ margin: "60px 0px" }}>
           Life at Devinova
-        </Text>
-       <Cards />
-      <GlassTest />
-       
+        </Heading>
+        <Cards />
+        <GlassTest />
+        <Flex variant="flex.alignCentar">
+          <Heading variant="heading.h5.quicksand">
+            Join the world's best developers and designers around!
+          </Heading>
+        </Flex>
         <Text
-          variant="h6.quicksand"
+          variant="body1.quicksand"
           sx={{
             width: "600px",
             textAlign: "center",
@@ -73,33 +65,32 @@ export default function Home() {
       </Flex>
 
       <Gallery />
-<Contact />
-     
+      <Contact />
+
       <Flex
         variant="flex.default"
         sx={{
           width: "100%",
-           height: '30vh',
+          height: "30vh",
         }}
       >
         <Box>
-
-        <Button>Don't forget to connect 👍</Button>
+          <Button>Don't forget to connect 👍</Button>
         </Box>
       </Flex>
       <Flex
         variant="flex.default"
         sx={{
           width: "100%",
-          height: '100%',
+          height: "100%",
         }}
       >
-        <Text variant="h4.quicksand" sx={{ color: "default.black" }}>
+        <Heading variant="heading.h4.quicksand" sx={{ color: "default.black" }}>
           About Devinova
-        </Text>
+        </Heading>
         <Text
           variant="body2.notoSans"
-          sx={{ width: "600px", color: "default.black", margin: "100px auto"}}
+          sx={{ width: "600px", color: "default.black", margin: "100px auto" }}
         >
           At Devinova we believe in thinking differently and challenging the
           status quo. We offer a welcoming environment where relationships,
@@ -114,7 +105,7 @@ export default function Home() {
           of how long your time at Devinova is. When you are ready to move on,
           we are happy to see you fly. This we believe is the sustainable way to
           work together in the future and we would love to set an example and be
-          an inspiration for other companies to follow.{" "}
+          an inspiration for other companies to follow.
         </Text>
       </Flex>
     </>

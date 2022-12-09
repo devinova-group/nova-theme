@@ -1,12 +1,12 @@
 import React from "react";
-import { Flex, Grid, Image, Link, Text } from "theme-ui";
-import maps from "../images/maps.png";
+import { Flex, Grid, Heading, Image, Link, Text } from "theme-ui";
+import maps from "../static/images/maps.png";
 
 function Contact() {
   return (
     <Grid variant="two">
       <Flex variant="flex.default">
-        <Text variant="h4.quicksand">Göteborg</Text>
+        <Heading variant="heading.h4.quicksand">Göteborg</Heading>
         <Text variant="body1.quicksand">
           Fabriksgatan 7 <br /> 412 50 Göteborg
         </Text>

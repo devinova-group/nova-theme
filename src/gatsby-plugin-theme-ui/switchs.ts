@@ -1,5 +1,3 @@
-
-
 const switchs = {
   toggleBig: {
     width: "145px",
@@ -49,7 +47,7 @@ const switchs = {
   },
   toggleV1Big: {
     variant: "switchs.toggleBig",
-    background: 'switch.bgV1BigMoon',
+    background: "switch.bgV1BigMoon",
 
     div: {
       marginLeft: 2,
@@ -57,7 +55,7 @@ const switchs = {
       height: "54px",
     },
     "input:checked ~ &": {
-      background: 'switch.bgV1BigSun',
+      background: "switch.bgV1BigSun",
       div: {
         marginLeft: 10,
       },
@@ -65,7 +63,7 @@ const switchs = {
   },
   toggleV1Small: {
     variant: "switchs.toggleSmall",
-    background: 'switch.bgV1SmallMoon',
+    background: "switch.bgV1SmallMoon",
     width: "68px",
     height: "32px",
 
@@ -75,7 +73,7 @@ const switchs = {
       height: "26px",
     },
     "input:checked ~ &": {
-      background: 'switch.bgV1SmallSun', 
+      background: "switch.bgV1SmallSun",
       div: {
         marginLeft: 3,
       },
@@ -83,35 +81,35 @@ const switchs = {
   },
   toggleV2Big: {
     variant: "switchs.toggleV1Big",
-    background: 'switch.bgV2BigDark',
+    background: "switch.bgV2BigDark",
 
     div: {
       marginLeft: 2,
-      background: 'switch.bgV2BigMoon',
+      background: "switch.bgV2BigMoon",
       width: "54px",
       height: "54px",
     },
     "input:checked ~ &": {
-      background: 'switch.bgV2BigLight',
+      background: "switch.bgV2BigLight",
       div: {
-        background: 'switch.bgV2BigSun',
+        background: "switch.bgV2BigSun",
         marginLeft: 10,
       },
     },
   },
   toggleV2Small: {
     variant: "switchs.toggleV1Small",
-    background: 'switch.bgV2SmallDark',
+    background: "switch.bgV2SmallDark",
     div: {
-      background: 'switch.bgV2MoonSmall',
+      background: "switch.bgV2MoonSmall",
       marginLeft: 1,
       width: "26px",
       height: "26px",
     },
     "input:checked ~ &": {
-      background: 'switch.bgV2SmallLight',
+      background: "switch.bgV2SmallLight",
       div: {
-        background: 'switch.bgV2SmallSun',
+        background: "switch.bgV2SmallSun",
         marginLeft: 3,
       },
     },

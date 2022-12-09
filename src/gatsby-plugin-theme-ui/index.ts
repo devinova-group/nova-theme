@@ -13,6 +13,9 @@ import checkbox from "./checkbox";
 import links from "./links";
 import grids from "./grids";
 import flex from "./flex";
+import heading from "./heading";
+
+
 const theme = {
    breakpoints: ['40em', '52em', '64em'],
   space: [
@@ -47,6 +50,7 @@ const theme = {
   checkbox,
   links,
   grids,
-  flex
+  flex,
+  heading
 };
 export default theme
