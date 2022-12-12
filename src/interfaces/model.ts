@@ -20,3 +20,10 @@ export interface BodyProps {
   hideArrow: boolean;
   onClick: () => void;
 }
+
+export interface FooterProps {
+  children: React.ReactNode;
+
+
+  
+}
