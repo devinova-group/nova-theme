@@ -1,6 +1,6 @@
 /** @jsxImportSource theme-ui */
 import "./App.css";
-import { useColorMode, Box, Switch } from "theme-ui";
+import { useColorMode, Box, Switch, Avatar } from "theme-ui";
 import CardExp from "./components/Cards/CardExpandable";
 import Badges from "./components/Badges";
 import CardPrimary from "./components/Cards/CardPrimary";
@@ -13,6 +13,9 @@ import Buttons from "./components/Buttons";
 import Headings from "./components/Headings";
 import BodyText from "./components/BodyText";
 import Toasters from "./components/Toasters";
+import Avatars from "./components/Avatars";
+
+
 
 function App() {
   const [colorMode, setColorMode] = useColorMode();
@@ -35,7 +38,8 @@ function App() {
           setColorMode(colorMode === "default" ? "dark" : "default");
         }}
       ></Switch>
-      
+      <h1>Avatar</h1>
+      <Avatars/>
       <h1>Toaster</h1>
       <Box className="test">
         <Toasters />

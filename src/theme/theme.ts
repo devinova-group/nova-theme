@@ -14,6 +14,7 @@ import grids from "./grids";
 import flex from "./flex";
 import heading from "./heading";
 import toaster from "./toaster";
+import avatars from "./avatars";
 
 export const theme = {
   space: [
@@ -50,5 +51,6 @@ export const theme = {
   grids,
   flex,
   heading,
-  toaster
+  toaster,
+  avatars
 }
