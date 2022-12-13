@@ -1,5 +1,18 @@
 import { Theme } from "theme-ui";
 
+import moonBig from './icons/moonBig.svg'
+import backgroundV2Big from './icons/backgroundV2Big.svg'
+import backgroundV1BigMoon from './icons/backgroundV1BigMoon.svg'
+import backgroundV1BigSun from './icons/backgroundV1BigSun.svg'
+import backgroundV1SmallMoon from './icons/backgroundV1SmallMoon.svg'
+import backgroundV1SmallSun from './icons/backgroundV1SmallSun.svg'
+import backgroundV2BigLight from './icons/backgroundV2BigLight.svg'
+import backgroundV2BigSun from './icons/backgroundV2BigSun.svg'
+import bgV2SmallDark from './icons/bgV2SmallDark.svg'
+import moonSmall from './icons/moonSmall.svg'
+import bgV2SmallLight from './icons/bgV2SmallLight.svg'
+import bgV2SmallSun from './icons/bgV2SmallSun.svg'
+
 const daisy = {
   color: [
     "#ECE8F6",
@@ -135,15 +148,30 @@ const colors: Theme["colors"] = {
   },
   border: {},
   card: {
-    backgroundColor: 'noRep.white',
-    phone: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMjYiIHZpZXdCb3g9IjAgMCAxOCAyNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEuMTQxMjUgMEMwLjc3IDAgMC41IDAuMjYgMC41IDAuNjE3NVYyNS40MTVDMC41IDI1Ljc3MjUgMC43NyAyNi4wMzI1IDEuMTQxMjUgMjYuMDMyNUgxNi43Njc1QzE3LjEzODggMjYuMDMyNSAxNy40MDg4IDI1Ljc3MjUgMTcuNDA4OCAyNS40MTVWMC42MTc1QzE3LjQwODggMC4yNiAxNy4xMzg4IDAgMTYuNzY3NSAwTDEuMTQxMjUgMFpNMy44NzUgMy4yNUgxNFYxOS41SDMuODc1VjMuMjVaTTguOTM3NSAyMS4xMjVDOS44ODI1IDIxLjEyNSAxMC42MjUgMjEuODQgMTAuNjI1IDIyLjc1QzEwLjYyNSAyMy42NiA5Ljg4MjUgMjQuMzc1IDguOTM3NSAyNC4zNzVDNy45OTI1IDI0LjM3NSA3LjI1IDIzLjY2IDcuMjUgMjIuNzVDNy4yNSAyMS44NCA3Ljk5MjUgMjEuMTI1IDguOTM3NSAyMS4xMjVaIiBmaWxsPSIjNEMzQTgwIi8+Cjwvc3ZnPgo=")
-    no-repeat center center`,
-    email: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyNSAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEgMC42MjVDMC40NDc3MTYgMC42MjUgMCAxLjA3MjcyIDAgMS42MjVWMy4xMzE5N0MwIDMuNTEwNzQgMC4yMTQwMDIgMy44NTcgMC41NTI3ODYgNC4wMjYzOUwxMi4wNTI4IDkuNzc2MzlDMTIuMzM0MyA5LjkxNzE2IDEyLjY2NTcgOS45MTcxNiAxMi45NDcyIDkuNzc2MzlMMjQuNDQ3MiA0LjAyNjM5QzI0Ljc4NiAzLjg1NyAyNSAzLjUxMDc0IDI1IDMuMTMxOTdWMS42MjVDMjUgMS4wNzI3MiAyNC41NTIzIDAuNjI1IDI0IDAuNjI1SDFaTTEuNDQ3MjEgNy41OTg2MUMwLjc4MjMxMiA3LjI2NjE2IDAgNy43NDk2NSAwIDguNDkzMDNWMTguMzc1QzAgMTguOTI3MyAwLjQ0NzcxNSAxOS4zNzUgMSAxOS4zNzVIMjRDMjQuNTUyMyAxOS4zNzUgMjUgMTguOTI3MyAyNSAxOC4zNzVWOC40OTMwM0MyNSA3Ljc0OTY1IDI0LjIxNzcgNy4yNjYxNiAyMy41NTI4IDcuNTk4NjFMMTIuOTQ3MiAxMi45MDE0QzEyLjY2NTcgMTMuMDQyMiAxMi4zMzQzIDEzLjA0MjIgMTIuMDUyOCAxMi45MDE0TDEuNDQ3MjEgNy41OTg2MVoiIGZpbGw9IiM0QzNBODAiLz4KPC9zdmc+Cg==")
-    no-repeat center center`,
+    backgroundColor: noRep.white,
     arrowUp: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDE0IDkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xMC42Njc5IDguNTQyODlDMTEuMDU4NCA4LjkzMzQyIDExLjY5MTYgOC45MzM0MiAxMi4wODIxIDguNTQyODlMMTMuMjkyOSA3LjMzMjExQzEzLjY4MzQgNi45NDE1OCAxMy42ODM0IDYuMzA4NDIgMTMuMjkyOSA1LjkxNzg5TDcuNzA3MTEgMC4zMzIxMDVDNy4zMTY1OCAtMC4wNTg0MTg5IDYuNjgzNDIgLTAuMDU4NDE4IDYuMjkyODkgMC4zMzIxMDZMMC43MDcxMDYgNS45MTc4OUMwLjMxNjU4MiA2LjMwODQyIDAuMzE2NTgzIDYuOTQxNTggMC43MDcxMDcgNy4zMzIxMUwxLjkxNzg5IDguNTQyODlDMi4zMDg0MiA4LjkzMzQyIDIuOTQxNTggOC45MzM0MiAzLjMzMjExIDguNTQyODlMNi4yOTI4OSA1LjU4MjExQzYuNjgzNDIgNS4xOTE1OCA3LjMxNjU4IDUuMTkxNTggNy43MDcxMSA1LjU4MjExTDEwLjY2NzkgOC41NDI4OVoiIGZpbGw9IiM2MDQ0QjUiLz4KPC9zdmc+Cg==")
         no-repeat center center`,
     arrowDown: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDE0IDkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0zLjMzMjExIDAuNDU3MTA3QzIuOTQxNTggMC4wNjY1ODMxIDIuMzA4NDIgMC4wNjY1ODI1IDEuOTE3ODkgMC40NTcxMDdMMC43MDcxMDcgMS42Njc4OUMwLjMxNjU4MyAyLjA1ODQyIDAuMzE2NTgzIDIuNjkxNTggMC43MDcxMDcgMy4wODIxMUw2LjI5Mjg5IDguNjY3ODlDNi42ODM0MiA5LjA1ODQyIDcuMzE2NTggOS4wNTg0MiA3LjcwNzExIDguNjY3ODlMMTMuMjkyOSAzLjA4MjExQzEzLjY4MzQgMi42OTE1OCAxMy42ODM0IDIuMDU4NDIgMTMuMjkyOSAxLjY2Nzg5TDEyLjA4MjEgMC40NTcxMDdDMTEuNjkxNiAwLjA2NjU4MjUgMTEuMDU4NCAwLjA2NjU4MjQgMTAuNjY3OSAwLjQ1NzEwN0w3LjcwNzExIDMuNDE3ODlDNy4zMTY1OCAzLjgwODQyIDYuNjgzNDIgMy44MDg0MiA2LjI5Mjg5IDMuNDE3ODlMMy4zMzIxMSAwLjQ1NzEwN1oiIGZpbGw9IiM2MDQ0QjUiLz4KPC9zdmc+Cg==")
         no-repeat center center`,
+        icon: noRep.second,
+  },
+ switch: {
+    bgV1BigMoon: `url(${backgroundV1BigMoon})`,
+    bgV1BigSun: `url(${backgroundV1BigSun})`,
+    bgV1SmallMoon: `url(${backgroundV1SmallMoon})`,
+    bgV1SmallSun: `url(${backgroundV1SmallSun})`,
+    bgV2BigDark: `url(${backgroundV2Big})`,
+    bgV2BigMoon: `url(${moonBig})`,
+    bgV2BigLight: `url(${backgroundV2BigLight})`,
+    bgV2BigSun: `url(${backgroundV2BigSun})`,
+    bgV2SmallDark: `url(${bgV2SmallDark})`,	
+    bgV2SmallLight: `url(${bgV2SmallLight})`,
+    bgV2SmallSun: `url(${bgV2SmallSun})`, 
+    bgV2MoonSmall: `url(${moonSmall})`,
+  },  
+  
+  link: {
+      test: '#000',
   },
   modes: {
     dark: {
@@ -152,16 +180,17 @@ const colors: Theme["colors"] = {
         primaryDisabled: "#493683",
         second: noRep.darkSecond,
         secondVariant: noRep.secondVariant,
-        textColor: "#08011C",
+        textColor: "#ffffff",
         textColorV2: "#585858",
         errors: "#C12945",
         errorsDisabled: "#7F2943",
         positive1: "#26962B",
         positive1Disabled: "#2B6035",
         positive2: "#9AE79D",
-        black: noRep.black,
-        white: noRep.white,
+        black: noRep.white,
+        white: noRep.black,
         errorInput: noRep.errorInput,
+
       },
       background: "#2F2A41",
       text: {
@@ -237,15 +266,29 @@ const colors: Theme["colors"] = {
       },
       /* border: {}, */
       card: {
-        backgroundColor: '#6B6278CC',
-        phone: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMjYiIHZpZXdCb3g9IjAgMCAxOCAyNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEuMTQxMjUgMEMwLjc3IDAgMC41IDAuMjYgMC41IDAuNjE3NVYyNS40MTVDMC41IDI1Ljc3MjUgMC43NyAyNi4wMzI1IDEuMTQxMjUgMjYuMDMyNUgxNi43Njc1QzE3LjEzODggMjYuMDMyNSAxNy40MDg4IDI1Ljc3MjUgMTcuNDA4OCAyNS40MTVWMC42MTc1QzE3LjQwODggMC4yNiAxNy4xMzg4IDAgMTYuNzY3NSAwTDEuMTQxMjUgMFpNMy44NzUgNC4yNUMzLjg3NSAzLjY5NzcyIDQuMzIyNzIgMy4yNSA0Ljg3NSAzLjI1SDEzQzEzLjU1MjMgMy4yNSAxNCAzLjY5NzcyIDE0IDQuMjVWMTguNUMxNCAxOS4wNTIzIDEzLjU1MjMgMTkuNSAxMyAxOS41SDQuODc1QzQuMzIyNzIgMTkuNSAzLjg3NSAxOS4wNTIzIDMuODc1IDE4LjVWNC4yNVpNOC45Mzc1IDIxLjEyNUM5Ljg4MjUgMjEuMTI1IDEwLjYyNSAyMS44NCAxMC42MjUgMjIuNzVDMTAuNjI1IDIzLjY2IDkuODgyNSAyNC4zNzUgOC45Mzc1IDI0LjM3NUM3Ljk5MjUgMjQuMzc1IDcuMjUgMjMuNjYgNy4yNSAyMi43NUM3LjI1IDIxLjg0IDcuOTkyNSAyMS4xMjUgOC45Mzc1IDIxLjEyNVoiIGZpbGw9IiNGRkZFRkIiLz4KPC9zdmc+Cg==")
-        no-repeat center center`,
-        email: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyNSAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEgMC42MjVDMC40NDc3MTYgMC42MjUgMCAxLjA3MjcyIDAgMS42MjVWMy4xMzE5N0MwIDMuNTEwNzQgMC4yMTQwMDIgMy44NTcgMC41NTI3ODYgNC4wMjYzOUwxMi4wNTI4IDkuNzc2MzlDMTIuMzM0MyA5LjkxNzE2IDEyLjY2NTcgOS45MTcxNiAxMi45NDcyIDkuNzc2MzlMMjQuNDQ3MiA0LjAyNjM5QzI0Ljc4NiAzLjg1NyAyNSAzLjUxMDc0IDI1IDMuMTMxOTdWMS42MjVDMjUgMS4wNzI3MiAyNC41NTIzIDAuNjI1IDI0IDAuNjI1SDFaTTEuNDQ3MjEgNy41OTg2MUMwLjc4MjMxMiA3LjI2NjE2IDAgNy43NDk2NSAwIDguNDkzMDNWMTguMzc1QzAgMTguOTI3MyAwLjQ0NzcxNSAxOS4zNzUgMSAxOS4zNzVIMjRDMjQuNTUyMyAxOS4zNzUgMjUgMTguOTI3MyAyNSAxOC4zNzVWOC40OTMwM0MyNSA3Ljc0OTY1IDI0LjIxNzcgNy4yNjYxNiAyMy41NTI4IDcuNTk4NjFMMTIuOTQ3MiAxMi45MDE0QzEyLjY2NTcgMTMuMDQyMiAxMi4zMzQzIDEzLjA0MjIgMTIuMDUyOCAxMi45MDE0TDEuNDQ3MjEgNy41OTg2MVoiIGZpbGw9IiNGRkZFRkIiLz4KPC9zdmc+Cg==")
-        no-repeat center center`,
+        backgroundColor: "rgba(107, 98, 120, 0.8)",
         arrowUp: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDE0IDkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xMC42Njc5IDguNTQyODlDMTEuMDU4NCA4LjkzMzQyIDExLjY5MTYgOC45MzM0MiAxMi4wODIxIDguNTQyODlMMTMuMjkyOSA3LjMzMjExQzEzLjY4MzQgNi45NDE1OCAxMy42ODM0IDYuMzA4NDIgMTMuMjkyOSA1LjkxNzg5TDcuNzA3MTEgMC4zMzIxMDZDNy4zMTY1OCAtMC4wNTg0MTg4IDYuNjgzNDIgLTAuMDU4NDE4MSA2LjI5Mjg5IDAuMzMyMTA2TDAuNzA3MTA2IDUuOTE3ODlDMC4zMTY1ODIgNi4zMDg0MiAwLjMxNjU4MyA2Ljk0MTU4IDAuNzA3MTA3IDcuMzMyMTFMMS45MTc4OSA4LjU0Mjg5QzIuMzA4NDIgOC45MzM0MiAyLjk0MTU4IDguOTMzNDIgMy4zMzIxMSA4LjU0Mjg5TDYuMjkyODkgNS41ODIxMUM2LjY4MzQyIDUuMTkxNTggNy4zMTY1OCA1LjE5MTU4IDcuNzA3MTEgNS41ODIxMUwxMC42Njc5IDguNTQyODlaIiBmaWxsPSIjRkZGNEZGIi8+Cjwvc3ZnPgo=")
         no-repeat center center`,
         arrowDown: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDE0IDkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0zLjMzMjExIDAuNDU3MTA3QzIuOTQxNTggMC4wNjY1ODMxIDIuMzA4NDIgMC4wNjY1ODI1IDEuOTE3ODkgMC40NTcxMDdMMC43MDcxMDcgMS42Njc4OUMwLjMxNjU4MyAyLjA1ODQyIDAuMzE2NTgzIDIuNjkxNTggMC43MDcxMDcgMy4wODIxMUw2LjI5Mjg5IDguNjY3ODlDNi42ODM0MiA5LjA1ODQyIDcuMzE2NTggOS4wNTg0MiA3LjcwNzExIDguNjY3ODlMMTMuMjkyOSAzLjA4MjExQzEzLjY4MzQgMi42OTE1OCAxMy42ODM0IDIuMDU4NDIgMTMuMjkyOSAxLjY2Nzg5TDEyLjA4MjEgMC40NTcxMDdDMTEuNjkxNiAwLjA2NjU4MjUgMTEuMDU4NCAwLjA2NjU4MjQgMTAuNjY3OSAwLjQ1NzEwN0w3LjcwNzExIDMuNDE3ODlDNy4zMTY1OCAzLjgwODQyIDYuNjgzNDIgMy44MDg0MiA2LjI5Mjg5IDMuNDE3ODlMMy4zMzIxMSAwLjQ1NzEwN1oiIGZpbGw9IiNGRkY0RkYiLz4KPC9zdmc+Cg==")
         no-repeat center center`,
+        icon: noRep.white,
+      },
+      switch: {
+        bgV1BigMoon: `url(${backgroundV1BigMoon})`,
+        bgV1BigSun: `url(${backgroundV1BigSun})`,
+        bgV1SmallMoon: `url(${backgroundV1SmallMoon})`,
+        bgV1SmallSun: `url(${backgroundV1SmallSun})`,
+        bgV2BigDark: `url(${backgroundV2Big})`,
+        bgV2BigMoon: `url(${moonBig})`,
+        bgV2BigLight: `url(${backgroundV2BigLight})`,
+        bgV2BigSun: `url(${backgroundV2BigSun})`,
+        bgV2SmallDark: `url(${bgV2SmallDark})`,	
+        bgV2SmallLight: `url(${bgV2SmallLight})`,
+        bgV2SmallSun: `url(${bgV2SmallSun})`, 
+        bgV2MoonSmall: `url(${moonSmall})`,
+      }, 
+      link: {
+          test: '#FFF',
       },
     },
   },

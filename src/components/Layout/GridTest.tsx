@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Grid, Text } from 'theme-ui'
+import { Box, Grid } from 'theme-ui'
 
 function GridTest() {
   return (

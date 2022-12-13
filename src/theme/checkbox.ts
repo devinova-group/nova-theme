@@ -5,7 +5,6 @@ const checkbox: any = {
   borderColor: "check.borderColor",
   boxShadow: "radio",
   fill: "none",
-  appearance: "none",
   "input:focus ~ &": {
     background: "transparent",
   },

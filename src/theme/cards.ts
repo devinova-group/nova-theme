@@ -1,4 +1,3 @@
-import { grid } from "styled-system";
 import { Theme } from "theme-ui";
 
 const cards: Theme["cards"] = {
@@ -8,7 +7,7 @@ const cards: Theme["cards"] = {
     display: "flex",
     flexDirection: "column",
     gap: "10px",
-    backgroundColor: 'card.backgroundColor',
+    backgroundColor: "card.backgroundColor",
     textAlign: "left",
     boxShadow: "card",
     borderRadius: "20px",
@@ -18,104 +17,59 @@ const cards: Theme["cards"] = {
       height: "316px",
       borderRadius: "20px 20px 0px 0px",
       margin: 0,
-    padding: 0,
+      padding: 0,
     },
     span: {
-      width: "100%",
-      padding: "0px 6px 6px 24px",
-      
-      
+      marginLeft: 8,
+      color: 'text.overline',
+    },
+    h5: {
+      marginLeft: 8,
+      fontWeight: 700,
+      color: 'text.titleCard',
+
+    },
+    p: {
+      marginLeft: 8,
+      lineHeight: "26.4px",
     },
 
-     button: {
+    button: {
       marginLeft: 8,
-    }, 
+    },
   },
-
 
   expandable: {
     variant: "cards.primary",
-        height: "none",
+    height: "none",
     padding: 0,
-    'div.arrowDown':{
+    "div.arrowDown": {
       width: "25px",
       height: "20px",
       backgroundColor: "black",
-      background: 'card.arrowDown',
+      background: "card.arrowDown",
       marginTop: 0,
-     },
-     'div.arrowUp': {
+    },
+    "div.arrowUp": {
       width: "25px",
       height: "30px",
-      background: 'card.arrowUp',
+      background: "card.arrowUp",
       marginTop: 0,
     },
-/*     'div.space': {
-    display: "flex",
-    justifyContent: "space-between",
-    marginRight: 5,
-  },
-  'div.arrowDown':{
-    width: "25px",
-    height: "20px",
-    backgroundColor: "black",
-    background: 'card.arrowDown',
-    marginTop: 0,
-   },
-   'div.arrowUp': {
-    width: "25px",
-    height: "30px",
-    background: 'card.arrowUp',
-    marginTop: 0,
-  },
-     div: {
-      position: 'relative',
-      width: "80%",
-       marginLeft: 8,
-       marginTop: 2, 
-
-        },  */
-       
-       /* div: {
-        display: 'grid',
-        gridTemplateColumns: '1fr 4fr',
-        gridGap: 4,
-        alignItems: 'center',
-        marginLeft: 0,
-        marginTop: 0, */
-        
-/*         'div.phone': {
-          width: "25px",
-          height: "30px",
-          background: 'card.phone',
-          marginTop: 0,
-        },
-        'div.email': {
-          width: "25px",
-          height: "20px",
-          background: 'card.email',
-          marginTop: 0,
-        }, */
-       /* } */
-   
-    span: {
-
-    },
   },
 
-
-
-  short: {
+  onlyText: {
     variant: "cards.primary",
-    height: "675px",
-  },
-  noImgnoBtn: {
+    height: "",
+    paddingBottom: 8,
+    paddingTop: 8,
     img: {
-      display:'none',
+      display: "none",
     },
-    height: "300px",
   },
-  noImg: {},
+  noImg: {
+    variant: "cards.onlyText",
+  },
 };
 
 export default cards;

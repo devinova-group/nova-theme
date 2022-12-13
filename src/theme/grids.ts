@@ -10,7 +10,6 @@ const grids = {
       height: "64px",
       gridColumn: [1 / 3, 1 / 3, 1 / 3],
       background: "#000",
-      /*  padding: '16px', */
     },
     "div:nth-of-type(2)": {
       "@media (max-width: 601px)": {},

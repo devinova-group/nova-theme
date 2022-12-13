@@ -13,6 +13,7 @@ import links from "./links";
 import grids from "./grids";
 import flex from "./flex";
 import heading from "./heading";
+import toaster from "./toaster";
 
 export const theme = {
   space: [
@@ -48,5 +49,6 @@ export const theme = {
   links,
   grids,
   flex,
-  heading
+  heading,
+  toaster
 }

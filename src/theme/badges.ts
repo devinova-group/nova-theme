@@ -13,7 +13,7 @@ const badges: Theme["badges"] = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    margin: "10px",
+    margin: 5,
     backgroundColor: "transparent",
   },
   inActive: {

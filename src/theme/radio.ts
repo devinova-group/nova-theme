@@ -7,7 +7,6 @@ const radio = {
   boxShadow: "radio",
   "> path": {
     fill: "none",
-    d: 'circle cx="6.75" cy:"6.75" r="6.75" ',
   },
   "input:checked ~ &": {
     borderColor: "radio.clicked",
