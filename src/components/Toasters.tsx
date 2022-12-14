@@ -22,6 +22,7 @@ function Toasters() {
   return (
     <>
     <Box>
+    <h2>V1</h2>
       <Box variant="toaster.primaryV1">
         <Check />
         <Text variant="body2.quicksand">Success</Text>
@@ -59,6 +60,7 @@ function Toasters() {
       </Box>
       </Box>
       <Box>
+    <h2>V2</h2>
       <Box variant="toaster.primaryV2">
         <CheckV2 />
         <Text variant="body2.quicksand">Success Message</Text>

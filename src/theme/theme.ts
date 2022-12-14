@@ -15,6 +15,9 @@ import flex from "./flex";
 import heading from "./heading";
 import toaster from "./toaster";
 import avatars from "./avatars";
+import modal from "./modal";
+import spinner from "./spinner";
+
 
 export const theme = {
   space: [
@@ -52,5 +55,7 @@ export const theme = {
   flex,
   heading,
   toaster,
-  avatars
+  avatars,
+  modal,
+  spinner
 }
