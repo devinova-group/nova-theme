@@ -38,7 +38,8 @@ function App() {
           setColorMode(colorMode === "default" ? "dark" : "default");
         }}
       ></Switch>
-      <Loading />
+    {/*  <h1>Spinner</h1>
+       <Loading /> */}
       <h1>Modal</h1>
       <Box className="test">
       <Modal />

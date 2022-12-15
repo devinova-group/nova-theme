@@ -23,7 +23,4 @@ export interface BodyProps {
 
 export interface FooterProps {
   children: React.ReactNode;
-
-
-  
 }

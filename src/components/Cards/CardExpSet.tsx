@@ -1,85 +1,27 @@
 import React from "react";
-import { Text, Image, Box } from "theme-ui";
-import { Heading as Head } from "theme-ui";
+import { Text, Card , Box } from "theme-ui";
 import {
   HeaderProps,
-  TextProps,
   HeadingProps,
   ArrowProps,
   BodyProps,
   FooterProps,
 } from "../../interfaces/model";
 
-const Header = ({ children }: HeaderProps) => <>{children}</>;
+const Header = ({ children }: HeaderProps) => 
+<>
+{children}
+</>
 
-const Img = ({ src }: any) => <Image src={src} />;
-
-const Overline = ({ children }: TextProps) => (
-  <Text variant="overline.notoSans">{children}</Text>
-);
-
-const Heading = ({ children, onClick, hideArrow }: HeadingProps) => (
-  <Box
-    sx={{
-      display: "flex",
-      justifyContent: "space-between",
-     
-    }}
-  >
-    <Head as={"h5"} variant="heading.h5.quicksand">
-      {children}
-    </Head>
-    {hideArrow && (
-      <Box
-        onClick={onClick}
-        className="arrowDown"
-        sx={{
-          width: "25px",
-          height: "20px",
-          marginTop: 0,
-          marginRight: 12,
-          marginLeft: 8,
-        }}
-      ></Box>
-    )}
-  </Box>
-);
-
-const TextDots = ({ children }: ArrowProps) => (
-  <Text
-    as={"p"}
-    variant="caption.quicksand"
-    sx={{ width: '300px' ,textOverflow: "ellipsis", overflow: "hidden", whiteSpace: "nowrap" }}
-  >
-    {children}
-  </Text>
-);
-
-const Body = ({ children, hideArrow, onClick }: BodyProps) => (
+const Body = ({ children }: any) => (
   <Box
     sx={{
       position: "relative",
       width: "90%",
     }}
   >
-    {hideArrow && (
-      <Box
-        onClick={onClick}
-        className="arrowUp"
-        sx={{
-          position: "absolute",
-          right: 0,
-          top: "50%",
-          width: "25px",
-          height: "30px",
-          marginTop: 0,
-        }}
-      ></Box>
-    )}
-    <Text as={"p"} variant="caption.quicksand">
       {children}
-    </Text>
-  </Box>
+ </Box>
 );
 
 const Footer = ({ children }: FooterProps) => (
@@ -114,6 +56,42 @@ const Footer = ({ children }: FooterProps) => (
     {children}
   </Box>
 );
-const CardExpSet = { Img, Header, Body, Overline, Heading, TextDots, Footer };
+const CardExpSet = { Header, Body, Footer };
 
 export default CardExpSet;
+
+
+/* const Heading = ({ children, onClick, hideArrow }: HeadingProps) => (
+  <Box
+    sx={{
+      display: "flex",
+      justifyContent: "space-between",
+     
+    }}
+  >
+      {children}
+    {hideArrow && (
+      <Box
+        onClick={onClick}
+        className="arrowDown"
+        sx={{
+          width: "25px",
+          height: "20px",
+          marginTop: 0,
+          marginRight: 12,
+          marginLeft: 8,
+        }}
+      ></Box>
+    )}
+  </Box>
+); */
+
+/* const TextDots = ({ children }: ArrowProps) => (
+  <Text
+    as={"p"}
+    variant="caption.quicksand"
+    sx={{ width: '300px' ,textOverflow: "ellipsis", overflow: "hidden", whiteSpace: "nowrap" }}
+  >
+    {children}
+  </Text>
+); */

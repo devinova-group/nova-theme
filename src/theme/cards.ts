@@ -46,16 +46,28 @@ const cards: Theme["cards"] = {
     "div.arrowDown": {
       width: "25px",
       height: "20px",
-      backgroundColor: "black",
       background: "card.arrowDown",
       marginTop: 0,
+      marginRight: 12,
+      marginLeft: 8,
     },
     "div.arrowUp": {
       width: "25px",
       height: "30px",
       background: "card.arrowUp",
+      position: "absolute",
+      right: 0,
+      top: 20,
       marginTop: 0,
     },
+    ".hide": {
+      textOverflow: "ellipsis", 
+      overflow: "hidden", 
+      whiteSpace: "nowrap"
+    },
+    ".show": {
+      /* display: "none", */
+    }
   },
 
   onlyText: {
