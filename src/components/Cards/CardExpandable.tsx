@@ -8,41 +8,32 @@ function CardExp() {
   const [clicked, setClick] = useState(true);
 
   return (
-    <Card variant="expandable">
-      <Cards.Header>
-        <Image src="https://i.ibb.co/dBdCVQq/Rectangle-143.jpg" />
-        <Text variant="overline.notoSans">Overline</Text>
-        <Flex variant="flex.spaceBetween">
-        <Heading
-          as={"h5"}
-          variant="heading.h5.quicksand"
-          onClick={() => setClick(false)}
-        >
-          Starting?
-        </Heading>
-        {clicked && <Box className="arrowDown" onClick={() => setClick(false)} />}
-        </Flex>
+    <Cards.Expandable>
+      <Cards.Header
+        imageSrc="https://i.ibb.co/dBdCVQq/Rectangle-143.jpg"
+        heading="Starting"
+      >
+        Overline
       </Cards.Header>
-          <Cards.Body >
-            <Text as={"p"} variant="caption.quicksand" className={clicked ? "hide" : "show"}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
-            illo ut, est repellendus facere suscipit quas eum totam ea mollitia
-            voluptates. Aspernatur tenetur mollitia fugit consequatur, dicta
-            praesentium impedit repellat?
-            </Text>
-            {!clicked && <Box className="arrowUp" onClick={() => setClick(true)} />}
-          </Cards.Body>
-          {!clicked &&  <Cards.Footer>
-            <Email />
-            <Text as={"p"} variant="caption.quicksand">
-              figma@devinova.se
-            </Text>
-            <Phone />
-            <Text as={"p"} variant="caption.quicksand">
-              +46 77 123 45 67
-            </Text>
-          </Cards.Footer>}
-    </Card>
+      <Cards.Body>
+        <Cards.BodyText toggle={clicked}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+          illo ut, est repellendus facere suscipit quas eum totam ea mollitia
+          voluptates. Aspernatur tenetur mollitia fugit consequatur, dicta
+          praesentium impedit repellat?
+        </Cards.BodyText>
+        <Cards.Toggle
+          onClick={() => setClick(!clicked)}
+          toggle={clicked}
+        ></Cards.Toggle>
+      </Cards.Body>
+      <Cards.Footer toggle={clicked}>
+        <Email />
+        <Cards.FooterText>figma@devinova.se</Cards.FooterText>
+        <Phone />
+        <Cards.FooterText>+46 77 123 45 67</Cards.FooterText>
+      </Cards.Footer>
+    </Cards.Expandable>
   );
 }
 

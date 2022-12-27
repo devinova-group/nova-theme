@@ -1,5 +1,6 @@
 import React from "react";
-import { Label, Radio } from "theme-ui";
+import { Label } from "theme-ui";
+import Radio from "../library/Radio";
 
 function Radios() {
   return (

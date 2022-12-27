@@ -2,9 +2,10 @@ const checkbox: any = {
   width: "24px",
   height: "24px",
   border: "default",
-  borderColor: "check.borderColor",
+  borderColor: "default.secondary",
   boxShadow: "radio",
   fill: "none",
+
   "input:focus ~ &": {
     background: "transparent",
   },
@@ -18,8 +19,7 @@ const checkbox: any = {
     width: "24px",
     height: "24px",
     cursor: "not-allowed",
-    border: "default",
-    borderColor: "check.borderDisabled",
+    border: "transparent",
     background: "check.backgroundDisabled",
   },
 };

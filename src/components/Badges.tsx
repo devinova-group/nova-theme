@@ -1,7 +1,5 @@
 import React from "react";
-import { Badge } from "theme-ui";
-
-
+import Badge from "../library/Badge";
 function Badges() {
   return (
     <div className="test">

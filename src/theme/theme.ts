@@ -17,7 +17,7 @@ import toaster from "./toaster";
 import avatars from "./avatars";
 import modal from "./modal";
 import spinner from "./spinner";
-
+import radii from "./radii";
 
 export const theme = {
   space: [
@@ -57,5 +57,6 @@ export const theme = {
   toaster,
   avatars,
   modal,
-  spinner
-}
+  spinner,
+  radii,
+};

@@ -1,10 +1,10 @@
 import { Theme } from "theme-ui";
 
 const buttons: Theme["buttons"] = {
-  primary: {
-    width: "259px",
-    height: "73px",
-    fontFamily: "body.1",
+  primaryMedium: {
+    width: "150px",
+    height: "50px",
+    fontFamily: "button.1",
     fontStyle: "normal",
     fontSize: 5,
     cursor: "pointer",
@@ -12,7 +12,7 @@ const buttons: Theme["buttons"] = {
     boxShadow: "button",
     borderRadius: "8px",
     margin: 2,
-    padding: "0",
+    padding: 0,
 
     "&:hover": {
       backgroundColor: "transparent",
@@ -22,8 +22,8 @@ const buttons: Theme["buttons"] = {
     },
     "&:disabled": {
       backgroundColor: "default.primary",
-      color: "white",
-      opacity: "0.5",
+      color: "default.white",
+      opacity: "0.35",
       "&:hover": {
         cursor: "not-allowed",
         backgroundColor: "none",
@@ -37,23 +37,23 @@ const buttons: Theme["buttons"] = {
       color: "white",
     },
   },
-  activeMedium: {
-    variant: "buttons.primary",
-    width: "150px",
-    height: "50px",
+  primaryLarge: {
+    variant: "buttons.primaryMedium",
+    width: "259px",
+    height: "73px",
     fontFamily: "body.1",
     fontStyle: "normal",
     fontSize: 5,
   },
-  activeSmall: {
-    variant: "buttons.primary",
+  primarySmall: {
+    variant: "buttons.primaryMedium",
     width: "105px",
     height: "35px",
     fontSize: 14,
   },
   /* Error buttons */
-  error: {
-    variant: "buttons.primary",
+  errorMedium: {
+    variant: "buttons.primaryMedium",
     backgroundColor: "default.errors",
     "&:hover": {
       backgroundColor: "transparent",
@@ -76,23 +76,23 @@ const buttons: Theme["buttons"] = {
       },
     },
   },
-  errorMedium: {
-    variant: "buttons.error",
-    width: "150px",
-    height: "50px",
-    fontFamily: "body.1",
-    fontStyle: "normal",
-    fontSize: 4,
-  },
   errorSmall: {
-    variant: "buttons.error",
+    variant: "buttons.errorMedium",
     width: "105px",
     height: "35px",
     fontSize: 14,
   },
+  errorLarge: {
+    variant: "buttons.errorMedium",
+    width: "259px",
+    height: "73px",
+    fontFamily: "body.1",
+    fontStyle: "normal",
+    fontSize: 4,
+  },
   /* Success buttons */
-  success: {
-    variant: "buttons.primary",
+  successMedium: {
+    variant: "buttons.primaryMedium",
     backgroundColor: "default.positive1",
     "&:hover": {
       backgroundColor: "transparent",
@@ -115,21 +115,21 @@ const buttons: Theme["buttons"] = {
       },
     },
   },
-  successMedium: {
-    variant: "buttons.success",
-    width: "150px",
-    height: "50px",
+  successSmall: {
+    variant: "buttons.successMedium",
+    width: "105px",
+    height: "35px",
+    fontSize: 14,
+  },
+  successLarge: {
+    variant: "buttons.successMedium",
+    width: "259px",
+    height: "73px",
     fontFamily: "body.1",
     fontStyle: "normal",
     fontSize: 5,
   },
 
-  successSmall: {
-    variant: "buttons.success",
-    width: "105px",
-    height: "35px",
-    fontSize: 14,
-  },
   /* Mobile buttons */
   mobile: {
     variant: "buttons.primary",
@@ -187,6 +187,12 @@ const buttons: Theme["buttons"] = {
     fontSize: 5,
     borderRadius: "6px",
     backgroundColor: "default.primary",
+  },
+  login: {
+    variant: "buttons.primary",
+    width: "314px",
+    height: "50px",
+    fontWeight: "body.3",
   },
 };
 

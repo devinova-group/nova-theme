@@ -1,111 +1,29 @@
-import React from 'react'
-import { Avatar, Box, Heading, Image } from 'theme-ui'
+import React from "react";
+import { Box, Flex } from "theme-ui";
+import Avatar from "../library/Avatar";
 
-import cat from '../images/cat.jpg'
+import cat from "../images/cat.jpg";
 
 function Avatars() {
   return (
-    <div style={{
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-    }} >
-    <div style={{
-      display: 'flex',
-    }}>
-      <Box variant='avatars.error'>
-      <Image src={cat} />
-
-       <Box />
-      </Box> 
-      <Box variant='avatars.notAvailable'>
-      <Image src={cat} />
-
-       <Box />
-      </Box> 
-      <Box variant='avatars.away'>
-      <Image src={cat} />
-
-       <Box />
-      </Box> 
-      <Box variant='avatars.busy'>
-      <Image src={cat} />
-
-       <Box />
-      </Box> 
-      <Box variant='avatars.notdisturb'>
-      <Image src={cat} />
-
-       <Box />
-      </Box> 
-      <Box variant='avatars.edit'>
-      <Image src={cat} />
-
-       <Box />
-      </Box> 
-      <Box variant='avatars.active' >
-      <Image src={cat} />
-
-       <Box />
-      </Box>
-      <Box variant='avatars.default'>
-      <Image src={cat} />
-
-      </Box> 
-    </div>
-     <div style={{
-      display: 'flex',
-    }}>
-      <Box variant='avatars.error'>
-      <Heading as={'h6'} variant='heading.h6.quicksand'>
-        JD
-       </Heading>
-       <Box />
-      </Box> 
-      <Box variant='avatars.notAvailable'>
-      <Heading as={'h6'} variant='heading.h6.quicksand'>
-        JD
-       </Heading>
-       <Box />
-      </Box> 
-      <Box variant='avatars.away'>
-      <Heading as={'h6'} variant='heading.h6.quicksand'>
-        JD
-       </Heading>
-       <Box />
-      </Box> 
-      <Box variant='avatars.busy'>
-      <Heading as={'h6'} variant='heading.h6.quicksand'>
-        JD
-       </Heading>
-       <Box />
-      </Box> 
-      <Box variant='avatars.notdisturb'>
-      <Heading as={'h6'} variant='heading.h6.quicksand'>
-        JD
-       </Heading>
-       <Box />
-      </Box> 
-      <Box variant='avatars.edit'>
-      <Heading as={'h6'} variant='heading.h6.quicksand'>
-        JD
-       </Heading>
-       <Box />
-      </Box> 
-      <Box variant='avatars.active' >
-       <Heading as={'h6'} variant='heading.h6.quicksand'>
-        JD
-       </Heading>
-       <Box />
-      </Box>
-      <Box variant='avatars.default'>
-      <Heading as={'h6'} variant='heading.h6.quicksand'>
-        JD
-       </Heading>
-      </Box> 
-    </div>
-    </div>
-  )
+    <Box
+      sx={{
+        display: "flex",
+        width: "100%",
+        flexDirection: "row",
+        justifyContent: "center",
+      }}
+    >
+      <Avatar variant={"error"} src={cat}></Avatar>
+      <Avatar variant={"busy"} src={cat}></Avatar>
+      <Avatar variant={"away"} src={cat}></Avatar>
+      <Avatar variant={"active"} src={cat}></Avatar>
+      <Avatar variant={"notAvailable"} src={cat}></Avatar>
+      <Avatar variant={"notdisturb"} username="MS" /* src={cat} */></Avatar>
+      <Avatar variant={"edit"} username="MS" /* src={cat} */></Avatar>
+      <Avatar variant={"default"} username="MS"></Avatar>
+    </Box>
+  );
 }
 
-export default Avatars
+export default Avatars;

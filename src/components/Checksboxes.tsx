@@ -1,5 +1,6 @@
 import React from "react";
-import { Checkbox, Label } from "theme-ui";
+import { Label } from "theme-ui";
+import Checkbox from "../library/Checksbox";
 
 function Checksboxes() {
   return (

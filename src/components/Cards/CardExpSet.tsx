@@ -1,97 +1,62 @@
 import React from "react";
-import { Text, Card , Box } from "theme-ui";
+import { Text, Card, Box, Image, Heading, Flex } from "theme-ui";
 import {
   HeaderProps,
-  HeadingProps,
-  ArrowProps,
   BodyProps,
+  BodyTextProps,
+  ToggleProps,
   FooterProps,
-} from "../../interfaces/model";
+  FooterTextProps,
+} from "../../interfaces/cards";
 
-const Header = ({ children }: HeaderProps) => 
-<>
-{children}
-</>
-
-const Body = ({ children }: any) => (
-  <Box
-    sx={{
-      position: "relative",
-      width: "90%",
-    }}
-  >
-      {children}
- </Box>
+const Expandable = ({ children }: any) => (
+  <Card variant="expandable">{children}</Card>
 );
 
-const Footer = ({ children }: FooterProps) => (
-  <Box
-    sx={{
-      width: "300px",
-      display: "grid",
-      gridTemplateColumns: "0.01fr 1fr",
-      gridTemplateRows: "1fr 1fr",
-      alignItems: "center",
+const Header = ({ children, imageSrc, heading }: HeaderProps) => {
+  return (
+    <>
+      <Image src={imageSrc} />
+      <Text variant="overline.notoSans">{children}</Text>
+      <Heading as={"h5"} variant="heading.h5.quicksand">
+        {heading}
+      </Heading>
+    </>
+  );
+};
 
-      margin: 8,
-      "p:nth-of-type(1)": {
-        gridRow: 1,
-      },
-      "p:nth-of-type(2)": {
-        gridRow: 2,
-      },
-      "svg:nth-of-type(1)": {
-        gridRow: 1,
-      },
-      "svg:nth-of-type(2)": {
-        gridRow: 2,
-        marginTop: 3,
-        marginLeft: 1,
-      },
-      "svg > path": {
-        fill: "card.icon",
-      },
-    }}
-  >
-    {children}
+const Toggle = ({ toggle, onClick }: ToggleProps) => (
+  <Box className="toggle" onClick={onClick}>
+    <Box className={toggle ? "arrowDown" : "arrowUp"} />
   </Box>
 );
-const CardExpSet = { Header, Body, Footer };
-
-export default CardExpSet;
-
-
-/* const Heading = ({ children, onClick, hideArrow }: HeadingProps) => (
-  <Box
-    sx={{
-      display: "flex",
-      justifyContent: "space-between",
-     
-    }}
-  >
+const BodyText = ({ toggle, children }: BodyTextProps) => (
+  <Box className="bodyText">
+    <Text as={"p"} variant="caption.quicksand" className={toggle ? "hide" : ""}>
       {children}
-    {hideArrow && (
-      <Box
-        onClick={onClick}
-        className="arrowDown"
-        sx={{
-          width: "25px",
-          height: "20px",
-          marginTop: 0,
-          marginRight: 12,
-          marginLeft: 8,
-        }}
-      ></Box>
-    )}
+    </Text>
   </Box>
-); */
+);
+const Body = ({ children }: BodyProps) => <Flex>{children}</Flex>;
 
-/* const TextDots = ({ children }: ArrowProps) => (
-  <Text
-    as={"p"}
-    variant="caption.quicksand"
-    sx={{ width: '300px' ,textOverflow: "ellipsis", overflow: "hidden", whiteSpace: "nowrap" }}
-  >
+const Footer = ({ toggle, children }: FooterProps) => (
+  <>{toggle ? null : <Box className="footerCard">{children}</Box>}</>
+);
+
+const FooterText = ({ children }: FooterTextProps) => (
+  <Text as={"p"} variant="caption.quicksand">
     {children}
   </Text>
-); */
+);
+
+const CardExpSet = {
+  Toggle,
+  BodyText,
+  Expandable,
+  Header,
+  Body,
+  Footer,
+  FooterText,
+};
+
+export default CardExpSet;

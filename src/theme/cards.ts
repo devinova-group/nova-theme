@@ -6,7 +6,7 @@ const cards: Theme["cards"] = {
     height: "642px",
     display: "flex",
     flexDirection: "column",
-    gap: "10px",
+    gap: 3,
     backgroundColor: "card.backgroundColor",
     textAlign: "left",
     boxShadow: "card",
@@ -21,16 +21,17 @@ const cards: Theme["cards"] = {
     },
     span: {
       marginLeft: 8,
-      color: 'text.overline',
+      color: "text.overline",
     },
     h5: {
       marginLeft: 8,
       fontWeight: 700,
-      color: 'text.titleCard',
-
+      color: "text.titleCard",
     },
     p: {
+      width: "300px",
       marginLeft: 8,
+      marginBottom: 2,
       lineHeight: "26.4px",
     },
 
@@ -41,7 +42,7 @@ const cards: Theme["cards"] = {
 
   expandable: {
     variant: "cards.primary",
-    height: "none",
+    height: "",
     padding: 0,
     "div.arrowDown": {
       width: "25px",
@@ -49,25 +50,55 @@ const cards: Theme["cards"] = {
       background: "card.arrowDown",
       marginTop: 0,
       marginRight: 12,
-      marginLeft: 8,
     },
     "div.arrowUp": {
       width: "25px",
       height: "30px",
       background: "card.arrowUp",
       position: "absolute",
-      right: 0,
-      top: 20,
+      top: 0,
       marginTop: 0,
     },
-    ".hide": {
-      textOverflow: "ellipsis", 
-      overflow: "hidden", 
-      whiteSpace: "nowrap"
+    ".toggle": {
+      width: "70px",
+      position: "relative",
+      alignSelf: "center",
     },
-    ".show": {
-      /* display: "none", */
-    }
+    ".hide": {
+      textOverflow: "ellipsis",
+      overflow: "hidden",
+      whiteSpace: "nowrap",
+      maxWidth: "280px",
+    },
+    ".bodyText": {
+      width: "450px",
+    },
+    ".footerCard": {
+      width: "300px",
+      display: "grid",
+      gridTemplateColumns: "0.01fr 1fr",
+      gridTemplateRows: "1fr 1fr",
+      alignItems: "center",
+
+      margin: 8,
+      "p:nth-of-type(1)": {
+        gridRow: 1,
+      },
+      "p:nth-of-type(2)": {
+        gridRow: 2,
+      },
+      "svg:nth-of-type(1)": {
+        gridRow: 1,
+      },
+      "svg:nth-of-type(2)": {
+        gridRow: 2,
+        marginTop: 3,
+        marginLeft: 1,
+      },
+      "svg > path": {
+        fill: "card.icon",
+      },
+    },
   },
 
   onlyText: {
@@ -78,6 +109,9 @@ const cards: Theme["cards"] = {
     img: {
       display: "none",
     },
+  },
+  p: {
+    width: "300px",
   },
   noImg: {
     variant: "cards.onlyText",

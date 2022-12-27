@@ -45,6 +45,29 @@ const field: any = {
       borderColor: "field.borderColorClick",
     },
   },
+  username: {
+    variant: "field.text",
+    width: "314px",
+    height: "50px",
+    background: "login.iconUsername",
+    backgroundColor: "field.searchBackground",
+    borderColor: "field.borderColorClick",
+    "&::placeholder": {
+      fontFamily: "body.2",
+      fontSize: 2,
+      fontWeight: 2,
+      letterSpacing: 0,
+      color: "#A3A3A3",
+    },
+    "&:focus": {
+      outline: "none",
+      borderColor: "field.borderColorClick",
+    },
+  },
+  password: {
+    variant: "field.username",
+    background: "login.iconPassword",
+  },
 };
 
 export default field;

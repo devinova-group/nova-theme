@@ -1,25 +1,25 @@
 import React from "react";
-import { Field } from "theme-ui";
+import Field from "../library/Field";
 
 function Fields() {
   return (
     <>
       <div className="test">
         <Field
-          variant="field.text"
+          variant="text"
           name="email"
           defaultValue=""
           placeholder="Placeholder Text"
         />
         <Field
           disabled
-          variant="field.text"
+          variant="text"
           name="email"
           defaultValue=""
           placeholder="Placeholder Text"
         />
         <Field
-          variant="field.textError"
+          variant="textError"
           name="email"
           defaultValue=""
           placeholder="Placeholder Text"
@@ -27,14 +27,14 @@ function Fields() {
       </div>
       <div className="test">
         <Field
-          variant="field.search"
+          variant="search"
           name="email"
           defaultValue=""
           placeholder="Search"
         />
         <Field
           disabled
-          variant="field.search"
+          variant="search"
           name="email"
           defaultValue=""
           placeholder="Search"

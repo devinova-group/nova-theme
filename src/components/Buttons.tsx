@@ -1,34 +1,46 @@
 import React from "react";
-import { Button } from "theme-ui";
+import Button from "../library/Button";
 
 function Buttons() {
   return (
     <>
       <div className="test">
-        <Button variant="primary" disabled>
+        <Button variant="primary" size="Large" disabled>
           + Button
         </Button>
-        <Button variant="activeMedium">+ Button</Button>
-        <Button variant="activeSmall">$ Button</Button>
-      </div>
-
-      <div className="test">
-        <Button variant="error">$ Button</Button>
-        <Button variant="errorMedium" disabled>
-          $ Button
+        <Button variant="primary" size="Medium">
+          + Button
         </Button>
-        <Button variant="errorSmall">$ Button</Button>
-      </div>
-      <div className="test">
-        <Button variant="success">+ Button</Button>
-        <Button variant="successMedium">+ Button</Button>
-        <Button variant="successSmall" disabled>
+        <Button variant="primary" size="Small">
           $ Button
         </Button>
       </div>
 
       <div className="test">
-        <Button variant="mobile" disabled>
+        <Button variant="error" size="Large">
+          $ Button
+        </Button>
+        <Button variant="error" size="Medium" disabled>
+          $ Button
+        </Button>
+        <Button variant="error" size="Small">
+          $ Button
+        </Button>
+      </div>
+      <div className="test">
+        <Button variant="success" size="Large">
+          + Button
+        </Button>
+        <Button variant="success" size="Medium">
+          + Button
+        </Button>
+        <Button variant="success" disabled size="Small">
+          $ Button
+        </Button>
+      </div>
+
+      <div className="test">
+        {/*  <Button variant="mobile" disabled>
           +
         </Button>
         <Button variant="mobileMedium">+</Button>
@@ -43,7 +55,7 @@ function Buttons() {
       <div className="test">
         <Button variant="mobileSuccess">+</Button>
         <Button variant="mobileSuccessMedium">+</Button>
-        <Button variant="mobileSuccessSmall">+</Button>
+        <Button variant="mobileSuccessSmall">+</Button> */}
       </div>
     </>
   );

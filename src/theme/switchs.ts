@@ -1,5 +1,5 @@
 const switchs = {
-  toggleBig: {
+  large: {
     width: "145px",
     height: "67px",
     backgroundColor: "badge.disabled",
@@ -25,8 +25,8 @@ const switchs = {
       },
     },
   },
-  toggleSmall: {
-    variant: "switchs.toggleBig",
+  small: {
+    variant: "switchs.large",
     width: "68px",
     height: "32px",
     div: {
@@ -45,8 +45,8 @@ const switchs = {
       },
     },
   },
-  toggleV1Big: {
-    variant: "switchs.toggleBig",
+  largeV1: {
+    variant: "switchs.large",
     background: "switch.bgV1BigMoon",
 
     div: {
@@ -61,8 +61,8 @@ const switchs = {
       },
     },
   },
-  toggleV1Small: {
-    variant: "switchs.toggleSmall",
+  smallV1: {
+    variant: "switchs.small",
     background: "switch.bgV1SmallMoon",
     width: "68px",
     height: "32px",
@@ -79,8 +79,8 @@ const switchs = {
       },
     },
   },
-  toggleV2Big: {
-    variant: "switchs.toggleV1Big",
+  largeV2: {
+    variant: "switchs.largeV1",
     background: "switch.bgV2BigDark",
 
     div: {
@@ -97,8 +97,8 @@ const switchs = {
       },
     },
   },
-  toggleV2Small: {
-    variant: "switchs.toggleV1Small",
+  smallV2: {
+    variant: "switchs.smallV1",
     background: "switch.bgV2SmallDark",
     div: {
       background: "switch.bgV2MoonSmall",
