@@ -1,30 +1,18 @@
+import React from "react";
 import { Button as ButtonThemeUi } from "theme-ui";
+import { ButtonProps as ThemeUIButtonProps } from "theme-ui";
 
-export interface ButtonProps {
-  children?: string;
-  size?: "Small" | "Medium" | "Large";
-  variant?: "primary" | "error" | "success";
-  disabled?: boolean;
-  onClick?: () => void;
-  sx?: any;
+export interface ButtonProps extends ThemeUIButtonProps {
+  size: "small" | "medium" | "large" | "";
 }
 
-const Button = ({
-  children,
-  size,
-  variant,
-  disabled,
-  onClick,
-  sx,
-}: ButtonProps) => (
+const Button = (props: ButtonProps) => (
   <ButtonThemeUi
-    variant={`${variant}${size}`}
-    onClick={onClick}
-    disabled={disabled}
-    sx={sx}
-  >
-    {children}
-  </ButtonThemeUi>
+    {...props}
+    variant={`buttons.${props.variant}.${
+      props.size === "" ? "medium" : props.size
+    }`}
+  ></ButtonThemeUi>
 );
 
 export default Button;

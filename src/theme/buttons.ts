@@ -1,199 +1,202 @@
 import { Theme } from "theme-ui";
 
 const buttons: Theme["buttons"] = {
-  primaryMedium: {
-    width: "150px",
-    height: "50px",
-    fontFamily: "button.1",
-    fontStyle: "normal",
-    fontSize: 5,
-    cursor: "pointer",
-    backgroundColor: "default.primary",
-    boxShadow: "button",
-    borderRadius: "8px",
-    margin: 2,
-    padding: 0,
-
-    "&:hover": {
-      backgroundColor: "transparent",
-      color: "default.primary",
-      border: "default",
-      borderColor: "default.primary",
-    },
-    "&:disabled": {
+  primary: {
+    medium: {
+      minWidth: "150px",
+      minHeight: "50px",
+      fontFamily: "button.1",
+      fontStyle: "normal",
+      fontSize: 5,
+      cursor: "pointer",
       backgroundColor: "default.primary",
-      color: "default.white",
-      opacity: "0.35",
+      boxShadow: "button",
+      borderRadius: "8px",
+      margin: 2,
+      padding: 0,
+
       "&:hover": {
-        cursor: "not-allowed",
-        backgroundColor: "none",
-        color: "none",
-        border: "none",
-        borderColor: "none",
+        backgroundColor: "transparent",
+        color: "default.primary",
+        border: "default",
+        borderColor: "default.primary",
       },
-    },
-    "&:focus": {
-      backgroundColor: "default.second",
-      color: "white",
-    },
-  },
-  primaryLarge: {
-    variant: "buttons.primaryMedium",
-    width: "259px",
-    height: "73px",
-    fontFamily: "body.1",
-    fontStyle: "normal",
-    fontSize: 5,
-  },
-  primarySmall: {
-    variant: "buttons.primaryMedium",
-    width: "105px",
-    height: "35px",
-    fontSize: 14,
-  },
-  /* Error buttons */
-  errorMedium: {
-    variant: "buttons.primaryMedium",
-    backgroundColor: "default.errors",
-    "&:hover": {
-      backgroundColor: "transparent",
-      color: "default.errors",
-      border: "default",
-      borderColor: "default.errors",
-    },
-    "&:focus": {
-      backgroundColor: "default.errors",
-      color: "white",
-    },
-    "&:disabled": {
-      backgroundColor: "default.errorsDisabled",
-      "&:hover": {
-        cursor: "not-allowed",
-        backgroundColor: "none",
-        border: "none",
-        borderColor: "none",
+      "&:disabled": {
+        backgroundColor: "default.primary",
+        color: "default.white",
+        opacity: "0.35",
+        "&:hover": {
+          cursor: "not-allowed",
+          backgroundColor: "none",
+          color: "none",
+          border: "none",
+          borderColor: "none",
+        },
+      },
+      "&:focus": {
+        backgroundColor: "default.second",
         color: "white",
       },
     },
-  },
-  errorSmall: {
-    variant: "buttons.errorMedium",
-    width: "105px",
-    height: "35px",
-    fontSize: 14,
-  },
-  errorLarge: {
-    variant: "buttons.errorMedium",
-    width: "259px",
-    height: "73px",
-    fontFamily: "body.1",
-    fontStyle: "normal",
-    fontSize: 4,
-  },
-  /* Success buttons */
-  successMedium: {
-    variant: "buttons.primaryMedium",
-    backgroundColor: "default.positive1",
-    "&:hover": {
-      backgroundColor: "transparent",
-      color: "default.positive1",
-      border: "default",
-      borderColor: "default.positive1",
+    small: {
+      variant: "buttons.primary.medium",
+      minWidth: "105px",
+      minHeight: "35px",
+      fontSize: 14,
     },
-    "&:focus": {
-      backgroundColor: "default.positive1",
-      color: "default.white",
+    large: {
+      variant: "buttons.primary.medium",
+      minWidth: "259px",
+      minHeight: "73px",
+      fontFamily: "body.1",
+      fontStyle: "normal",
+      fontSize: 5,
     },
-    "&:disabled": {
-      backgroundColor: "default.positive1Disabled",
-      "&:hover": {
-        cursor: "not-allowed",
-        backgroundColor: "none",
-        border: "none",
-        borderColor: "none",
-        color: "default.white",
-      },
-    },
-  },
-  successSmall: {
-    variant: "buttons.successMedium",
-    width: "105px",
-    height: "35px",
-    fontSize: 14,
-  },
-  successLarge: {
-    variant: "buttons.successMedium",
-    width: "259px",
-    height: "73px",
-    fontFamily: "body.1",
-    fontStyle: "normal",
-    fontSize: 5,
-  },
-
-  /* Mobile buttons */
-  mobile: {
-    variant: "buttons.primary",
-    width: "72px",
-    height: "72px",
-  },
-  mobileMedium: {
-    variant: "buttons.primary",
-    width: "60px",
-    height: "60px",
-  },
-  mobileSmall: {
-    variant: "buttons.primary",
-    width: "42px",
-    height: "42px",
-  },
-  /* Mobile error */
-  mobileError: {
-    variant: "buttons.error",
-    width: "72px",
-    height: "72px",
-  },
-  mobileErrorMedium: {
-    variant: "buttons.error",
-    width: "60px",
-    height: "60px",
-  },
-  mobileErrorSmall: {
-    variant: "buttons.error",
-    width: "42px",
-    height: "42px",
-  },
-  /* Mobile Success */
-  mobileSuccess: {
-    variant: "buttons.success",
-    width: "72px",
-    height: "72px",
-  },
-  mobileSuccessMedium: {
-    variant: "buttons.success",
-    width: "60px",
-    height: "60px",
-  },
-  mobileSuccessSmall: {
-    variant: "buttons.success",
-    width: "42px",
-    height: "42px",
-  },
-  learnMore: {
-    width: "150px",
-    height: "59px",
-    fontFamily: "body.0",
-    fontWeight: "body.3",
-    boxShadow: "button",
-    fontSize: 5,
-    borderRadius: "6px",
-    backgroundColor: "default.primary",
-  },
-  login: {
-    variant: "buttons.primary",
-    width: "314px",
-    height: "50px",
-    fontWeight: "body.3",
   },
 };
-
 export default buttons;
+/* error: {
+    medium: {
+      variant: "buttons.primary.medium",
+      backgroundColor: "default.errors",
+      "&:hover": {
+        backgroundColor: "transparent",
+        color: "default.errors",
+        border: "default",
+        borderColor: "default.errors",
+      },
+      "&:focus": {
+        backgroundColor: "default.errors",
+        color: "white",
+      },
+      "&:disabled": {
+        backgroundColor: "default.errorsDisabled",
+        "&:hover": {
+          cursor: "not-allowed",
+          backgroundColor: "none",
+          border: "none",
+          borderColor: "none",
+          color: "white",
+        },
+      },
+    },
+    small: {
+      variant: "buttons.error.medium",
+      width: "105px",
+      height: "35px",
+      fontSize: 14,
+    },
+    large: {
+      variant: "buttons.error.medium",
+      width: "259px",
+      height: "73px",
+      fontFamily: "body.1",
+      fontStyle: "normal",
+      fontSize: 4,
+    },
+  },
+  success: {
+    medium: {
+      variant: "buttons.primary.medium",
+      backgroundColor: "default.positive1",
+      "&:hover": {
+        backgroundColor: "transparent",
+        color: "default.positive1",
+        border: "default",
+        borderColor: "default.positive1",
+      },
+      "&:focus": {
+        backgroundColor: "default.positive1",
+        color: "default.white",
+      },
+      "&:disabled": {
+        backgroundColor: "default.positive1Disabled",
+        "&:hover": {
+          cursor: "not-allowed",
+          backgroundColor: "none",
+          border: "none",
+          borderColor: "none",
+          color: "default.white",
+        },
+      },
+    },
+    small: {
+      variant: "buttons.success.medium",
+      width: "105px",
+      height: "35px",
+      fontSize: 14,
+    },
+    large: {
+      variant: "buttons.success.medium",
+      width: "259px",
+      height: "73px",
+      fontFamily: "body.1",
+      fontStyle: "normal",
+      fontSize: 5,
+    },
+  }, */
+
+/*  mobile: {
+      variant: "buttons.primary",
+      width: "72px",
+      height: "72px",
+    },
+    mobileMedium: {
+      variant: "buttons.primary",
+      width: "60px",
+      height: "60px",
+    },
+    mobileSmall: {
+      variant: "buttons.primary",
+      width: "42px",
+      height: "42px",
+    },
+
+    mobileError: {
+      variant: "buttons.error",
+      width: "72px",
+      height: "72px",
+    },
+    mobileErrorMedium: {
+      variant: "buttons.error",
+      width: "60px",
+      height: "60px",
+    },
+    mobileErrorSmall: {
+      variant: "buttons.error",
+      width: "42px",
+      height: "42px",
+    },
+    mobileSuccess: {
+      variant: "buttons.success",
+      width: "72px",
+      height: "72px",
+    },
+    mobileSuccessMedium: {
+      variant: "buttons.success",
+      width: "60px",
+      height: "60px",
+    },
+    mobileSuccessSmall: {
+      variant: "buttons.success",
+      width: "42px",
+      height: "42px",
+    },
+    learnMore: {
+      width: "150px",
+      height: "59px",
+      fontFamily: "body.0",
+      fontWeight: "body.3",
+      boxShadow: "button",
+      fontSize: 5,
+      borderRadius: "6px",
+      backgroundColor: "default.primary",
+    },
+    login: {
+      variant: "buttons.primary",
+      width: "314px",
+      height: "50px",
+      fontWeight: "body.3",
+    },
+  },
+}; */

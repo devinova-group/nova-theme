@@ -1,14 +1,15 @@
 import React, { useState } from "react";
-import { Box, Heading, Text } from "theme-ui";
 import Modals from "../library/Modal";
 import Button from "../library/Button";
+import Text from "../library/Text";
+import Heading from "../library/Heading";
 
 function Modal() {
   const [clicked, setClick] = useState(false);
 
   return (
     <>
-      <Button variant="primary" size="Medium" onClick={() => setClick(true)}>
+      <Button variant="primary" size="medium" onClick={() => setClick(true)}>
         Modal
       </Button>
       {clicked && (
@@ -24,8 +25,8 @@ function Modal() {
           </Modals.Body>
           <Modals.Footer>
             <Button
-              variant="success"
-              size="Medium"
+              variant="primary"
+              size="medium"
               onClick={() => setClick(false)}
               sx={{ background: "black" }}
             >
@@ -33,7 +34,7 @@ function Modal() {
             </Button>
             <Button
               variant="primary"
-              size="Medium"
+              size="medium"
               onClick={() => setClick(false)}
             >
               Click me

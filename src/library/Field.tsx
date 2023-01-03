@@ -1,33 +1,13 @@
 import { Field as FieldThemeUi } from "theme-ui";
+import { FieldOwnProps as FieldPropsTheme } from "theme-ui";
+import { InputProps as InputPropsTheme } from "theme-ui";
 
-export interface FieldProps {
+export interface FieldProps extends InputPropsTheme, FieldPropsTheme {
   variant?: "text" | "textError" | "search";
-  name?: string;
-  defaultValue?: string;
-  placeholder?: string;
-  disabled?: boolean;
-  onClick?: () => void;
-  sx?: any;
 }
 
-const Field = ({
-  variant,
-  name,
-  defaultValue,
-  placeholder,
-  disabled,
-  onClick,
-  sx,
-}: FieldProps) => (
-  <FieldThemeUi
-    onClick={onClick}
-    name={name}
-    defaultValue={defaultValue}
-    placeholder={placeholder}
-    variant={`field.${variant}`}
-    sx={sx}
-    disabled={disabled}
-  />
+const Field = (props: FieldProps) => (
+  <FieldThemeUi {...props} variant={`field.${props.variant}`} />
 );
 
 export default Field;

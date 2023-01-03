@@ -4,84 +4,84 @@ import Text from "../library/Text";
 function BodyText() {
   return (
     <>
-      <Text size="display" variant="notoSans">
+      <Text variant="notoSans" size="display">
         Noto Sans
       </Text>
       <br />
-      <Text size="title1" variant="notoSans">
+      <Text variant="notoSans" size="title1">
         Noto Sans
       </Text>
       <br />
-      <Text size="title2" variant="notoSans">
+      <Text variant="notoSans" size="title2">
         Noto Sans
       </Text>
       <br />
-      <Text size="subhead" variant="notoSans">
+      <Text variant="notoSans" size="subhead">
         Noto Sans
       </Text>
       <br />
-      <Text size="body1" variant="notoSans">
+      <Text variant="notoSans" size="body1">
         Noto Sans
       </Text>
       <br />
-      <Text size="body2" variant="notoSans">
+      <Text variant="notoSans" size="body2">
         Noto Sans
       </Text>
       <br />
-      <Text size="body3" variant="notoSans">
+      <Text variant="notoSans" size="body3">
         Noto Sans
       </Text>
       <br />
-      <Text size="caption" variant="notoSans">
+      <Text variant="notoSans" size="caption">
         Noto Sans
       </Text>
       <br />
-      <Text size="button" variant="notoSans">
+      <Text variant="notoSans" size="button">
         Noto Sans
       </Text>
       <br />
-      <Text size="overline" variant="notoSans">
+      <Text variant="notoSans" size="overline">
         Noto Sans
       </Text>
       <br />
       <br />
-      <Text size="display" variant="quicksand">
+      <Text variant="quicksand" size="display">
         Quicksand
       </Text>
       <br />
-      <Text size="title1" variant="quicksand">
+      <Text variant="quicksand" size="title1">
         Quicksand
       </Text>
       <br />
-      <Text size="title2" variant="quicksand">
+      <Text variant="quicksand" size="title2">
         Quicksand
       </Text>
       <br />
-      <Text size="subhead" variant="quicksand">
+      <Text variant="quicksand" size="subhead">
         Quicksand
       </Text>
       <br />
-      <Text size="body1" variant="quicksand">
+      <Text variant="quicksand" size="body1">
         Quicksand
       </Text>
       <br />
-      <Text size="body2" variant="quicksand">
+      <Text variant="quicksand" size="body2">
         Quicksand
       </Text>
       <br />
-      <Text size="body3" variant="quicksand">
+      <Text variant="quicksand" size="body3">
         Quicksand
       </Text>
       <br />
-      <Text size="caption" variant="quicksand">
+      <Text variant="quicksand" size="caption">
         Quicksand
       </Text>
       <br />
-      <Text size="button" variant="quicksand">
+      <Text variant="quicksand" size="button">
         Quicksand
       </Text>
       <br />
-      <Text size="overline" variant="quicksand">
+      <Text variant="quicksand" size="overline">
         Quicksand
       </Text>
       <br />

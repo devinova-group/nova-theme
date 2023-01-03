@@ -1,8 +1,8 @@
 import { Text as TextThemeUi } from "theme-ui";
+import { TextProps as TextPropsThemeUi } from "theme-ui";
 
-export interface TextProps {
-  children: string;
-  size:
+export interface TextProps extends TextPropsThemeUi {
+  size?:
     | "display"
     | "title1"
     | "title2"
@@ -13,13 +13,12 @@ export interface TextProps {
     | "caption"
     | "button"
     | "overline";
-  variant: "notoSans" | "quicksand";
-  onClick?: () => void;
-  sx?: any;
+  variant?: "notoSans" | "quicksand";
 }
-const Text = ({ children, size, variant, onClick, sx }: TextProps) => (
-  <TextThemeUi onClick={onClick} variant={`${size}.${variant}`} sx={sx}>
-    {children}
-  </TextThemeUi>
+const Text = (props: TextProps) => (
+  <TextThemeUi
+    {...props}
+    variant={`${props.size}.${props.variant}`}
+  ></TextThemeUi>
 );
 export default Text;

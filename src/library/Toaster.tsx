@@ -1,6 +1,7 @@
-import { Box, Text } from "theme-ui";
+import { Box } from "theme-ui";
+import { BoxProps as ToasterPropsThemeUI } from "theme-ui";
 
-export interface ToasterProps {
+export interface ToasterProps extends ToasterPropsThemeUI {
   variant?:
     | "primaryV1"
     | "warningV1"
@@ -12,15 +13,13 @@ export interface ToasterProps {
     | "warningV2"
     | "errorV2"
     | "infoV2";
-  onClick?: () => void;
-  sx?: any;
   children?: any;
 }
 
-const Toaster = ({ children, variant, onClick, sx }: ToasterProps) => (
-  <Box variant={`toaster.${variant}`} onClick={onClick} sx={sx}>
+const Toaster = (props: ToasterProps) => (
+  <Box variant={`toaster.${props.variant}`}>
     <Box className="toasterSvg" />
-    {children}
+    {props.children}
     <Box className="toasterX" />
   </Box>
 );

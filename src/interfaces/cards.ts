@@ -9,16 +9,16 @@ export interface BodyProps {
 }
 export interface BodyTextProps {
   children: React.ReactNode;
-  toggle: boolean;
+  toggle?: boolean;
 }
 export interface ToggleProps {
-  toggle: boolean;
-  onClick: () => void;
+  toggle?: boolean;
+  onClick?: () => void;
 }
 
 export interface FooterProps {
   children: React.ReactNode;
-  toggle: boolean;
+  toggle?: boolean;
 }
 export interface FooterTextProps {
   children: React.ReactNode;

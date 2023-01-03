@@ -23,7 +23,7 @@ const cards: Theme["cards"] = {
       marginLeft: 8,
       color: "text.overline",
     },
-    h5: {
+    h2: {
       marginLeft: 8,
       fontWeight: 700,
       color: "text.titleCard",

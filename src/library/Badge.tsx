@@ -1,8 +1,9 @@
 import { Badge as BadgeThemeUi } from "theme-ui";
+import { BadgeProps as BadgePropsThemeUi } from "theme-ui";
 
-export interface BadgeProps {
+export interface BadgeProps extends BadgePropsThemeUi {
   children: string;
-  variant:
+  variant?:
     | "inActive"
     | "error"
     | "disabled"
@@ -11,14 +12,10 @@ export interface BadgeProps {
     | "primary"
     | "selected"
     | "secondary";
-  onClick?: () => void;
-  sx?: any;
 }
 
-const Badge = ({ children, variant, onClick, sx }: BadgeProps) => (
-  <BadgeThemeUi variant={variant} onClick={onClick} sx={sx}>
-    {children}
-  </BadgeThemeUi>
+const Badge = (props: BadgeProps) => (
+  <BadgeThemeUi variant={props.variant}>{props.children}</BadgeThemeUi>
 );
 
 export default Badge;

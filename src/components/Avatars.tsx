@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Flex } from "theme-ui";
+import { Box } from "theme-ui";
 import Avatar from "../library/Avatar";
 
 import cat from "../images/cat.jpg";
@@ -14,14 +14,14 @@ function Avatars() {
         justifyContent: "center",
       }}
     >
-      <Avatar variant={"error"} src={cat}></Avatar>
-      <Avatar variant={"busy"} src={cat}></Avatar>
-      <Avatar variant={"away"} src={cat}></Avatar>
-      <Avatar variant={"active"} src={cat}></Avatar>
-      <Avatar variant={"notAvailable"} src={cat}></Avatar>
-      <Avatar variant={"notdisturb"} username="MS" /* src={cat} */></Avatar>
-      <Avatar variant={"edit"} username="MS" /* src={cat} */></Avatar>
-      <Avatar variant={"default"} username="MS"></Avatar>
+      <Avatar variant="error" src={cat}></Avatar>
+      <Avatar variant="busy" src={cat}></Avatar>
+      <Avatar variant="away" src={cat}></Avatar>
+      <Avatar variant="active" src={cat}></Avatar>
+      <Avatar variant="notAvailable" src={cat}></Avatar>
+      <Avatar variant="notdisturb" username="NW"></Avatar>
+      <Avatar variant="edit" username="LJ"></Avatar>
+      <Avatar variant="default" username="MS"></Avatar>
     </Box>
   );
 }

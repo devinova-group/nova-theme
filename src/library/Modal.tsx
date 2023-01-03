@@ -1,16 +1,13 @@
 import React from "react";
-import { Box, Button, Checkbox, Flex, Heading, Label, Text } from "theme-ui";
+import { Box } from "theme-ui";
 import ReactDOM from "react-dom";
 import {
+  DialogProps,
   HeaderProps,
   BodyProps,
   FooterProps,
-  /* DialogProps, */
 } from "../interfaces/modals";
-export interface DialogProps {
-  children: React.ReactNode;
-  size: "small" | "medium" | "large";
-}
+
 const Dialog = ({ children, size }: DialogProps) => {
   return ReactDOM.createPortal(
     <Box
@@ -18,7 +15,7 @@ const Dialog = ({ children, size }: DialogProps) => {
         width: "100%",
         height: "100%",
         background: "#0009",
-        position: "absolute",
+        position: "fixed",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -34,11 +31,11 @@ const Dialog = ({ children, size }: DialogProps) => {
   );
 };
 
-const Header = ({ children }: any) => <header>{children}</header>;
+const Header = ({ children }: HeaderProps) => <header>{children}</header>;
 
-const Body = ({ children }: any) => <main>{children}</main>;
+const Body = ({ children }: BodyProps) => <main>{children}</main>;
 
-const Footer = ({ children }: any) => <footer>{children}</footer>;
+const Footer = ({ children }: FooterProps) => <footer>{children}</footer>;
 
 const Modals = { Dialog, Header, Body, Footer };
 

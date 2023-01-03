@@ -4,51 +4,51 @@ import Heading from "../library/Heading";
 function Headings() {
   return (
     <div>
-      <Heading variant="neucha" size="h1">
+      <Heading size="h1" variant="neucha">
         H1- Neucha
       </Heading>
       <br />
-      <Heading variant="neucha" size="h2">
+      <Heading size="h2" variant="neucha">
         H2- Neucha
       </Heading>
       <br />
-      <Heading variant="neucha" size="h3">
+      <Heading size="h3" variant="neucha">
         H3- Neucha
       </Heading>
       <br />
-      <Heading variant="neucha" size="h4">
+      <Heading size="h4" variant="neucha">
         H4- Neucha
       </Heading>
       <br />
-      <Heading variant="neucha" size="h5">
+      <Heading size="h5" variant="neucha">
         H5- Neucha
       </Heading>
       <br />
-      <Heading variant="neucha" size="h6">
+      <Heading size="h6" variant="neucha">
         H6- Neucha
       </Heading>
       <br />
-      <Heading variant="quicksand" size="h1">
+      <Heading size="h1" variant="quicksand">
         H1- Quicksand
       </Heading>
       <br />
-      <Heading variant="quicksand" size="h2">
+      <Heading size="h2" variant="quicksand">
         H2- Quicksand
       </Heading>
       <br />
-      <Heading variant="quicksand" size="h3">
+      <Heading size="h3" variant="quicksand">
         H3- Quicksand
       </Heading>
       <br />
-      <Heading variant="quicksand" size="h4">
+      <Heading size="h4" variant="quicksand">
         H4- Quicksand
       </Heading>
       <br />
-      <Heading variant="quicksand" size="h5">
+      <Heading size="h5" variant="quicksand">
         H5- Quicksand
       </Heading>
       <br />
-      <Heading variant="quicksand" size="h6">
+      <Heading size="h6" variant="quicksand">
         H6- Quicksand
       </Heading>
       <br />

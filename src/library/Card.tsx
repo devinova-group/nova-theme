@@ -1,5 +1,6 @@
 import React from "react";
 import { Text, Card, Box, Image, Heading, Flex } from "theme-ui";
+import { CardProps as CardPropsThemeUI } from "theme-ui";
 import {
   HeaderProps,
   BodyProps,
@@ -7,29 +8,25 @@ import {
   ToggleProps,
   FooterProps,
   FooterTextProps,
-} from "../../interfaces/cards";
+} from "../interfaces/cards";
 
-const Expandable = ({ children }: any) => (
-  <Card variant="expandable">{children}</Card>
+export interface CardProps extends CardPropsThemeUI {
+  variant?: "primary" | "expandable" | "onlyText" | "noImg";
+  children?: any;
+}
+
+const Dialog = ({ children, variant }: CardProps, props: CardPropsThemeUI) => (
+  <Card variant={variant} {...props}>
+    {children}
+  </Card>
 );
 
-const Header = ({ children, imageSrc, heading }: HeaderProps) => {
-  return (
-    <>
-      <Image src={imageSrc} />
-      <Text variant="overline.notoSans">{children}</Text>
-      <Heading as={"h5"} variant="heading.h5.quicksand">
-        {heading}
-      </Heading>
-    </>
-  );
+const Header = ({ children }: any) => {
+  return <header>{children}</header>;
 };
 
-const Toggle = ({ toggle, onClick }: ToggleProps) => (
-  <Box className="toggle" onClick={onClick}>
-    <Box className={toggle ? "arrowDown" : "arrowUp"} />
-  </Box>
-);
+const Body = ({ children }: BodyProps) => <Flex>{children}</Flex>;
+
 const BodyText = ({ toggle, children }: BodyTextProps) => (
   <Box className="bodyText">
     <Text as={"p"} variant="caption.quicksand" className={toggle ? "hide" : ""}>
@@ -37,7 +34,12 @@ const BodyText = ({ toggle, children }: BodyTextProps) => (
     </Text>
   </Box>
 );
-const Body = ({ children }: BodyProps) => <Flex>{children}</Flex>;
+
+const Toggle = ({ toggle, onClick }: ToggleProps) => (
+  <Box className="toggle" onClick={onClick}>
+    <Box className={toggle ? "arrowDown" : "arrowUp"} />
+  </Box>
+);
 
 const Footer = ({ toggle, children }: FooterProps) => (
   <>{toggle ? null : <Box className="footerCard">{children}</Box>}</>
@@ -52,7 +54,7 @@ const FooterText = ({ children }: FooterTextProps) => (
 const CardExpSet = {
   Toggle,
   BodyText,
-  Expandable,
+  Dialog,
   Header,
   Body,
   Footer,

@@ -1,11 +1,7 @@
 /** @jsxImportSource theme-ui */
 import "./App.css";
 import { useColorMode, Box } from "theme-ui";
-import CardExp from "./components/Cards/CardExpandable";
 import Badges from "./components/Badges";
-import CardPrimary from "./components/Cards/CardPrimary";
-import CardNoImg from "./components/Cards/CardNoImg";
-import CardOnlyText from "./components/Cards/CardOnlyText";
 import Fields from "./components/Fields";
 import Checksboxes from "./components/Checksboxes";
 import Radios from "./components/Radios";
@@ -18,6 +14,7 @@ import Modal from "./components/Modal";
 import Loading from "./components/Loading";
 import Switches from "./components/Switches";
 import Switch from "./library/Switch";
+import Cards from "./components/Cards";
 
 function App() {
   const [colorMode, setColorMode] = useColorMode();
@@ -47,6 +44,10 @@ function App() {
         {/*  <h1>Spinner</h1>
        <Loading /> */}
         <Box className="test"></Box>
+        <h1>Cards</h1>
+        <Box>
+          <Cards />
+        </Box>
         <h1>Modal</h1>
         <Box className="test">
           <Modal />
@@ -56,15 +57,6 @@ function App() {
         <h1>Toaster</h1>
         <Box className="test">
           <Toasters />
-        </Box>
-        <h1>Cards</h1>
-        <Box className="test">
-          <CardPrimary />
-          <CardNoImg />
-        </Box>
-        <Box className="test">
-          <CardExp />
-          <CardOnlyText />
         </Box>
         <h1>Switch</h1>
         <Switches />

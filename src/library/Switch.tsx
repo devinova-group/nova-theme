@@ -1,13 +1,12 @@
 import { Switch as SwitchThemeUi } from "theme-ui";
+import { SwitchProps as SwitchPropsThemeUi } from "theme-ui";
 
-export interface SwitchProps {
+export interface SwitchProps extends SwitchPropsThemeUi {
   variant?: "large" | "small" | "largeV1" | "smallV1" | "largeV2" | "smallV2";
-  onClick?: () => void;
-  sx?: any;
 }
 
-const Switch = ({ variant, onClick, sx }: SwitchProps) => (
-  <SwitchThemeUi variant={`switchs.${variant}`} onClick={onClick} sx={sx} />
+const Switch = (props: SwitchProps) => (
+  <SwitchThemeUi {...props} variant={`switchs.${props.variant}`} />
 );
 
 export default Switch;
