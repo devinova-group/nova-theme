@@ -11,7 +11,8 @@ export interface BadgeProps extends BadgePropsThemeUi {
     | "default"
     | "primary"
     | "selected"
-    | "secondary";
+    | "secondary"
+    | string;
 }
 
 const Badge = (props: BadgeProps) => (

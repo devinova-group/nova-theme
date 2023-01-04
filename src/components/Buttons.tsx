@@ -12,7 +12,7 @@ function Buttons() {
           + Button
         </Button>
         <Button variant="primary" size="small">
-          $ Button 122324235667464
+          $ Button
         </Button>
       </div>
       <div className="test">

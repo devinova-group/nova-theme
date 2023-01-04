@@ -15,6 +15,7 @@ import Loading from "./components/Loading";
 import Switches from "./components/Switches";
 import Switch from "./library/Switch";
 import Cards from "./components/Cards";
+import Tables from "./components/Tables";
 
 function App() {
   const [colorMode, setColorMode] = useColorMode();
@@ -40,6 +41,11 @@ function App() {
               setColorMode(colorMode === "default" ? "dark" : "default");
             }}
           />
+        </Box>
+        <Box className="test"></Box>
+        <h1>Tables</h1>
+        <Box>
+          <Tables />
         </Box>
         {/*  <h1>Spinner</h1>
        <Loading /> */}

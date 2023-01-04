@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, useColorMode } from "theme-ui";
+import { Box } from "theme-ui";
 import Switch from "../library/Switch";
 
 function Switches() {

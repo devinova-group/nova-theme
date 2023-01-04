@@ -1,8 +1,13 @@
 import { useState } from "react";
-import { Image, Box, Flex, Heading } from "theme-ui";
+import { Box, Flex } from "theme-ui";
 
-export interface AvatarProps {
+import { BoxProps as AvatarPropsThemeUI } from "theme-ui";
+import Heading from "./Heading";
+import Image from "./Image";
+
+export interface AvatarProps extends AvatarPropsThemeUI {
   src?: string;
+  username?: string;
   variant?:
     | "notAvailable"
     | "busy"
@@ -13,12 +18,9 @@ export interface AvatarProps {
     | "default"
     | "noImage"
     | "error";
-  onClick?: () => void;
-  sx?: any;
-  username?: string;
 }
 
-const Avatar = ({ username, src, variant, onClick, sx }: AvatarProps) => {
+const Avatar = (props: AvatarProps) => {
   const [status, setStatus] = useState(true);
   const [clicked, setClick] = useState("");
 
@@ -38,13 +40,11 @@ const Avatar = ({ username, src, variant, onClick, sx }: AvatarProps) => {
   return (
     <Box sx={{ position: "relative" }}>
       <Box
-        variant={clicked ? `avatars.${clicked}` : `avatars.${variant}`}
-        onClick={onClick}
-        sx={sx}
+        variant={clicked ? `avatars.${clicked}` : `avatars.${props.variant}`}
       >
-        <Image src={src} />
-        <Heading as={"h6"} variant="heading.h6.quicksand">
-          {username}
+        <Image src={props.src} />
+        <Heading as={"h6"} variant="quicksand" size="h6">
+          {props.username}
         </Heading>
         <Box
           sx={{ position: "absolute" }}

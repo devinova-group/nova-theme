@@ -15,10 +15,10 @@ function Cards() {
         <Card.Dialog variant="primary">
           <Card.Header>
             <Image src="https://i.ibb.co/dBdCVQq/Rectangle-143.jpg" />
-            <Text variant="notoSans" size="overline">
+            <Text variant="notoSans" size="overline" color="#a8a1b8">
               Overline
             </Text>
-            <Heading variant="quicksand" size="h5">
+            <Heading variant="quicksand" size="h5" color="default.primary">
               Starting?
             </Heading>
           </Card.Header>
@@ -40,10 +40,10 @@ function Cards() {
         <Card.Dialog variant="expandable">
           <Card.Header>
             <Image src="https://i.ibb.co/dBdCVQq/Rectangle-143.jpg" />
-            <Text variant="notoSans" size="overline">
+            <Text variant="notoSans" size="overline" color="#a8a1b8">
               Overline
             </Text>
-            <Heading variant="quicksand" size="h5">
+            <Heading variant="quicksand" size="h5" color="default.primary">
               Starting?
             </Heading>
           </Card.Header>
@@ -71,10 +71,10 @@ function Cards() {
         <Card.Dialog variant="onlyText">
           <Card.Header>
             <Image src="https://i.ibb.co/dBdCVQq/Rectangle-143.jpg" />
-            <Text variant="notoSans" size="overline">
+            <Text variant="notoSans" size="overline" color="#a8a1b8">
               Overline
             </Text>
-            <Heading variant="quicksand" size="h5">
+            <Heading variant="quicksand" size="h5" color="default.primary">
               Starting?
             </Heading>
           </Card.Header>
@@ -91,10 +91,10 @@ function Cards() {
         <Card.Dialog variant="noImg">
           <Card.Header>
             <Image src="https://i.ibb.co/dBdCVQq/Rectangle-143.jpg" />
-            <Text variant="notoSans" size="overline">
+            <Text variant="notoSans" size="overline" color="#a8a1b8">
               Overline
             </Text>
-            <Heading variant="quicksand" size="h5">
+            <Heading variant="quicksand" size="h5" color="default.primary">
               Starting?
             </Heading>
           </Card.Header>

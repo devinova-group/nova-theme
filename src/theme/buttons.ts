@@ -53,6 +53,19 @@ const buttons: Theme["buttons"] = {
       fontSize: 5,
     },
   },
+  mobile: {
+    large: { variant: "buttons.primary.medium", width: "72px", height: "72px" },
+  },
+  medium: {
+    variant: "buttons.mobile.large",
+    width: "60px",
+    height: "60px",
+  },
+  small: {
+    variant: "buttons.mobile.large",
+    width: "42px",
+    height: "42px",
+  },
 };
 export default buttons;
 /* error: {
