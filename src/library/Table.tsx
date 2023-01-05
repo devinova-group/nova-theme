@@ -7,13 +7,13 @@ import Field from "./Field";
 
 export interface TableProps extends TableThemeUI {
   children?: React.ReactNode;
-  expand?: boolean;
   data?: any;
   columns?: any;
 }
 
 const Table = (props: TableProps) => {
-  const { items, requestSort, sortConfig } = useSortableData(props.data, {
+  const { children, data, columns } = props;
+  const { items, requestSort, sortConfig } = useSortableData(data, {
     key: "name",
     direction: "ascending",
   });
@@ -21,7 +21,7 @@ const Table = (props: TableProps) => {
   return (
     <>
       <Box>
-        {props.children}
+        {children}
         <Box
           {...props}
           sx={{
@@ -33,13 +33,13 @@ const Table = (props: TableProps) => {
           <table style={{ width: "80%" }}>
             <thead style={{ textAlign: "left" }}>
               <tr style={{ cursor: "pointer" }}>
-                {props.columns &&
-                  props.columns.map((column: any, index: number) => (
+                {columns &&
+                  columns.map((column: any) => (
                     <th
+                      key={column.key}
                       onClick={() =>
                         requestSort(`${column.title.toLowerCase()}`)
                       }
-                      key={index}
                     >
                       {column.title}
                       {/* Partly working */}
