@@ -13,13 +13,21 @@ export interface TableProps extends TableThemeUI {
 
 const Table = (props: TableProps) => {
   const { children, data, columns } = props;
+  const [dataState, setDataState] = useState("");
   const { items, requestSort, sortConfig } = useSortableData(data, {
     key: "name",
     direction: "ascending",
   });
-
   return (
-    <>
+    <Box variant="tables">
+      <Field
+        type="search"
+        style={{
+          width: "200px",
+        }}
+        onChange={(e) => setDataState(e.target.value)}
+        placeholder="Search name"
+      />
       <Box>
         {children}
         <Box
@@ -50,21 +58,31 @@ const Table = (props: TableProps) => {
             </thead>
             <tbody style={{ textAlign: "left" }}>
               {items &&
-                items.map((data: any) => (
-                  <tr key={data.key}>
-                    <td>{data.name}</td>
-                    <td>{data.age}</td>
-                    <td>{data.address}</td>
-                    <td>
-                      <a href="#">Delete</a>
-                    </td>
-                  </tr>
-                ))}
+                items
+                  .filter((post: any) => {
+                    if (dataState === "") {
+                      return post;
+                    } else if (
+                      post.name.toLowerCase().includes(dataState.toLowerCase())
+                    ) {
+                      return post;
+                    }
+                  })
+                  .map((data: any) => (
+                    <tr key={data.key}>
+                      <td>{data.name}</td>
+                      <td>{data.age}</td>
+                      <td>{data.address}</td>
+                      <td>
+                        <a href="#">Delete</a>
+                      </td>
+                    </tr>
+                  ))}
             </tbody>
           </table>
         </Box>
       </Box>
-    </>
+    </Box>
   );
 };
 
