@@ -2,7 +2,7 @@ import { Badge as BadgeThemeUi } from "theme-ui";
 import { BadgeProps as BadgePropsThemeUi } from "theme-ui";
 
 export interface BadgeProps extends BadgePropsThemeUi {
-  children: string;
+  children?: string;
   variant?:
     | "inActive"
     | "error"
