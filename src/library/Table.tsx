@@ -1,107 +1,110 @@
-import { useState } from "react";
-import { Box, Label } from "theme-ui";
+import { Box, Grid } from "theme-ui";
 
 import { BoxProps as TableThemeUI } from "theme-ui";
+import useAccordion from "../hooks/useAccordion";
 import { useSearch } from "../hooks/useSearch";
 import useSortableData from "../hooks/useSortableData";
-import Badge from "./Badge";
-import Checkbox from "./Checksbox";
+import Accordion from "./Accordion";
 import Field from "./Field";
 
-export interface TableProps extends TableThemeUI {
-  children?: React.ReactNode;
-  data?: any;
-  columns?: any;
+interface TableProps extends TableThemeUI {
+  rows?: object[];
+  columns?: object[];
+  expandableContent?: (row: any) => JSX.Element;
 }
 const Table = (props: TableProps) => {
-  const { children, data, columns } = props;
-
-  const { items, requestSort, sortConfig } = useSortableData(data, {
+  const { rows, columns, expandableContent } = props;
+  const { onClick, toggleAccordion } = useAccordion();
+  const { items, requestSort, sortConfig } = useSortableData(rows!, {
     key: "name",
     direction: "ascending",
   });
 
-  const { search, filtered, onChange } = useSearch("name", "email", data);
-  /*   const expandRow = () => {};
-  const [row, setRow] = useState(false); */
-  return (
-    <Box variant="tables">
-      <Field
-        type="search"
-        style={{
-          width: "200px",
-        }}
-        value={search}
-        onChange={onChange}
-        placeholder="Search name"
-      />
-      <Box>
-        {children}
-        <Box
-          {...props}
-          sx={{
-            alignItems: "center",
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          <table style={{ width: "80%" }}>
-            <thead style={{ textAlign: "left" }}>
-              <tr style={{ cursor: "pointer" }}>
-                <th>
-                  <Label>
-                    <Checkbox />
-                  </Label>
-                </th>
-                {columns &&
-                  columns.map((column: any) => (
-                    <th
-                      key={column.id}
-                      onClick={() =>
-                        requestSort(`${column.title.toLowerCase()}`)
-                      }
-                    >
-                      {column.title}
-                      {/* Partly working */}
-                      {sortConfig.direction === "ascending" ? "⬇️" : "⬆️"}
-                    </th>
-                  ))}
-              </tr>
-            </thead>
-            <tbody style={{ textAlign: "left" }}>
-              {filtered.length <= 0 ? (
-                <tr>
-                  <td>Opps! No Results found...</td>
-                </tr>
-              ) : (
-                filtered.map((data: any) => (
-                  <tr key={data.id}>
-                    <th>
-                      <Label>
-                        <Checkbox />
-                      </Label>
-                    </th>
-                    <td>{data.name}</td>
-                    <td>{data.email}</td>
-                    <td>{data.phone}</td>
-                    <td>
-                      <Badge variant={`${data.status}`}>
-                        {data.status.toLowerCase()}
-                      </Badge>
-                    </td>
-                    <td /* onClick={() => setRow(true)} */>
-                      <span>View More</span>
-                      {/*  <i> |</i> */}
-                    </td>
-                    {/*   <td>{data.description}</td> */}
-                  </tr>
-                ))
-              )}
-            </tbody>
-          </table>
-        </Box>
-      </Box>
+  const { search, filtered, onChange } = useSearch(["name", "email"], items);
+
+  interface Column {
+    key?: string;
+    title?: string;
+    render?: (
+      x: string | any | Array<string>
+    ) => JSX.Element | string | Array<string> | any;
+    style?: object;
+    sx?: object;
+    grids?: string;
+  }
+
+  const renderHeader = columns!.map((column: Column) => (
+    <Box
+      sx={{ m: 3, ...column.sx }}
+      style={column.style}
+      onClick={() => requestSort(`${column.key!.toLowerCase()}`)}
+      key={column.key}
+    >
+      {column.title}
+      {sortConfig.direction === "ascending" ? "⬇️" : "⬆️"}
     </Box>
+  ));
+
+  function createStringOfArray(arr: string[]) {
+    return `${arr.join().replaceAll(",", " ")}`;
+  }
+  interface Row {
+    id?: number | string;
+    name?: string;
+    email?: string;
+    phone?: string;
+    status?: string[];
+    description?: string;
+  }
+  const renderRows = filtered.map((row: any) => (
+    <div key={row.id}>
+      <Grid
+        sx={{ gridTemplateColumns: "repeat(3, 1fr)" }}
+        gap="0"
+        columns={createStringOfArray(
+          columns!.map((column: Column) => column.grids!)
+        )}
+      >
+        {columns!.map((column: Column) => (
+          <Box key={column.key} onClick={() => onClick()}>
+            {/* row[column.key! ROW ??? */}
+            {column.render!(row[column.key!])}
+          </Box>
+        ))}
+      </Grid>
+      <Accordion toggleAccordion={toggleAccordion}>
+        {expandableContent!(row)}
+      </Accordion>
+    </div>
+  ));
+
+  return (
+    <div>
+      <Box p="1" sx={{ width: "50%" }}>
+        <Field
+          type="search"
+          style={{
+            width: "200px",
+          }}
+          value={search}
+          onChange={onChange}
+          placeholder="Search name"
+        />
+
+        <Grid
+          sx={{
+            gridTemplateColumns: "repeat(3, 1fr)",
+          }}
+          gap="0"
+          columns={createStringOfArray(
+            columns!.map((column: Column) => column.grids!)
+          )}
+        >
+          {renderHeader}
+        </Grid>
+        {renderRows}
+      </Box>
+    </div>
   );
 };
 

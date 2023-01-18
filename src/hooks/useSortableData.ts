@@ -10,11 +10,16 @@ import React from "react";
  * @param {(ascending|descending)} [config.direction] - The sort direction.
  * @returns {array}
  */
-const sortTableData = (array: any, { key, direction }: any) => {
-  return array.sort((a: any, b: any) => {
+interface Props {
+  key: string;
+  direction: string;
+}
+
+const sortTableData = (array: Array<object>, { key, direction }: Props) => {
+  return array.sort((a: any, b: any): number => {
+    /* console.log(a); */
     if (a[key] < b[key]) return direction === "ascending" ? -1 : 1;
     if (a[key] > b[key]) return direction === "ascending" ? 1 : -1;
-
     return 0;
   });
 };
@@ -29,9 +34,14 @@ const sortTableData = (array: any, { key, direction }: any) => {
  * @param {(ascending|descending)} [config.direction] - The sort direction.
  * @returns {object}
  */
-const useSortableData = (items = [], config: any) => {
-  const [sortConfig, setSortConfig] = React.useState(config);
 
+interface Config {
+  key: string;
+  direction: string;
+}
+
+const useSortableData = (items: object[], config: Config) => {
+  const [sortConfig, setSortConfig] = React.useState(config);
   const sortedItems = React.useMemo(() => {
     // If no config was defined then return the unsorted array
     if (!sortConfig) return items;
@@ -39,7 +49,7 @@ const useSortableData = (items = [], config: any) => {
     return sortTableData(items, { ...sortConfig });
   }, [items, sortConfig]);
 
-  const requestSort = (key: any) => {
+  const requestSort = (key: string) => {
     let direction = "descending";
 
     if (
