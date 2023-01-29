@@ -14,7 +14,6 @@ const avatars = {
     backgroundColor: "#6044b5",
     margin: 2,
     h6: {
-      /* position: "absolute", */
       top: 7,
       left: 7,
       color: "white",
@@ -28,7 +27,6 @@ const avatars = {
     width: "128px",
     height: "128px",
     h6: {
-      /* position: "absolute", */
       top: 43,
       left: 43,
       color: "white",
@@ -41,7 +39,6 @@ const avatars = {
   active: {
     variant: "avatars.default",
     div: {
-      /* position: "absolute", */
       bottom: 0,
       right: 2,
       width: "18px",
@@ -53,7 +50,6 @@ const avatars = {
   edit: {
     variant: "avatars.active",
     div: {
-      /* position: "absolute", */
       bottom: 0,
       right: 2,
       width: "18px",
@@ -65,7 +61,6 @@ const avatars = {
   notdisturb: {
     variant: "avatars.active",
     div: {
-      /* position: "absolute", */
       bottom: 0,
       right: 2,
       width: "18px",
@@ -77,7 +72,6 @@ const avatars = {
   busy: {
     variant: "avatars.active",
     div: {
-      /* position: "absolute", */
       bottom: 0,
       right: 2,
       width: "18px",
@@ -90,7 +84,6 @@ const avatars = {
   away: {
     variant: "avatars.active",
     div: {
-      /* position: "absolute", */
       bottom: 0,
       right: 2,
       width: "18px",
@@ -103,7 +96,6 @@ const avatars = {
   notAvailable: {
     variant: "avatars.active",
     div: {
-      /* position: "absolute", */
       bottom: 0,
       right: 2,
       width: "18px",
@@ -116,7 +108,6 @@ const avatars = {
   error: {
     variant: "avatars.active",
     div: {
-      /* position: "absolute", */
       bottom: 0,
       right: 2,
       width: "18px",

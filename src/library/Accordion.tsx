@@ -3,19 +3,20 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Box, jsx } from "theme-ui";
-
 interface Props {
   toggleAccordion?: boolean;
-  children: React.ReactNode;
+  children?: React.ReactNode;
+  onClick?: () => void;
 }
 
-const Accordion = ({ toggleAccordion, children }: Props) => {
+const Accordion = ({ toggleAccordion, children, onClick }: Props) => {
   const [height, setHeight] = useState("0px");
   useEffect(() => {
     setHeight(toggleAccordion ? `40px` : "0px");
   }, [toggleAccordion]);
   return (
     <Box
+      onClick={onClick}
       sx={{
         width: "100%",
         maxHeight: height,

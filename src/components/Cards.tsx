@@ -10,8 +10,8 @@ import Heading from "../library/Heading";
 function Cards() {
   const [click, setClick] = useState(true);
   return (
-    <>
-      <div className="test">
+    <div style={{ display: "flex", justifyContent: "center" }}>
+      <div>
         <Card.Dialog variant="primary">
           <Card.Header>
             <Image src="https://i.ibb.co/dBdCVQq/Rectangle-143.jpg" />
@@ -36,7 +36,7 @@ function Cards() {
           </Card.Footer>
         </Card.Dialog>
       </div>
-      <div className="test">
+      <div>
         <Card.Dialog variant="expandable">
           <Card.Header>
             <Image src="https://i.ibb.co/dBdCVQq/Rectangle-143.jpg" />
@@ -67,7 +67,7 @@ function Cards() {
           </Card.Footer>
         </Card.Dialog>
       </div>
-      <div className="test">
+      <div>
         <Card.Dialog variant="onlyText">
           <Card.Header>
             <Image src="https://i.ibb.co/dBdCVQq/Rectangle-143.jpg" />
@@ -87,7 +87,7 @@ function Cards() {
           </Card.Body>
         </Card.Dialog>
       </div>
-      <div className="test">
+      <div>
         <Card.Dialog variant="noImg">
           <Card.Header>
             <Image src="https://i.ibb.co/dBdCVQq/Rectangle-143.jpg" />
@@ -112,7 +112,7 @@ function Cards() {
           </Card.Footer>
         </Card.Dialog>
       </div>
-    </>
+    </div>
   );
 }
 

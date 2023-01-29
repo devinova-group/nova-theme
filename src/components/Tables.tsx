@@ -1,8 +1,9 @@
-import React from "react";
-import { Box, Card, Flex } from "theme-ui";
+import React, { useState } from "react";
 import Badge from "../library/Badge";
 import Table from "../library/Table";
 import Text from "../library/Text";
+import Box from "../library/Box";
+import Flex from "../library/Flex";
 
 function Tables() {
   const columns = [
@@ -11,13 +12,18 @@ function Tables() {
       title: "Name",
       render: (name: string) => <Text>{name}</Text>,
       style: { paddingBottom: "10px" },
-      sx: { border: "1px solid green" },
     },
     {
       key: "email",
       title: "Email",
       render: (email: string) => <Text>{email}</Text>,
       style: {},
+    },
+    {
+      key: "phone",
+      title: "Phone",
+      render: (phone: string) => <Text>{phone}</Text>,
+      style: { paddingBottom: "10px" },
     },
     {
       key: "status",
@@ -33,6 +39,12 @@ function Tables() {
       ),
       style: {},
     },
+    {
+      key: "action",
+      title: "Action",
+      render: (action: string) => <Text>{action}</Text>,
+      style: { paddingBottom: "10px" },
+    },
   ];
   const rows = [
     {
@@ -40,45 +52,52 @@ function Tables() {
       name: "Baillie Devin",
       email: "bdevin0@twitter.com",
       phone: "(244) 4222745",
-      status: ["inActive", "inActive"],
+      status: ["inActive"],
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, nam.",
+      action: "View More",
     },
+
     {
       id: 2,
       name: "Zacharie Bwye",
       email: "zbwye1@webs.com",
       phone: "(845) 4463753",
-      status: ["active", "inActive"],
+      status: ["active"],
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, nam.",
+      action: "View More",
     },
+
     {
       id: 3,
       name: "Merv Stoke",
       email: "mstoke2@squarespace.com",
       phone: "(258) 9714780",
-      status: ["error", "inActive"],
+      status: ["error"],
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, nam.",
+      action: "View More",
     },
     {
       id: 4,
       name: "Janessa Clymer",
       email: "jclymer3@tuttocitta.it",
       phone: "(216) 5889221",
-      status: ["disabled", "inActive"],
+      status: ["disabled"],
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, nam.",
+      action: "View More",
     },
     {
       id: 5,
       name: "Blakeley Plumtree",
       email: "bplumtree4@phpbb.com",
       phone: "(524) 2531171",
-      status: ["active", "inActive"],
+      status: ["active"],
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, nam.",
+      action: "View More",
     },
   ];
   type TableRowType = {

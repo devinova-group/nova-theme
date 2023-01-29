@@ -16,22 +16,60 @@ function Buttons() {
         </Button>
       </div>
       <div className="test">
-        {/*  <Button variant="mobile" disabled>
+        <Button variant="error" size="large">
+          + Button
+        </Button>
+        <Button variant="error" size="medium">
+          + Button
+        </Button>
+        <Button variant="error" size="small">
+          $ Button
+        </Button>
+      </div>
+      <div className="test">
+        <Button variant="success" size="large">
+          + Button
+        </Button>
+        <Button variant="success" size="medium">
+          + Button
+        </Button>
+        <Button variant="success" size="small">
+          $ Button
+        </Button>
+      </div>
+      <div className="test">
+        <Button variant="mobile" size="large" disabled>
           +
         </Button>
-        <Button variant="mobileMedium">+</Button>
-        <Button variant="mobileSmall">+</Button>
+        <Button variant="mobile" size="medium">
+          +
+        </Button>
+        <Button variant="mobile" size="small">
+          +
+        </Button>
       </div>
 
       <div className="test">
-        <Button variant="mobileError">+</Button>
-        <Button variant="mobileErrorMedium">+</Button>
-        <Button variant="mobileErrorSmall">+</Button>
+        <Button variant="mobileError" size="large">
+          +
+        </Button>
+        <Button variant="mobileError" size="medium">
+          +
+        </Button>
+        <Button variant="mobileError" size="small">
+          +
+        </Button>
       </div>
       <div className="test">
-        <Button variant="mobileSuccess">+</Button>
-        <Button variant="mobileSuccessMedium">+</Button>
-        <Button variant="mobileSuccessSmall">+</Button> */}
+        <Button variant="mobileSuccess" size="large">
+          +
+        </Button>
+        <Button variant="mobileSuccess" size="medium">
+          +
+        </Button>
+        <Button variant="mobileSuccess" size="small">
+          +
+        </Button>
       </div>
     </>
   );

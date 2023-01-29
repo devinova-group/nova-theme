@@ -8,12 +8,8 @@ import {
   ToggleProps,
   FooterProps,
   FooterTextProps,
+  CardProps,
 } from "../interfaces/cards";
-
-export interface CardProps extends CardPropsThemeUI {
-  variant?: "primary" | "expandable" | "onlyText" | "noImg";
-  children?: any;
-}
 
 const Dialog = ({ children, variant }: CardProps, props: CardPropsThemeUI) => (
   <Card variant={variant} {...props}>
@@ -21,7 +17,7 @@ const Dialog = ({ children, variant }: CardProps, props: CardPropsThemeUI) => (
   </Card>
 );
 
-const Header = ({ children }: any) => {
+const Header = ({ children }: HeaderProps) => {
   return <header>{children}</header>;
 };
 
