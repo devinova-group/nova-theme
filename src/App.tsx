@@ -20,74 +20,73 @@ import Tables from "./components/Tables";
 function App() {
   const [colorMode, setColorMode] = useColorMode();
   return (
-    <>
+    <Box
+      className="App"
+      sx={{
+        background: "default.background",
+        color: "default.text",
+      }}
+    >
       <Box
-        className="App"
+        className="text"
         sx={{
-          color: "default.black",
+          position: "fixed",
+          top: 10,
+          right: 20,
         }}
       >
-        <Box
-          className="text"
-          sx={{
-            position: "fixed",
-            top: 10,
-            right: 20,
+        <Switch
+          variant="smallV1"
+          onClick={() => {
+            setColorMode(colorMode === "default" ? "dark" : "default");
           }}
-        >
-          <Switch
-            variant="smallV1"
-            onClick={() => {
-              setColorMode(colorMode === "default" ? "dark" : "default");
-            }}
-          />
-        </Box>
-        <Box className="test"></Box>
-        <h1>Tables</h1>
-        <Box>
-          <Tables />
-        </Box>
-        {/*  <h1>Spinner</h1>
-       <Loading /> */}
-        <Box className="test"></Box>
-        <h1>Cards</h1>
-        <Box>
-          <Cards />
-        </Box>
-        <h1>Modal</h1>
-        <Box className="test">
-          <Modal />
-        </Box>
-        <h1>Avatar</h1>
-        <Avatars />
-        <h1>Toaster</h1>
-        <Box className="test">
-          <Toasters />
-        </Box>
-        <h1>Switch</h1>
-        <Switches />
-        <h1>Badges</h1>
-        <Badges />
-
-        <h1>Fields</h1>
-        <Fields />
-
-        <h1>Check Box</h1>
-        <Checksboxes />
-
-        <h1>Radios</h1>
-        <Radios />
-
-        <h1>Buttons</h1>
-        <Buttons />
-
-        <h1>-----Headings-----</h1>
-        <Headings />
-
-        <h1>-----BodyText-----</h1>
-        <BodyText />
+        />
       </Box>
-    </>
+      <Box className="test"></Box>
+      <h1>Tables</h1>
+      <Box>
+        <Tables />
+      </Box>
+      {/*  <h1>Spinner</h1>
+       <Loading /> */}
+      <Box className="test"></Box>
+      <h1>Cards</h1>
+      <Box>
+        <Cards />
+      </Box>
+      <h1>Modal</h1>
+      <Box className="test">
+        <Modal />
+      </Box>
+      <h1>Avatar</h1>
+      <Avatars />
+      <h1>Toaster</h1>
+      <Box className="test">
+        <Toasters />
+      </Box>
+      <h1>Switch</h1>
+      <Switches />
+      <h1>Badges</h1>
+      <Badges />
+
+      <h1>Fields</h1>
+      <Fields />
+
+      <h1>Check Box</h1>
+      <Checksboxes />
+
+      <h1>Radios</h1>
+      <Radios />
+
+      <h1>Buttons</h1>
+      <Buttons />
+
+      <h1>-----Headings-----</h1>
+      <Headings />
+
+      <h1>-----BodyText-----</h1>
+      <BodyText />
+    </Box>
   );
 }
 
