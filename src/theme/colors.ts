@@ -1,4 +1,4 @@
-import { Theme } from "theme-ui";
+import {Theme} from "theme-ui";
 /* Switch */
 import moonBig from "./icons/switch/moonBig.svg";
 import backgroundV2Big from "./icons/switch/backgroundV2Big.svg";
@@ -117,6 +117,7 @@ const colors: Theme["colors"] = {
   modes: {
     dark: {
       default: {
+<<<<<<< HEAD
         primary: "#7B4EFF",
         secondary: "#A689FF",
         secondaryVariant: "#7E778D",
