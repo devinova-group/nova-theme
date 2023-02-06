@@ -8,7 +8,7 @@ function Buttons() {
         <Button variant="primary" size="large">
           + Button
         </Button>
-        <Button variant="primary" size="medium">
+        <Button variant="primary" size="medium" disabled>
           + Button
         </Button>
         <Button variant="primary" size="small">
@@ -16,7 +16,7 @@ function Buttons() {
         </Button>
       </div>
       <div className="test">
-        <Button variant="error" size="large">
+        <Button variant="error" size="large" disabled>
           + Button
         </Button>
         <Button variant="error" size="medium">
@@ -30,7 +30,7 @@ function Buttons() {
         <Button variant="success" size="large">
           + Button
         </Button>
-        <Button variant="success" size="medium">
+        <Button variant="success" size="medium" disabled>
           + Button
         </Button>
         <Button variant="success" size="small">
@@ -53,7 +53,7 @@ function Buttons() {
         <Button variant="mobileError" size="large">
           +
         </Button>
-        <Button variant="mobileError" size="medium">
+        <Button variant="mobileError" size="medium" disabled>
           +
         </Button>
         <Button variant="mobileError" size="small">
@@ -67,7 +67,7 @@ function Buttons() {
         <Button variant="mobileSuccess" size="medium">
           +
         </Button>
-        <Button variant="mobileSuccess" size="small">
+        <Button variant="mobileSuccess" size="small" disabled>
           +
         </Button>
       </div>

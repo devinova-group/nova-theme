@@ -23,18 +23,17 @@ const buttons: Theme["buttons"] = {
       },
       "&:disabled": {
         backgroundColor: "default.primary",
-        color: "default.white",
-        opacity: "0.35",
+        color: "#938ca3",
         "&:hover": {
           cursor: "not-allowed",
           backgroundColor: "none",
-          color: "none",
-          border: "none",
+          /* color: "none", */
+          border: "default.otherColors.darkGreyShades.1",
           borderColor: "none",
         },
       },
       "&:focus": {
-        backgroundColor: "default.second",
+        backgroundColor: "default.secondary",
         color: "white",
       },
     },
@@ -56,19 +55,19 @@ const buttons: Theme["buttons"] = {
   error: {
     medium: {
       variant: "buttons.primary.medium",
-      backgroundColor: "default.errors",
+      backgroundColor: "button.error",
       "&:hover": {
         backgroundColor: "transparent",
-        color: "default.errors",
+        color: "button.error",
         border: "default",
-        borderColor: "default.errors",
+        borderColor: "button.errors",
       },
       "&:focus": {
-        backgroundColor: "default.errors",
+        backgroundColor: "button.errors",
         color: "white",
       },
       "&:disabled": {
-        backgroundColor: "default.errorsDisabled",
+        backgroundColor: "button.errorDisabled",
         "&:hover": {
           cursor: "not-allowed",
           backgroundColor: "none",
@@ -96,19 +95,19 @@ const buttons: Theme["buttons"] = {
   success: {
     medium: {
       variant: "buttons.primary.medium",
-      backgroundColor: "default.positive1",
+      backgroundColor: "button.positive",
       "&:hover": {
         backgroundColor: "transparent",
-        color: "default.positive1",
-        border: "default",
-        borderColor: "default.positive1",
+        color: "button.positive",
+        border: "button",
+        borderColor: "button.positive",
       },
       "&:focus": {
-        backgroundColor: "default.positive1",
-        color: "default.white",
+        backgroundColor: "button.positive",
+        color: "button.white",
       },
       "&:disabled": {
-        backgroundColor: "default.positive1Disabled",
+        backgroundColor: "button.positiveDisabled",
         "&:hover": {
           cursor: "not-allowed",
           backgroundColor: "none",
@@ -203,74 +202,3 @@ const buttons: Theme["buttons"] = {
   },
 };
 export default buttons;
-
-/* import { Theme } from "theme-ui";
-
-const buttons: Theme["buttons"] = {
-  primary: {
-    medium: {
-      minWidth: "150px",
-      minHeight: "50px",
-      fontFamily: "button.1",
-      fontStyle: "normal",
-      fontSize: 5,
-      cursor: "pointer",
-      backgroundColor: "default.primary",
-      boxShadow: "button",
-      borderRadius: "8px",
-      margin: 2,
-      padding: 0,
-
-      "&:hover": {
-        backgroundColor: "transparent",
-        color: "default.primary",
-        border: "default",
-        borderColor: "default.primary",
-      },
-      "&:disabled": {
-        backgroundColor: "default.primary",
-        color: "default.white",
-        opacity: "0.35",
-        "&:hover": {
-          cursor: "not-allowed",
-          backgroundColor: "none",
-          color: "none",
-          border: "none",
-          borderColor: "none",
-        },
-      },
-      "&:focus": {
-        backgroundColor: "default.second",
-        color: "white",
-      },
-    },
-    small: {
-      variant: "buttons.primary.medium",
-      minWidth: "105px",
-      minHeight: "35px",
-      fontSize: 14,
-    },
-    large: {
-      variant: "buttons.primary.medium",
-      minWidth: "259px",
-      minHeight: "73px",
-      fontFamily: "body.1",
-      fontStyle: "normal",
-      fontSize: 5,
-    },
-  },
-  mobile: {
-    large: { variant: "buttons.primary.medium", width: "72px", height: "72px" },
-  },
-  medium: {
-    variant: "buttons.mobile.large",
-    width: "60px",
-    height: "60px",
-  },
-  small: {
-    variant: "buttons.mobile.large",
-    width: "42px",
-    height: "42px",
-  },
-};
-export default buttons; */

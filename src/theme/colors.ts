@@ -37,52 +37,6 @@ import textField from "./icons/field/textField.svg";
 import fieldError from "./icons/field/textFieldError.svg";
 import fieldSearch from "./icons/field/textFieldSearch.svg";
 
-/* Button lightmode Primary color, but dark mode is secondary color */
-/* Badges boarder 10% of #fff, cant set opacity only on border, opacity affects the whole element */
-
-const daisy = {
-  color: [
-    "#ECE8F6",
-    "#CFC6E8",
-    "#B0A1DA",
-    "#917BCC",
-    "#785EC0",
-    "#6044B5",
-    "#573FAF",
-    "#4A37A6",
-    "#3F319D",
-    "#2B268D",
-  ],
-};
-const oath = {
-  color: [
-    "#FFF4FF",
-    "#FAF2FF",
-    "#F5ECFE",
-    "#E9E1FA",
-    "#C7BED7",
-    "#A8A1B8",
-    "#7E778D",
-    "#6B6278",
-    "#4A4458",
-    "#292336",
-  ],
-};
-const noRep = {
-  second: "#4C3A80",
-  secondVariant: "#6E6893",
-  disabled: "#C5C5C5",
-  disabledV2: "#B4B4B4",
-  errorInput: "#700519",
-  black: "#000000",
-  white: "#FFFFFF",
-  darkPrimary: "#4C3A80",
-  darkSecond: "#7B4EFF",
-  badge: "#565555",
-  badgeBorder: "#5E4D8C",
-  badgeError: "#FFC34E",
-};
-
 const colors: Theme["colors"] = {
   config: {
     initialColorModeName: "light",
@@ -91,52 +45,47 @@ const colors: Theme["colors"] = {
   default: {
     primary: "#6044B5",
     secondary: "#4C3A80",
-    second: "#6E6893",
-    primaryDisabled: "#BCB1DC",
-    background: "#FFFEFB",
-    textColor: "#08011C",
-    textColorV2: "#585858",
-    errors: "#C12945",
-    positive1: "#26962B",
-    positive2: "#9AE79D",
-    black: "#000000",
-    white: "#FFFFFF",
-    errorInput: "#700519",
+    secondaryVariant: "#6E6893",
+    background: "#F6F7FB",
+    surfaces: "#FFFFFF",
+    text: "#4A4458",
+    disabledText: "#7E778D",
+    hightlight: "#6044B5",
+    hightlight2: "#8477A8",
+    hightlight3: "#FFFEFB",
+    surfaceHightlight: "#EAE4FA",
+    divadeColor: "#D8D3DA",
+    outlines: "#D8D3DA",
+    hovers: "#6044B5",
   },
-  badge: {
-    inActive: "#FF6768",
-    active: "#3CC13B",
-    error: "#FFC34E",
-    disabled: "#C2C9D1",
-    primary: "#B2C3FF",
+  button: {
+    error: "#C12945",
+    errorDisabled: "#E094A2",
+    positive: "#26962B",
+    positiveDisabled: "#93CB95",
   },
+  otherColors: {
+    redShades: ["#F03738", "#FFC5C5"],
+    greenShades: ["#26962B", "#B4E7B4"],
+    orangeShades: ["#CC9428", "#FCE2B0"],
+    blueShades: ["#3C6DA6", "#D4E1F2"],
+    darkGreyShades: ["#5F5F5F", "#CECFD0"],
+  },
+
   check: {
     background: `url(${checkLightSvg}) no-repeat center center`,
     backgroundDisabled: `url(${checkLightDisabled}) no-repeat center center`,
   },
   radio: {
-    borderColor: oath.color[6],
     bg: "transparent",
-    clicked: noRep.second,
-    disabled: noRep.disabled,
-    disabledBorder: noRep.disabledV2,
     background: `url(${radioLight}) no-repeat center center`,
   },
   field: {
     background: `url(${textField}) no-repeat 16px center`,
-    borderColorClick: "#ACA4C5",
-    borderColor: "#D5D5D5",
-    disabled: "#D3D2D3",
-    disabledBorder: noRep.disabled,
-    errorBorder: "#D16B7F",
-    placeholder: "#A3A3A3",
-    errorBackground: "#E6CED7",
     errorBg: `
     url(${textField}) no-repeat 16px center, 
     url(${fieldError}) no-repeat right 16px center`,
     searchBg: `url(${fieldSearch}) no-repeat 16px center`,
-    searchBorder: "#F5F3F6",
-    searchBackground: "#FCFBFC",
   },
   shadow: {
     default: "#00000040",
@@ -144,10 +93,8 @@ const colors: Theme["colors"] = {
   },
   border: {},
   card: {
-    backgroundColor: noRep.white,
     arrowUp: `url(${arrowUp}) no-repeat center center`,
     arrowDown: `url(${arrowDown}) no-repeat center center`,
-    icon: noRep.second,
   },
   switch: {
     bgV1BigMoon: `url(${backgroundV1BigMoon})`,
@@ -170,62 +117,56 @@ const colors: Theme["colors"] = {
   modes: {
     dark: {
       default: {
-        errors: "#C12945",
-        positive1: "#26962B",
-        primary: "#A689FF",
-        secondary: "#7B4EFF",
-        second: "#7E778D",
-        background: "#292336",
-        textColor: "#FFFEFB",
+        primary: "#7B4EFF",
+        secondary: "#A689FF",
+        secondaryVariant: "#7E778D",
+        background: "#2F2A41",
+        surfaces: "#4A4458",
+        text: "#FFFEFB",
+        disabledText: "#7E778D",
+        hightlight: "#A689FF",
+        hightlight2: "#746E83",
+        hightlight3: "#746E83",
+        surfaceHightlight: "#292336",
+        divadeColor: "#7E778D",
+        outlines: "#6B6278",
+        hovers: "#7B4EFF",
       },
-      badge: {
-        inActive: "#FF6768",
-        active: "#3CC13B",
-        error: "#FFC34E",
-        disabled: "#C2C9D1",
-        primary: "#B2C3FF",
+      button: {
+        error: "#C12945",
+        errorDisabled: "#9A4454",
+        positive: "#26962B",
+        positiveDisabled: "#93CB95",
+      },
+      otherColors: {
+        redShades: ["#F03738", "#A14C56"],
+        greenShades: ["#3CC13B", "#37853D"],
+        orangeShades: ["#FFC34E", "#AC8649"],
+        blueShades: ["#B2C3FF", "#7E86B3"],
+        darkGreyShades: ["#A8A1B8", "#5B596D"],
       },
       check: {
         borderColor: "#9794A0",
         background: `url(${checkDark}) no-repeat center center`,
         backgroundDisabled: `url(${checkDarkDisabled}) no-repeat center center`,
-        borderDisabled: noRep.disabled,
       },
       radio: {
-        borderColor: oath.color[4],
-        bg: oath.color[5],
-        clicked: noRep.darkSecond,
-        disabled: noRep.disabled,
-        disabledBorder: noRep.disabledV2,
         background: `url(${radioDark}) no-repeat center center`,
       },
 
       field: {
         background: `url(${fieldBackground}) no-repeat 16px center`,
-        backgroundColor: "#282336",
-        borderColor: "#343041",
-        borderColorClick: "#A689FF",
-        disabled: "#605B6C",
-        disabledBorder: "#73717D",
-        errorBorder: "#AD2944",
-        placeholder: noRep.white,
-        errorBackground: "#5B2943",
-
         errorBg: `url(${errorDark}) no-repeat left 16px center, 
             url(${fieldErrorDark}) no-repeat right 16px center`,
         searchBg: `url(${fieldSearchDark}) no-repeat 16px center`,
-        searchBorder: "#595661",
-        searchBackground: "#43404C",
       },
       shadow: {
         default: "#00000040",
         field: "#00000040",
       },
       card: {
-        backgroundColor: "rgba(107, 98, 120, 0.8)",
         arrowUp: `url(${arrowUpDark}) no-repeat center center`,
         arrowDown: `url(${arrowDownDark}) no-repeat center center`,
-        icon: noRep.white,
       },
       switch: {
         bgV1BigMoon: `url(${backgroundV1BigMoon})`,

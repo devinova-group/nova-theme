@@ -7,11 +7,12 @@ const cards: Theme["cards"] = {
     display: "flex",
     flexDirection: "column",
     gap: 3,
-    backgroundColor: "card.backgroundColor",
+    backgroundColor: "default.surfaces",
     textAlign: "left",
     boxShadow: "card",
     borderRadius: "20px",
     margin: 10,
+    color: "default.text",
     img: {
       width: "353px",
       height: "316px",
@@ -21,12 +22,10 @@ const cards: Theme["cards"] = {
     },
     span: {
       marginLeft: 8,
-      color: "text.overline",
     },
     h2: {
       marginLeft: 8,
       fontWeight: 700,
-      color: "text.titleCard",
     },
     p: {
       width: "300px",
