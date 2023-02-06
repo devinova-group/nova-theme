@@ -1,6 +1,6 @@
 /** @jsxImportSource theme-ui */
 import "./App.css";
-import { useColorMode, Box } from "theme-ui";
+import {useColorMode, Box} from "theme-ui";
 import Badges from "./components/Badges";
 import Fields from "./components/Fields";
 import Checksboxes from "./components/Checksboxes";
@@ -16,6 +16,11 @@ import Switches from "./components/Switches";
 import Switch from "./library/Switch";
 import Cards from "./components/Cards";
 import Tables from "./components/Tables";
+import Tooltip from "./library/Tooltip";
+import Card from "./library/Card";
+import Text from "./library/Text";
+import Image from "./library/Image";
+import Heading from "./library/Heading";
 
 function App() {
   const [colorMode, setColorMode] = useColorMode();
@@ -25,6 +30,7 @@ function App() {
         className="App"
         sx={{
           color: "default.black",
+          paddingBottom: "10rem",
         }}
       >
         <Box
@@ -47,8 +53,8 @@ function App() {
         <Box>
           <Tables />
         </Box>
-        {/*  <h1>Spinner</h1>
-       <Loading /> */}
+        <h1>Spinner</h1>
+        <Loading />
         <Box className="test"></Box>
         <h1>Cards</h1>
         <Box>
@@ -86,6 +92,35 @@ function App() {
 
         <h1>-----BodyText-----</h1>
         <BodyText />
+        <br />
+        <br />
+        <div
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <Tooltip tip="racecarasdasfasdasf" placement="top" fade arrow>
+            <Card.Dialog variant="onlyText">
+              <Card.Header>
+                <Image src="https://i.ibb.co/dBdCVQq/Rectangle-143.jpg" />
+                <Text variant="notoSans" size="overline" color="#a8a1b8">
+                  Overline
+                </Text>
+                <Heading variant="quicksand" size="h5" color="default.primary">
+                  Starting?
+                </Heading>
+              </Card.Header>
+              <Card.Body>
+                <Card.BodyText>
+                  Lorem Ipsum has been the industry's standard dummy text ever
+                  since the 1500s, when an unknown printer took a galley of type
+                  and scrambled it to make a type specimen book.
+                </Card.BodyText>
+              </Card.Body>
+            </Card.Dialog>
+          </Tooltip>
+        </div>
       </Box>
     </>
   );

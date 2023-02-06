@@ -174,7 +174,7 @@ const colors: Theme["colors"] = {
         positive1: "#26962B",
         primary: "#A689FF",
         secondary: "#7B4EFF",
-        second: "#6E6893",
+        second: "#7E778D",
         background: "#292336",
         textColor: "#FFFEFB",
       },

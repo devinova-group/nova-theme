@@ -18,6 +18,7 @@ import avatars from "./avatars";
 import modal from "./modal";
 import spinner from "./spinner";
 import radii from "./radii";
+import tooltip from "./tooltip";
 
 export const theme = {
   space: [
@@ -59,4 +60,5 @@ export const theme = {
   modal,
   spinner,
   radii,
+  tooltip,
 };
