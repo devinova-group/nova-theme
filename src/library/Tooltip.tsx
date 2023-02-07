@@ -34,7 +34,6 @@ const Tooltip = (
 
   return (
     <>
-      {/** TODO: Maybe fix placement of tooltip if too far to left or right */}
       {follow ? (
         <Box
           sx={{
@@ -141,13 +140,13 @@ const ToolTipPortal = ({
       case "right":
         x = left + width;
         y = top + height / 2;
-        transVar = `translateX(${spacing}px)`;
+        transVar = `translate(${spacing}px, -${tipHeight / 2}px)`;
 
         break;
       case "left":
         x = left;
         y = top + height / 2;
-        transVar = `translateX(-${tipWidth + spacing}px)`;
+        transVar = `translate(-${tipWidth + spacing}px, -${tipHeight / 2}px)`;
 
         break;
 

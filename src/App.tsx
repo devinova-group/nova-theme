@@ -99,7 +99,7 @@ function App() {
           justifyContent: "center",
         }}
       >
-        <Tooltip tip="racecarasdasfasdasf" placement="right" fade arrow>
+        <Tooltip tip="Lorem ipsum dolor sit" placement="left" fade arrow>
           <Card.Dialog variant="onlyText">
             <Card.Header>
               <Image src="https://i.ibb.co/dBdCVQq/Rectangle-143.jpg" />

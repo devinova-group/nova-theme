@@ -3,9 +3,20 @@ import {Theme} from "theme-ui";
 const tooltip: Theme["buttons"] = {
   primary: {
     backgroundColor: "default.secondary",
-    padding: 2,
-    borderRadius: 4,
+    px: 3,
+    py: 2,
+    borderRadius: 5,
+    maxWidth: "10rem",
+    maxHeight: "10rem",
     color: "white",
+    overflow: "visible",
+    "::After": {
+      content: '" "',
+      position: "absolute",
+      borderStyle: "solid",
+      borderWidth: "5px",
+      borderColor: "transparent",
+    },
   },
   top: {
     primary: {
@@ -14,14 +25,9 @@ const tooltip: Theme["buttons"] = {
     arrow: {
       variant: "tooltip.primary",
       "::after": {
-        content: '" "',
-        position: "absolute",
         top: "100%",
         left: "50%",
         marginLeft: "-5px",
-        borderWidth: "5px",
-        borderStyle: "solid",
-        borderColor: "transparent",
         borderTopColor: "default.secondary",
       },
     },
@@ -33,14 +39,9 @@ const tooltip: Theme["buttons"] = {
     arrow: {
       variant: "tooltip.primary",
       "::after": {
-        content: '" "',
-        position: "absolute",
         bottom: "100%",
         left: "50%",
         marginLeft: "-5px",
-        borderWidth: "5px",
-        borderStyle: "solid",
-        borderColor: "transparent",
         borderBottomColor: "default.secondary",
       },
     },
@@ -52,14 +53,9 @@ const tooltip: Theme["buttons"] = {
     arrow: {
       variant: "tooltip.primary",
       "::after": {
-        content: '" "',
-        position: "absolute",
         right: "100%",
         top: "50%",
         marginTop: "-5px",
-        borderWidth: "5px",
-        borderStyle: "solid",
-        borderColor: "transparent",
         borderRightColor: "default.secondary",
       },
     },
@@ -71,14 +67,9 @@ const tooltip: Theme["buttons"] = {
     arrow: {
       variant: "tooltip.primary",
       "::after": {
-        content: '" "',
-        position: "absolute",
         top: "50%",
         left: "100%",
         marginTop: "-5px",
-        borderWidth: "5px",
-        borderStyle: "solid",
-        borderColor: "transparent",
         borderLeftColor: "default.secondary",
       },
     },
