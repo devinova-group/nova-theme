@@ -1,4 +1,4 @@
-const switchs = {
+export const switchs = {
   large: {
     width: "145px",
     height: "67px",

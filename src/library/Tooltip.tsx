@@ -10,6 +10,7 @@ interface tipProps {
   follow?: boolean;
   placement?: "top" | "bottom" | "right" | "left";
   fade?: boolean;
+  delay?: number;
 }
 
 interface portalProps {
@@ -21,10 +22,11 @@ interface portalProps {
   boxInfo?: MutableRefObject<HTMLDivElement | null | undefined>;
   visible: boolean;
   fade?: boolean;
+  delay?: number;
 }
 
 const Tooltip = (
-  {children, tip, arrow, follow, placement, fade}: tipProps,
+  {children, tip, arrow, follow, placement, fade, delay}: tipProps,
   props: BoxProps
 ) => {
   const [coords, setCoords] = useState<{y?: number; x?: number}>({});
@@ -83,6 +85,7 @@ const Tooltip = (
         boxInfo={hoverBox}
         visible={isOn}
         fade={fade}
+        delay={delay}
       >
         {tip}
       </ToolTipPortal>
@@ -102,6 +105,7 @@ const ToolTipPortal = ({
   boxInfo,
   visible,
   fade,
+  delay,
 }: portalProps) => {
   let x;
   let y;
@@ -165,18 +169,21 @@ const ToolTipPortal = ({
       sx={{
         marginTop: mt,
         position: "absolute",
-        zIndex: 6969696969,
         top: y,
         left: x,
         transform: transVar,
         visibility: `${visible ? "visible" : "hidden"}`,
-        transition: `${fade ? "visibility 2s" : ""}`,
-        animation: `${fade && visible ? fadeIn : fadeOut} 2s`,
+        transition: `${
+          fade ? `visibility ${delay ? delay / 1000 + "s" : "2s"}` : ""
+        }`,
+        animation: `${fade && visible ? fadeIn : fadeOut} ${
+          delay ? delay / 1000 + "s" : "2s"
+        }`,
       }}
     >
       {children}
     </Box>,
-    document.body
+    document.getElementById("portal")!
   );
 };
 

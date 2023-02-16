@@ -5,7 +5,7 @@ import badges from "./badges";
 import cards from "./cards";
 import shadows from "./shadows";
 import borders from "./borders";
-import switchs from "./switchs";
+import {switchs as switches} from "./switchs";
 import field from "./field";
 import radio from "./radio";
 import checkbox from "./checkbox";
@@ -35,11 +35,8 @@ export const theme = {
     body: [300, 400, 500, 600],
     heading: [400, 500],
   },
-
   letterSpacings: [1, 2, 2.5, 3, 3.5],
-  label: {
-    width: "30px",
-  },
+  zIndices: [0, 250, 500, 1000, 1500],
   colors,
   text,
   buttons,
@@ -47,7 +44,7 @@ export const theme = {
   cards,
   shadows,
   borders,
-  switchs,
+  switches,
   field,
   radio,
   checkbox,
